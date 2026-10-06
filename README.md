@@ -2,38 +2,42 @@
 
 Static site, same setup as the Miller site: one self-contained HTML file per page, shared header and footer copied into each, Netlify form, `_headers` for caching.
 
-index.html        The story (hook, success, amendments, cost, ask)
+index.html        The story, V3: hook, the past, the win, now, never built, we all pay, the ask
 numbers.html      Sources and method for every figure
-stories.html      "I want to live here because..." form (Netlify Forms)
-act.html          Email the Council (editable letter) + Be there
+stories.html      Build your card: photo upload with drag and zoom, 7 designs, live preview (Netlify Forms; sends layout, photo_x, photo_y, photo_zoom)
+storycards.js     The 7 story card layouts, shared by index.html and stories.html
+act.html          Email the Council (editable letter), Pledge to be there (Netlify form), what happens next
 thanks.html       Where the story form lands after submit
+pledged.html      Where the pledge form lands after submit; shows Add to calendar for each event
+events.js         Upcoming events list, shared by index.html, act.html and pledged.html
 privacy.html      Short privacy note for the form
-council-vote.ics  Apple Calendar file for Sept 28 (served as text/calendar via _headers)
 images/           Portrait photos go here
 
 ## Design
-Visual system follows DESIGN.md (Porch Teal): Anton for headlines, DM Serif Display italic for residents' words, DM Sans for everything else. Tokens live in :root and the "Porch Teal design system" block at the end of each page's <style>. The alert band under the skip link is for hearing weeks; remove or update it after Sept 28.
+Visual system follows DESIGN.md (Porch Teal): Anton for headlines, DM Serif Display italic for residents' words, DM Sans for everything else. Tokens live in :root and the "Porch Teal design system" block at the end of each page's <style>. The alert band style is still in the CSS for hearing weeks; the band itself is removed until a hearing date is set.
 
 ## How the animations work
-Nothing pins or holds the page. Each piece plays on its own the first time it scrolls into view:
-the cards slide in as you scroll, the yes line draws, the amendments play in sequence,
-and the cost chart draws. Visitors with reduced motion turned on see the finished state.
+Nothing pins or holds the page. The "We want to live here" row drifts sideways on its own and freezes while hovered, focused or touched. Each other piece plays once when it scrolls into view: resident cards fade up, the porch lights come on with the 147 counter, numbered pins drop onto the zoning map (hovering a street photo lights its pin), the population-loss bars grow year by year and wipe out the neighbors they reach, and the cost chart draws. Visitors with reduced motion turned on see the finished state.
 
 ## Deploy
 Drag the folder onto app.netlify.com/drop, or push to a repo linked to Netlify.
 After the first deploy, turn on form detection: Site settings > Forms.
 
 ## Editing numbers
-All story numbers live in one block at the top of the <script> in index.html (`var DATA = {...}`).
-Change them there and every chart, counter, stat, and house grid updates.
+All homepage numbers live in one block at the top of the last <script> in index.html (`var DATA = {...}`): affordable (porch lights and the win counter), atRisk (the Now and Never built counters), resident photos in the porch grid, and the illustrative rent/price series.
 
 ## Before launch
 Search every file for TODO and [square brackets]. Main ones:
-- Real sources for 1,460 / 70 / 230 / 410, plus the 40-year series and rent/price series
-- Amendment one-liners and links
-- IRL photo slots: index.html has the block party photo plus two placeholder-boat.jpg slots; replace with real photos and captions
+- Confirm 147 affordable homes proposed, with earlier years for comparison (David)
+- Confirm the 147 at-risk figure and the method behind it (numbers.html)
+- The past map: "Where apartments were banned" is built from official City of Cambridge GIS zoning polygons (March 2024, pre-ordinance). The "Diversity" tab redraws CDD p. 16 values on official neighborhood boundaries (original in images/cdd-diversity-map.jpg). The "New homes" tab redraws David's draft net-units map (images/units-permitted-since-envision-draft.jpg); confirm its time frame and credit line
+- Cite the inclusionary threshold behind the 12-to-9 building example
+- Rent and home price series for We all pay (chart is illustrative)
+- Pushed out chart: DATA.migration is illustrative; replace with Boston Indicators' yearly net loss of 25 to 44-year-olds (2006 to 2022) and fill in [N] residents per figure
+- Illegal to build cards: photos in images/garden-st.jpg etc. are low-res crops; swap in originals, confirm each building is nonconforming, and move the map pins to exact addresses
+- Nine new neighbor photos (images/neighbor-1.jpg to neighbor-9.jpg) need names, neighborhoods, quotes and written consent; they also fill the faces in the Pushed out chart
+- Resident stories and photos: hook cards, Never built story card, porch grid photos, stories.html
 - Background video images/cambridge-aerial.mp4 is YouTube drone footage; confirm rights
-- Portrait photos, names, quotes are stock placeholders (index.html part 1, stories.html); replace with real residents
-- Meeting time, remote comment link, sign-up link (act.html); confirm council@cambridgema.gov
 - Contact email and paid-for line (footer on every page)
 - og:image and og:url once the Netlify URL exists
+- Update the timeline (index.html section 7 and act.html) as the city sets dates

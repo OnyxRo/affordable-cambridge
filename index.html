@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Affordable Cambridge | Let's make room for all</title>
-<meta name="description" content="Cambridge said yes to new homes and it worked. Three amendments would cut 410 of them. The Council votes September 28.">
-<meta property="og:title" content="Affordable Cambridge | Let's make room for all">
-<meta property="og:description" content="Cambridge said yes to new homes and it worked. Three amendments would cut 410 of them. The Council votes September 28.">
+<title>Affordable Cambridge | Stop the rollback</title>
+<meta name="description" content="Wealthy landowners want to roll back the Multifamily Housing Ordinance that produced a record year for affordable homes. Help stop it.">
+<meta property="og:title" content="Affordable Cambridge | Stop the rollback">
+<meta property="og:description" content="Wealthy landowners want to roll back the Multifamily Housing Ordinance that produced a record year for affordable homes. Help stop it.">
 <!-- TODO: add og:image and og:url once the Netlify URL exists -->
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -16,7 +16,7 @@
 <meta name="theme-color" content="#1F5F5B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
 <style>
 :root{
   /* Porch Teal tokens (DESIGN.md). Old variable names kept so existing rules still resolve. */
@@ -222,8 +222,6 @@ footer.site{margin-top:0}
 .ask-hero .wrap{position:relative}
 .ask-hero h1{font-size:clamp(2.1rem,5.4vw,3.6rem);line-height:1.06;max-width:760px;text-shadow:0 1px 18px rgba(0,0,0,.35)}
 .ask-hero .when{font-size:clamp(1.1rem,2.2vw,1.35rem);font-weight:700;margin:18px 0 28px}
-.ask-hero .btn:not(.btn-ask){background:transparent;color:#fff;border-color:#fff}
-.ask-hero .btn:not(.btn-ask):hover{background:rgba(255,255,255,.12)}
 .ask-hero :focus-visible{outline-color:#fff}
 @media (max-width:600px){.ask-hero{min-height:0;padding:44px 0 40px}.ask-hero .when{margin:14px 0 22px}}
 
@@ -311,8 +309,6 @@ footer.site strong{font-size:.8125rem;letter-spacing:.1em;text-transform:upperca
 .ask-hero{color:var(--on-teal)}
 .ask-hero h1{font-size:clamp(2.75rem,8vw,5rem);line-height:.9;max-width:900px;text-shadow:none}
 .ask-hero .when{font-size:1.25rem;margin:24px 0 40px}
-.ask-hero .btn:not(.btn-ask){background:transparent;color:var(--on-teal);border:2px solid var(--on-teal)}
-.ask-hero .btn:not(.btn-ask):hover{background:rgba(243,247,246,.12)}
 
 /* part 1 on a teal field; neutral story cards sit on it */
 section.frame.hook{background:var(--teal);color:var(--on-teal)}
@@ -403,6 +399,422 @@ section.frame.hook{background:var(--teal);color:var(--on-teal)}
 .polaroid::after{content:"";position:absolute;inset:0;background:var(--surface);border:1px solid var(--line);z-index:-1}
 .card.yours .big{white-space:nowrap}
 @media (max-width:520px){.card .polaroid .who{overflow-wrap:anywhere}}
+
+/* ================= V3 homepage (seven screens) ================= */
+.kicker{font-size:.8125rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.sub{font-size:clamp(1.15rem,2.2vw,1.4rem);line-height:1.4;margin-top:16px}
+.s{padding:96px 0}
+.s h2{margin-top:12px;max-width:760px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+@media (max-width:860px){.two{grid-template-columns:1fr;gap:36px}.s{padding:72px 0}}
+.js .rise{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.rise.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rise{opacity:1;transform:none;transition:none}}
+
+/* 1. hook over a picture of Cambridge */
+.hook3{position:relative;overflow:hidden;background:var(--ink);color:var(--on-teal);padding:88px 0 96px}
+.hook3 video,.hook3 .shade{position:absolute;inset:0;width:100%;height:100%}
+.hook3 video{object-fit:cover}
+.hook3 .shade{background:rgba(18,35,34,.74)}
+.hook3 .wrap{position:relative}
+.hook3 h1{font-size:clamp(2.4rem,6.2vw,4.4rem);line-height:.95;max-width:980px}
+.hl{background:var(--rose);color:var(--ink);padding:0 .12em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.hook3 .sub{color:var(--on-teal);font-size:clamp(1.25rem,2.4vw,1.6rem)}
+.hook3 .btn-row{margin-top:28px}
+.hook3 :focus-visible{outline-color:var(--yellow)}
+.hook3 .intro{font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.15;margin-top:64px}
+.hook3 .cards{margin-top:24px}
+
+/* 2. the past */
+.past .sub{color:var(--muted)}
+.proof{margin-top:32px;padding:20px 24px;border:2px solid var(--teal);background:var(--surface);max-width:460px}
+.proof b{display:block;font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(2.4rem,5vw,3.4rem);line-height:.95;color:var(--teal)}
+.proof p{font-size:.95rem;margin-top:8px}
+.map-slot{margin:0}
+.map-box{aspect-ratio:4/3;border:2px dashed var(--sea);background:var(--surface);display:grid;place-items:center;text-align:center;padding:24px}
+.map-box span{font-size:.8125rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.map-key{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:.875rem;color:var(--muted);margin-top:10px}
+.map-key i{display:inline-block;width:14px;height:14px;vertical-align:-2px;margin-right:6px}
+
+/* 3. the win: the record, lit up */
+.win{background:var(--teal);color:var(--on-teal)}
+.win h2{max-width:900px}
+.win-stat{display:flex;align-items:center;gap:20px;margin-top:28px}
+.win-stat b{font-family:var(--display);font-weight:400;font-size:clamp(5rem,14vw,9rem);line-height:.85;font-variant-numeric:tabular-nums}
+.win-stat span{font-size:clamp(1.1rem,2.2vw,1.4rem);font-weight:700;line-height:1.25;max-width:240px}
+.win-sub{font-family:var(--display);text-transform:uppercase;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1;margin-top:28px}
+.win-body{margin-top:10px;color:#D3E8E3}
+.porch{display:flex;flex-wrap:wrap;gap:8px;margin-top:36px}
+.porch .t{width:28px;height:28px;flex:none}
+.porch svg{width:100%;height:100%;display:block}
+.porch .body{fill:#174A47;stroke:var(--sea);stroke-width:1.2;stroke-linejoin:round}
+.porch .win-w{fill:#2E6F69}
+.porch .light{fill:#2E6F69;transition:fill .25s}
+.porch .t.on .light{fill:var(--yellow)}
+.porch .p{border-radius:50%;overflow:hidden;background:var(--sea);border:2px solid var(--sea)}
+.porch .p img{width:100%;height:100%;object-fit:cover}
+.win-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;margin-top:18px;font-size:.875rem}
+.win-foot i{display:inline-block;width:12px;height:12px;background:radial-gradient(circle at 50% 45%,#F7E2A8 0,#F2C356 45%,#E5992F 100%);box-shadow:0 0 5px 1px rgba(255,190,70,.52),0 0 12px 3px rgba(255,170,40,.24);vertical-align:-1px;margin-right:10px;border-radius:2px}
+.win .source{color:#D3E8E3;margin:0}
+.win .source a{color:inherit}
+@media (max-width:520px){.porch{gap:6px}.porch .t{width:20px;height:20px}}
+
+/* 4. now: the rollback */
+.now .sub{color:var(--muted)}
+.rules{list-style:none;margin-top:28px}
+.rules li{position:relative;padding:12px 0 12px 26px;border-top:2px solid var(--line)}
+.rules li:first-child{border-top:0}
+.rules li::before{content:"";position:absolute;left:0;top:20px;width:12px;height:12px;border-radius:50%;background:var(--red)}
+.rules h3{font-size:1.5rem}
+.rules p{color:var(--muted);font-size:1rem;margin-top:4px}
+.lose{margin-top:28px;padding-top:20px;border-top:2px solid var(--line)}
+.lose b{font-family:var(--display);font-weight:400;font-size:clamp(4rem,10vw,6.5rem);line-height:.85;color:var(--red);font-variant-numeric:tabular-nums}
+.lose svg{width:100%;height:70px;overflow:visible}
+.lose path{fill:none;stroke:var(--red);stroke-width:3;stroke-linecap:round}
+.lose circle{fill:var(--red)}
+.lose span{display:block;font-size:.9rem;color:var(--muted);margin-top:8px}
+.bkey{font-size:.875rem;color:var(--muted);margin-top:28px}
+.bkey i{display:inline-block;width:14px;height:14px;border:1.5px solid var(--muted);border-radius:3px;background:var(--data-muted);vertical-align:-2px;margin-right:8px}
+.bldgs{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:16px;margin-top:12px}
+.bldg{display:flex;flex-direction:column;align-items:center}
+.frame-b{position:relative;width:100%;max-width:170px;display:flex;align-items:flex-end;justify-content:center}
+/* the outline of the original building, shown once it shrinks */
+.ghost-b{position:absolute;left:0;right:0;bottom:0;height:var(--gh,144px);border:2px dashed var(--red);border-bottom:0;opacity:0;transition:opacity .5s .2s;pointer-events:none}
+.after.shrunk .ghost-b{opacity:1}
+.tower{width:100%;border:2px solid var(--muted);border-bottom:0;background:var(--surface);padding:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;transition:width .9s ease}
+.tower .w{height:22px;border:1.5px solid var(--muted);border-radius:3px;transition:background .6s,opacity .6s,height .6s,margin .6s,border-width .6s}
+.tower .w.aff{background:var(--data-muted)}
+.ground{width:100%;max-width:200px;height:2px;background:var(--ink)}
+.bldg figcaption{text-align:center;margin-top:8px;font-size:.9rem;line-height:1.3}
+.bldg figcaption b{display:block;font-weight:700}
+.bldg figcaption span{color:var(--muted)}
+.arrow{align-self:center;text-align:center;font-size:.85rem;color:var(--red);font-weight:700;padding-bottom:40px}
+.arrow svg{display:block;width:56px;height:14px;margin:4px auto 0;fill:none;stroke:var(--red);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.after.shrunk .tower{width:76%}
+.after.shrunk .w.top{height:0;opacity:0;border-width:0;margin-bottom:-10px}
+.after.shrunk .w.aff{background:transparent}
+@media (prefers-reduced-motion:reduce){.tower,.tower .w{transition:none}}
+
+/* 5. never built */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.split>div{padding:0 40px}
+.split>div:first-child{padding-left:0;border-right:2px solid var(--line)}
+.split>div:last-child{padding-right:0}
+.h-alt{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(2.25rem,5.5vw,3.5rem);line-height:.95;margin-top:12px}
+.never .split>div:last-child .h-alt{margin-top:calc(12px + 1.2rem)}
+.ghosts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px;max-width:380px}
+.ghosts svg{width:100%;height:auto;overflow:visible}
+.ghosts .g{transition:opacity .5s}
+.ghosts .g.gone{opacity:.15}
+.never .counter{margin-top:20px}
+.never .counter b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(3rem,7vw,4.5rem);line-height:.9;color:var(--red);font-variant-numeric:tabular-nums}
+.people{display:flex;gap:14px;margin-top:36px}
+.people .pp{width:56px;flex:none;transition:transform .8s ease,opacity .8s ease}
+.people .pp.left{transform:translateX(40px);opacity:0}
+.people svg{width:100%;height:auto;fill:var(--sea)}
+.story-card{display:flex;gap:18px;align-items:center;margin:32px 0 0;padding:20px;background:var(--surface);border:2px solid var(--line)}
+.story-card .ph{width:84px;height:84px;border-radius:50%;overflow:hidden;background:var(--sea);flex:none}
+.story-card .ph img{width:100%;height:100%;object-fit:cover}
+.story-card blockquote{font-family:var(--serif);font-style:italic;font-size:1.3rem;line-height:1.2;color:var(--teal)}
+.story-card figcaption{font-size:.875rem;color:var(--muted);margin-top:8px}
+@media (max-width:860px){
+  .split{grid-template-columns:1fr}
+  .split>div{padding:0}
+  .split>div:first-child{border-right:0;border-bottom:2px solid var(--line);padding-bottom:48px;margin-bottom:48px}
+  .never .split>div:last-child .h-alt{margin-top:0}
+}
+@media (max-width:520px){.story-card{flex-direction:column;align-items:flex-start}}
+
+/* 6. we all pay */
+.pay{background:var(--surface)}
+.ymark{background:var(--yellow);color:var(--ink);padding:0 .1em}
+.pay #costChart{height:min(40vh,300px);margin-top:40px}
+.pay .chart .ln.rent{stroke:var(--red)}
+.pay .chart .ln.price{stroke:var(--rose)}
+.pay .legend i{border-top-color:var(--red)}
+.pay .legend i.rose{border-top-color:var(--rose);border-top-style:solid}
+
+/* 7. the ask */
+.ask .sub{color:var(--muted)}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);margin-top:48px;position:relative;counter-reset:s}
+.steps::before{content:"";position:absolute;top:41px;left:10%;right:10%;height:2px;background:var(--line)}
+.steps li{position:relative;text-align:center;padding:0 6px}
+.steps .nx{display:block;height:22px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal)}
+.steps .sdot{display:block;width:22px;height:22px;margin:8px auto 12px;border-radius:50%;border:2px solid var(--muted);background:var(--bg);position:relative}
+.steps li.cur .sdot{background:var(--teal);border-color:var(--teal);box-shadow:0 0 0 5px rgba(31,95,91,.18)}
+.steps b{display:block;font-size:1rem}
+.steps small{display:block;font-size:.875rem;color:var(--muted)}
+.ask-btns{margin-top:48px}
+@media (max-width:780px){
+  .steps{grid-template-columns:1fr;gap:0}
+  .steps::before{top:28px;bottom:28px;left:10px;right:auto;width:2px;height:auto}
+  .steps li{text-align:left;padding:0 0 22px 40px}
+  .steps .nx{height:auto}
+  .steps .sdot{position:absolute;left:0;top:2px;margin:0}
+  .steps li.cur .sdot{top:20px}
+}
+@media (max-width:520px){.hook3 .cards .card{grid-area:auto;margin-left:0}.hook3 .cards{gap:14px}}
+
+/* past: official-boundary zoning map */
+.map-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.map-tabs button{font:inherit;font-size:.8125rem;font-weight:700;letter-spacing:.02em;min-height:38px;padding:0 14px;border-radius:9999px;border:2px solid var(--teal);background:transparent;color:var(--teal);cursor:pointer}
+.map-tabs button[aria-selected="true"]{background:var(--teal);color:var(--on-teal)}
+.zmap{display:block;width:100%;height:auto;background:var(--surface)}
+.z-base{fill:#E4EBE9}
+.z-none{fill:#C9D3D1}
+.z-allowed{fill:var(--teal)}
+.z-low{fill:var(--sea)}
+.z-banned{fill:var(--red)}
+.z-hoods path{fill:none;stroke:#fff;stroke-width:1.4;stroke-linejoin:round}
+.z-edge{fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linejoin:round}
+.z-lbl text{font-family:var(--sans);font-size:11px;font-weight:700;fill:var(--ink);text-anchor:middle;paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round;pointer-events:none}
+.js .zmap .zf{opacity:0;transition:opacity .7s}
+.zmap.in .zf{opacity:1}
+.zmap.in .z-low{transition-delay:.7s}
+.zmap.in .z-allowed{transition-delay:1.1s}
+.map-key{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 16px;font-size:.8125rem;color:var(--muted);margin-top:12px}
+.map-key i{display:inline-block;width:12px;height:12px;vertical-align:-1px;margin-right:6px}
+.cdd-img{display:block;width:100%;height:auto;border:2px solid var(--line)}
+@media (max-width:520px){.map-key{grid-template-columns:1fr}.z-lbl text{font-size:14px}}
+@media (prefers-reduced-motion:reduce){.js .zmap .zf{opacity:1;transition:none}}
+
+/* now: rules light up one at a time; then the whole block shrinks */
+.js .rules li{opacity:.4;transition:opacity .35s}
+.rules li.on{opacity:1}
+.blockv{margin-top:24px;background:var(--surface);border:1px solid var(--line);padding:12px 12px 10px}
+.blockv svg{display:block;width:100%;height:auto}
+.blockv .b{transition:transform .7s ease;transform-box:fill-box;transform-origin:50% 100%}
+.blockv .b.s{transform:scale(.76,.75)}
+.blockv .aw{transition:fill .4s,stroke .4s}
+.blockv .b.s .aw{fill:none;stroke:var(--line)}
+.blockv .gh{opacity:0;transition:opacity .5s}
+.blockv .gh.s{opacity:1}
+.blockcap{font-size:.9rem;margin-top:6px}
+.blockcap span{color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.js .rules li{opacity:1}.blockv .b,.blockv .gh{transition:none}}
+/* hook: the highlight wipes in */
+.js .hl{background:linear-gradient(var(--rose),var(--rose)) no-repeat 0 0/0% 100%;transition:background-size .9s ease .3s;color:inherit}
+.js .hl.on{background-size:100% 100%;color:var(--ink)}
+@media (prefers-reduced-motion:reduce){.js .hl{transition:none}}
+
+.hmap .h-fill path{stroke:#fff;stroke-width:1.4;stroke-linejoin:round}
+.h-lbl text{font-family:var(--display);font-size:17px;text-anchor:middle;pointer-events:none}
+@media (max-width:520px){.h-lbl text{font-size:22px}}
+
+/* ===== round 4 edits ===== */
+/* hook: video only behind the headline block */
+.hook3{padding:96px 0 88px}
+.residents{padding:48px 0 16px}
+.residents .intro{font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.15;color:var(--teal)}
+.residents .cards{margin-top:24px}
+.residents .card{background:var(--surface)}
+.residents :focus-visible{outline-color:var(--teal)}
+/* your turn: big pill, centered between the label and the card's bottom edge */
+.card.yours>div:last-child{flex:1;display:flex;flex-direction:column}
+.card.yours .big{margin:auto;min-height:64px;padding:0 36px;font-size:1.25rem;justify-content:center}
+@media (max-width:520px){.card.yours>div:last-child{align-self:stretch;justify-content:center}.card.yours .big{min-height:52px;padding:0 24px;font-size:1.05rem}}
+/* win: fewer, bigger homes */
+.porch{gap:14px}
+.porch .t{width:56px;height:53px}
+.porch .p{width:53px;height:53px}
+.porch .pl{transition:fill .25s}
+@media (max-width:520px){.porch{gap:10px}.porch .t{width:40px;height:38px}.porch .p{width:38px;height:38px}}
+/* never built: houses break */
+.ghosts{grid-template-columns:repeat(4,1fr);gap:22px 18px;max-width:400px}
+.ghosts .h{width:100%;height:auto;stroke-width:1.1}
+.ghosts .h path{fill:var(--surface);stroke:inherit;stroke-width:inherit;stroke-dasharray:none}
+.ghosts .h .crack{stroke:inherit;stroke-dasharray:none}
+.never .split>div:last-child .h-alt{margin-top:12px}
+.ghosts{margin-top:44px}
+/* story carousel */
+.people{display:flex;align-items:center;gap:10px;margin-top:36px}
+.faces{flex:1;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.face{padding:0;border:3px solid transparent;border-radius:50%;background:var(--sea);aspect-ratio:1/1;overflow:hidden;cursor:pointer;transition:border-color .2s,transform .2s}
+.face img{display:block;width:100%;height:100%;object-fit:cover}
+.face[aria-pressed="true"]{border-color:var(--teal);transform:scale(1.06)}
+.face:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.pg{flex:none;width:44px;height:44px;border-radius:50%;border:2px solid var(--teal);background:transparent;color:var(--teal);display:grid;place-items:center;cursor:pointer}
+.pg svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.pg:hover{background:var(--teal);color:var(--on-teal)}
+.pg-count{font-size:.8125rem;color:var(--muted);text-align:center;margin-top:8px}
+.js .faces .face{animation:faceIn .35s ease both}
+@keyframes faceIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.js .faces .face{animation:none}}
+/* ask buttons: bigger, centered */
+.ask-btns{justify-content:center;gap:16px}
+.ask-btns .btn{min-height:64px;padding:0 40px;font-size:1.15rem}
+@media (max-width:600px){.ask-btns{flex-direction:column;align-items:stretch}.ask-btns .btn{width:100%}}
+/* events */
+.events-s{padding-top:0}
+.ev-list{display:grid;gap:16px;margin-top:24px}
+.ev{display:grid;grid-template-columns:180px 1fr;gap:20px;padding:24px;background:var(--surface);border:2px solid var(--line)}
+.ev-when b{display:block;font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:1.5rem;line-height:1;color:var(--teal)}
+.ev-when span{display:block;font-size:.875rem;color:var(--muted);margin-top:6px}
+.ev h3{font-family:var(--sans);text-transform:none;font-weight:700;font-size:1.15rem;line-height:1.3}
+.ev p{font-size:.95rem;color:var(--muted);margin-top:6px}
+.ev .btn-row{margin-top:14px}
+.ev .btn{min-height:42px;padding:0 18px;font-size:.9rem}
+.ev .tbd{font-size:.875rem;font-weight:700;color:var(--teal);margin-top:12px}
+@media (max-width:600px){.ev{grid-template-columns:1fr;gap:10px}}
+
+/* ===== round 5 ===== */
+/* residents: infinite native-scroll loop */
+.res-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
+.loop-arrows{display:flex;gap:10px}
+.loop{--edge:max(22px,calc((100vw - 1040px) / 2 + 22px));--gap:16px;display:flex;gap:var(--gap);overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--edge);padding:20px var(--edge) 12px;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.loop::-webkit-scrollbar{display:none}
+.loop:focus-visible{outline:3px solid var(--teal);outline-offset:-3px}
+.loop .card{flex:0 0 calc((min(100vw,1040px) - 44px - 3 * var(--gap)) / 4);scroll-snap-align:start;background:var(--surface);will-change:auto}
+.loop .card.r0 .polaroid{transform:rotate(-2.5deg)}
+.loop .card.r1 .polaroid{transform:rotate(2deg)}
+.loop .card.r2 .polaroid{transform:rotate(-1.5deg)}
+.loop .card.r3 .polaroid{transform:rotate(2.5deg)}
+@media (max-width:900px){.loop .card{flex-basis:calc((100vw - 44px - var(--gap)) / 2.2)}}
+@media (max-width:520px){
+  .loop .card{flex:0 0 76vw;flex-direction:column;align-items:stretch;gap:20px;padding:20px}
+  .loop .polaroid{width:auto;margin:10px 8px 6px}
+  .loop .card .polaroid .who{font-size:.8125rem}
+  .loop .card.yours>div:last-child{align-self:auto}
+  .res-head{align-items:center}
+}
+/* win: scattered faces, full rows */
+.porch .t.p{border-radius:50%}
+/* never built: a clean break */
+.bh{width:100%;height:auto;overflow:visible;fill:var(--surface);stroke:var(--teal);stroke-width:1.1;stroke-linejoin:round;stroke-linecap:round;transition:stroke .18s}
+.bh .half{opacity:0;transition:transform .34s cubic-bezier(.3,1.4,.5,1);transform-box:view-box}
+.bh .half.l{transform-origin:6px 20.5px}
+.bh .half.r{transform-origin:18px 20.5px}
+.bh.lost{stroke:var(--red)}
+.bh.lost .whole{opacity:0}
+.bh.lost .half{opacity:1}
+.bh.lost .half.l{transform:translateX(-.8px) rotate(-13deg)}
+.bh.lost .half.r{transform:translateX(.8px) rotate(13deg)}
+.ghosts .bh path{fill:var(--surface);stroke:inherit;stroke-width:inherit;stroke-dasharray:none}
+@media (prefers-reduced-motion:reduce){.bh .half{transition:none}}
+
+/* ===== round 6 ===== */
+/* pushed out: 4 by 3 faces */
+.face-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:36px;padding:16px;background:var(--surface);border:2px solid var(--line)}
+.fg{display:block;aspect-ratio:1/1;background:var(--sea);overflow:hidden;border-radius:4px}
+.fg img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* ===== hero 4a ===== */
+.hook3{min-height:640px;display:flex;align-items:center;padding:80px 0}
+.hook3 .shade{background:rgba(18,35,34,.8)}
+.hook3 .wrap{width:100%}
+.hook3 h1{display:flex;flex-direction:column;gap:28px;font-family:var(--sans);text-transform:none;letter-spacing:0;max-width:none}
+.h-lead{font-weight:500;font-size:30px;line-height:1.3;letter-spacing:-.01em;max-width:720px;text-wrap:pretty}
+.h-villain{text-decoration:underline;text-decoration-thickness:.1em;text-underline-offset:.18em;text-decoration-color:var(--rose)}
+.h-big{font-weight:700;font-size:clamp(3.5rem,6.9vw,7.5rem);line-height:1.05;letter-spacing:-.04em}
+.h-mark{display:inline-block;white-space:nowrap;padding:0 .12em;color:var(--ink);background:var(--rose)}
+.js .h-mark{background:linear-gradient(var(--rose),var(--rose)) no-repeat 0 0/0% 100%;color:var(--on-teal);transition:background-size .8s ease .3s,color .3s ease .6s}
+.js .h-mark.on{background-size:100% 100%;color:var(--ink)}
+.hero-btns{gap:20px;margin-top:52px}
+.hook3 .btn-ghost{background:transparent;color:var(--on-teal);border:2px solid var(--on-teal)}
+.hook3 .btn-ghost:hover{background:rgba(243,247,246,.12)}
+@media (max-width:800px){.hook3{min-height:0;padding:56px 0}.h-lead{font-size:22px}.h-big{font-size:64px}}
+@media (max-width:400px){.h-big{font-size:52px}}
+@media (prefers-reduced-motion:reduce){.js .h-mark{transition:none}}
+
+
+/* ===== past: numbered pins + "illegal to build" photo cards ===== */
+.z-pin circle{fill:var(--ink);stroke:#fff;stroke-width:2;transition:fill .2s,transform .2s}
+.z-pin text{font-family:var(--sans);font-size:11px;font-weight:700;fill:#fff;text-anchor:middle}
+.z-pin.hi circle{fill:var(--yellow);transform:scale(1.25)}
+.z-pin.hi text{fill:var(--ink)}
+.js .zmap .z-pin{opacity:0;transition:opacity .4s}
+.zmap.in .z-pin{opacity:1}
+.zmap.in .z-pin[data-pin="1"]{transition-delay:1.6s}.zmap.in .z-pin[data-pin="2"]{transition-delay:1.8s}
+.zmap.in .z-pin[data-pin="3"]{transition-delay:2s}.zmap.in .z-pin[data-pin="4"]{transition-delay:2.2s}
+@media (prefers-reduced-motion:reduce){.js .zmap .z-pin{opacity:1;transition:none}}
+
+/* ===== pushed out: population loss chart ===== */
+.never-h{font-size:clamp(2.4rem,6vw,4.4rem);line-height:.95}
+.never .sub{color:var(--ink)}
+.mig{margin:40px 0 0}
+.mig-t{font-family:var(--display);font-weight:400;text-transform:uppercase;color:var(--red);font-size:clamp(1.5rem,3vw,2.1rem);line-height:1}
+.mig-box{margin-top:14px;background:var(--surface);border:2px solid var(--line);padding:12px 16px 16px}
+#migSvg{display:block;width:100%;height:auto;overflow:visible}
+.mig-axis{stroke:var(--ink);stroke-width:2}
+.mig-yr{font-family:var(--sans);font-size:14px;font-weight:700;fill:var(--muted);text-anchor:middle}
+.mig-bar{fill:var(--red)}
+.mig-c{fill:var(--surface);stroke:var(--rose);stroke-width:2.5}
+.mig-g{fill:var(--teal)}
+.mig-p{transition:opacity .3s}
+.mig-p image{transition:opacity .25s}
+.mig-p.gray image{filter:url(#migGray);opacity:.75}
+.mig-p.gray .mig-c{stroke:var(--muted)}
+.mig-p.gone{opacity:0}
+.mig-key{display:flex;align-items:center;gap:8px;font-size:.875rem;color:var(--muted);margin-top:12px}
+.mig-key i{width:14px;height:14px;border-radius:50%;background:var(--sea);display:inline-block}
+.mig-cap{font-size:.9rem;margin-top:6px;max-width:760px}
+@media (max-width:600px){.mig-box{padding:8px}.mig-yr{font-size:22px}}
+@media (prefers-reduced-motion:reduce){.mig-p{transition:none}}
+/* residents: constant drift needs snapping off */
+.loop.drift{scroll-snap-type:none}
+
+/* ask: "we are here" dot sits between Staff options and Zoning drafted */
+.steps li.done .sdot{background:#2E8B57;border-color:#2E8B57;box-shadow:inset 0 0 0 4px var(--bg)}
+.steps li.cur::after{content:"";position:absolute;left:100%;top:42px;width:13px;height:13px;border-radius:50%;background:var(--rose);box-shadow:0 0 0 4px rgba(255,148,133,.3);transform:translate(-50%,-50%);z-index:1}
+@media (max-width:780px){.steps li.cur::after{left:11px;top:calc(50% + 22px)}.steps li.done .sdot{top:2px}}
+
+/* ===== past: "Illegal to build." stamp panel ===== */
+.ill-panel{background:#fff;border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:16px;font-family:Inter,system-ui,sans-serif;color:#1f2421;font-size:15px;line-height:1.55;max-width:440px;margin-top:28px}
+.ill-panel h3{margin:0;font-family:Inter,system-ui,sans-serif;font-size:25px;font-weight:500;line-height:1.12;letter-spacing:-.015em;text-transform:none}
+.ill-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ill{background:#fff;border:2px solid #cfdcd6;border-radius:4px;padding:8px;display:flex;flex-direction:column;gap:8px;outline:none;transition:border-color .2s}
+.ill:hover,.ill:focus-visible{border-color:var(--teal)}
+.ill-ph{position:relative;aspect-ratio:16/10;border-radius:4px;overflow:hidden;display:grid;place-items:center;background:var(--sea)}
+.ill-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.stamp{position:relative;border:2px solid #d42a1f;color:#b8241a;padding:4px 22px;border-radius:4px;font-size:12px;font-weight:600;letter-spacing:.12em;white-space:nowrap;text-transform:uppercase;transform:rotate(-16deg) scale(.72);background:rgba(244,247,246,.33)}
+.ill-name{padding:0 4px 4px;font-size:15px}
+.js .stamp{opacity:0;transform:rotate(-16deg) scale(1.3);transition:opacity .25s,transform .35s cubic-bezier(.3,1.5,.5,1)}
+.ill-panel.in .stamp{opacity:1;transform:rotate(-16deg) scale(.72)}
+.ill-panel.in .ill:nth-child(2) .stamp{transition-delay:.15s}
+.ill-panel.in .ill:nth-child(3) .stamp{transition-delay:.3s}
+.ill-panel.in .ill:nth-child(4) .stamp{transition-delay:.45s}
+@media (max-width:860px){.ill-panel{max-width:none}}
+@media (max-width:400px){.ill-panel{padding:16px}.ill-grid{gap:8px}.ill-name{font-size:14px}}
+@media (prefers-reduced-motion:reduce){.js .stamp{opacity:1;transform:rotate(-16deg) scale(.72);transition:none}}
+
+/* ===== pink accents ===== */
+.loop .card.r1 .polaroid::before,.loop .card.r3 .polaroid::before{background:var(--rose)}
+.proof{border-color:var(--teal);box-shadow:8px 8px 0 var(--rose)}
+.mig-key-f{width:22px;height:22px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--rose);margin:0 4px 0 2px}
+.mig-t{color:var(--red)}
+.map-tabs button:hover{border-color:var(--rose)}
+.ill:hover,.ill:focus-visible{border-color:var(--rose)}
+.z-pin.hi circle{fill:var(--rose)}
+a.btn:not(.btn-ask):hover{box-shadow:inset 0 0 0 2px var(--rose)}
+.source a:hover{text-decoration-color:var(--rose);text-decoration-thickness:2px}
+footer.site{border-top:6px solid var(--rose)}
+
+/* ===== story cards (storycards.js): seven layouts, scaled from 375px ===== */
+.sc-fit{position:relative}
+.sc-scale{position:absolute;top:0;left:0;width:375px;transform-origin:0 0}
+.loop{align-items:flex-start}
+.loop .card.sc{padding:0;background:none;border:0;box-shadow:none;display:block;color:inherit;text-decoration:none}
+.loop .card.sc.yours{transition:transform .2s}
+.loop .card.sc.yours:hover{transform:translateY(-4px)}
+.loop .card.sc.yours:focus-visible{outline:3px solid var(--teal);outline-offset:4px}
+@media (max-width:520px){.loop .card.sc{flex:0 0 76vw;padding:0}}
+.porch .pl.glow{filter:url(#warmGlow)}
+.porch .t{overflow:visible}
+.porch svg{overflow:visible}
+.stat-red{color:var(--red)}
+.map-key i.key-dot{border-radius:50%;background:var(--ink);box-shadow:0 0 0 2px #fff,0 0 0 3px var(--ink)}
+.past .sub{margin-top:28px}
+.past .proof{margin-top:28px}
+/* porch lights: glow 30% softer */
+.porch .pl.glow{filter:url(#warmGlow)}
+/* pay: pink underline and pink highlight */
+.pay .pinku{text-decoration:none;background:linear-gradient(var(--rose),var(--rose)) no-repeat 0 100%/100% .14em;padding-bottom:.08em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.pay .pinkh{background:var(--rose);color:var(--ink);padding:0 .12em}
+/* timeline: bigger "now" dot on computers */
+@media (min-width:781px){.steps li.cur::after{width:18px;height:18px;box-shadow:0 0 0 5px rgba(255,148,133,.3)}}
+@media (max-width:780px){.steps li[aria-current="step"] .sdot{top:20px}}
+.porch .t.p{overflow:hidden;border-radius:50%}
+.porch .t.p img{border-radius:50%}
 </style>
 </head>
 <body>
@@ -413,7 +825,6 @@ section.frame.hook{background:var(--teal);color:var(--on-teal)}
 <path d="M788.66 354C788.67 355 788.67 356 788.68 357C772.62 342.65 756.56 328.3 740.5 313.95C705.03 346.13 669.57 378.32 634.1 410.5C634.07 535.97 634.03 661.43 634 786.9C624.33 786.9 614.66 786.9 604.98 786.91C604.97 651.77 604.96 516.64 604.95 381.5C640.47 349.23 675.98 316.96 711.5 284.68C737.22 307.79 762.94 330.89 788.66 354ZM433.09 341.8C432.72 341.85 432.35 341.9 431.97 341.95C432.35 341.9 432.72 341.85 433.09 341.8ZM435.24 342.94C435.5 343.27 435.75 343.61 436.01 343.94C435.75 343.61 435.5 343.27 435.24 342.94ZM436.01 343.94C436.33 344.3 436.64 344.66 436.96 345.02C436.64 344.66 436.33 344.3 436.01 343.94ZM442.62 351.36C443.08 351.54 443.54 351.71 444 351.88C443.54 351.71 443.08 351.54 442.62 351.36ZM441.08 353.1C441.34 353.37 441.59 353.64 441.84 353.92C441.59 353.64 441.34 353.37 441.08 353.1ZM445.22 352.96C445.48 353.29 445.74 353.63 445.99 353.97C445.74 353.63 445.48 353.29 445.22 352.96ZM445.99 353.97C446.31 354.32 446.63 354.68 446.95 355.03C446.63 354.68 446.31 354.32 445.99 353.97ZM873.02 358.95C877.29 361.52 880.25 365.29 883.58 368.91C886.74 372.34 890.36 375.55 893.58 378.92C895.79 381.24 900.67 383.54 901.68 386.74C902.89 390.55 901.84 401.01 901.84 405.5C901.84 419.5 901.84 433.5 901.84 447.5C901.84 476.83 901.84 506.17 901.84 535.5C901.84 545.17 901.84 554.83 901.84 564.5C901.84 569.89 902.27 575.53 901.5 580.84C883.32 580.73 865.15 580.61 846.97 580.5C846.95 577.5 846.94 574.5 846.92 571.5C843.78 571.3 840.64 571.1 837.5 570.89C837.3 567.76 837.1 564.63 836.9 561.5C833.86 561.17 830.82 560.83 827.78 560.5C827.83 557.69 827.88 554.88 827.93 552.07C842.65 551.88 857.37 551.69 872.09 551.5C872.4 487.32 872.71 423.13 873.02 358.95ZM447.07 360.12C447.32 360.39 447.56 360.66 447.81 360.93C447.56 360.66 447.32 360.39 447.07 360.12ZM451.15 359.99C451.43 360.33 451.71 360.67 452 361C451.71 360.67 451.43 360.33 451.15 359.99ZM453.09 361.73C453.79 362.41 454.49 363.09 455.19 363.77C454.49 363.09 453.79 362.41 453.09 361.73ZM455.19 363.77C455.51 364.13 455.82 364.49 456.14 364.85C455.82 364.49 455.51 364.13 455.19 363.77ZM456.14 364.85C456.45 365.21 456.75 365.58 457.06 365.94C456.75 365.58 456.45 365.21 456.14 364.85ZM452.08 366.08C452.33 366.36 452.58 366.64 452.84 366.93C452.58 366.64 452.33 366.36 452.08 366.08ZM457.06 365.94C457.35 366.32 457.64 366.7 457.93 367.07C457.64 366.7 457.35 366.32 457.06 365.94ZM457.93 367.07C459 368.33 460.07 369.59 461.14 370.84C460.07 369.59 459 368.33 457.93 367.07ZM461.14 370.84C461.41 371.17 461.68 371.5 461.95 371.83C461.68 371.5 461.41 371.17 461.14 370.84ZM520.8 436.62C520.82 438.06 520.84 439.49 520.86 440.93C515.96 438.93 509.73 428.82 505.96 424.56C496.4 413.76 487.57 402.31 478 391.51C473.37 386.29 464.7 377.83 461.95 371.83C464.53 371.05 465.56 373.3 467.18 375.29C470.6 379.48 474.46 382.41 478.02 386.46C488.01 397.84 497.61 409.57 507.49 421.06C511.88 426.15 515.8 432.14 520.8 436.62ZM463.09 379.08C463.33 379.36 463.58 379.64 463.82 379.92C463.58 379.64 463.33 379.36 463.09 379.08ZM468.04 385C468.3 385.31 468.57 385.61 468.83 385.92C468.57 385.61 468.3 385.31 468.04 385ZM480.09 399.11C480.33 399.38 480.57 399.66 480.81 399.93C480.57 399.66 480.33 399.38 480.09 399.11ZM490.08 411.09C490.41 411.37 490.74 411.65 491.06 411.94C490.74 411.65 490.41 411.37 490.08 411.09ZM491.06 411.94C491.32 412.26 491.58 412.59 491.84 412.92C491.58 412.59 491.32 412.26 491.06 411.94ZM496.07 418.11C496.33 418.38 496.58 418.65 496.84 418.93C496.58 418.65 496.33 418.38 496.07 418.11ZM502.06 425.13C502.31 425.4 502.56 425.67 502.81 425.94C502.56 425.67 502.31 425.4 502.06 425.13ZM441.25 438.88C450.22 449.29 459.19 459.7 468.16 470.11C434.16 510.75 400.16 551.39 366.16 592.03C356.46 592.04 346.75 592.05 337.04 592.06C337.26 585.54 335.84 566.64 337.38 561.78C338.39 558.61 344.62 553.17 346.94 550.4C353.74 542.23 360.49 533.98 367.52 526.01C392.68 497.51 416.81 468.01 441.25 438.88ZM518.08 444.09C518.33 444.37 518.57 444.65 518.81 444.93C518.57 444.65 518.33 444.37 518.08 444.09ZM520.05 446.2C520.29 446.14 520.53 446.07 520.76 446C520.53 446.07 520.29 446.14 520.05 446.2ZM520.86 677.07C520.85 686.73 520.85 696.39 520.85 706.05C509.85 704.26 497.65 705.64 486.5 705.64C464.17 705.64 441.83 705.64 419.5 705.64C408.17 705.64 396.83 705.64 385.5 705.64C379.29 705.64 372.4 704.82 366.5 706.49C366.39 762.61 366.28 818.74 366.16 874.86C341.45 874.89 316.73 874.92 292.01 874.95C292 873.69 291.98 872.44 291.97 871.18C307.02 870.96 322.08 870.73 337.13 870.5C337.22 805.83 337.31 741.17 337.4 676.5C342.66 675.8 348.18 676.21 353.5 676.21C362.83 676.21 372.17 676.21 381.5 676.21C410.5 676.21 439.5 676.21 468.5 676.21C480.5 676.21 492.5 676.21 504.5 676.21C509.44 676.21 516.36 674.95 520.86 677.07ZM777.86 723.02C781.46 726.35 785.06 729.67 788.66 733C788.61 750.93 788.55 768.86 788.5 786.79C787.02 786.83 785.54 786.86 784.07 786.9C784.59 777.48 784.2 767.94 784.2 758.5C784.2 752.32 784.81 745.66 783.89 739.54C782.98 733.55 779.88 728.55 777.86 723.02ZM872.89 756C875.99 756.17 879.09 756.33 882.19 756.5C882.29 759.59 882.4 762.69 882.5 765.78C885.5 765.86 888.5 765.93 891.5 766C891.79 769.17 892.07 772.33 892.36 775.5C895.41 775.62 898.45 775.73 901.5 775.85C901.5 817.22 901.5 858.58 901.5 899.95C893.29 899.92 885.08 899.89 876.87 899.87C876.87 891.75 876.86 883.62 876.85 875.5C771.23 875.31 665.61 875.12 559.98 874.93C559.97 873.69 559.95 872.45 559.94 871.22C664.12 871.01 768.31 870.8 872.5 870.59C872.63 832.4 872.76 794.2 872.89 756ZM220.14 899.03C250.57 899.27 281 899.52 311.42 899.76C303.57 900.62 295.41 900.08 287.5 900.08C273.17 900.08 258.83 900.08 244.5 900.08C239.25 900.08 223.57 901.54 220.14 899.03ZM579.27 899.82C508.39 899.81 437.5 899.8 366.62 899.79C437.5 899.8 508.39 899.81 579.27 899.82Z" fill="#2E6F69" fill-rule="evenodd" stroke="#2E6F69" stroke-width="0.25" stroke-linejoin="round"/>
 <path d="M292.01 874.95C316.73 874.92 341.45 874.89 366.16 874.86C430.77 874.88 495.38 874.91 559.98 874.93C665.61 875.12 771.23 875.31 876.85 875.5C876.86 883.62 876.87 891.75 876.87 899.87C777.67 899.85 678.47 899.83 579.27 899.82C508.39 899.81 437.5 899.8 366.62 899.79C348.22 899.78 329.82 899.77 311.42 899.76C281 899.52 250.57 899.27 220.14 899.03C220.15 891.19 220.15 883.34 220.15 875.5C244.11 875.32 268.06 875.13 292.01 874.95Z" fill="#8CC0B5" fill-rule="evenodd" stroke="#8CC0B5" stroke-width="0.25" stroke-linejoin="round"/>
 </symbol></svg><a class="skip" href="#content">Skip to content</a>
-<a class="alert-band" href="act.html#attend"><span class="wrap" style="display:block">Council votes Monday, Sept 28, 5:30 PM, City Hall</span></a>
 <header class="site">
   <div class="wrap">
     <a class="brand" href="index.html"><svg class="logo" viewBox="0 0 1095 1095" aria-hidden="true"><use href="#ac-logo"/></svg><span>Affordable Cambridge</span></a>
@@ -423,148 +834,220 @@ section.frame.hook{background:var(--teal);color:var(--on-teal)}
     </div>
     <nav class="main" id="mainNav" aria-label="Main">
       <ul>
-        <li><a href="index.html" aria-current="page">The story</a></li><li><a href="numbers.html">The numbers</a></li><li><a href="stories.html">Share your story</a></li><li><a href="act.html" class="nav-ask">Take action</a></li>
+        <li><a href="index.html" aria-current="page">The Issue</a></li><li><a href="numbers.html">The numbers</a></li><li><a href="stories.html">Share your story</a></li><li><a href="act.html" class="nav-ask">Take action</a></li>
       </ul>
     </nav>
   </div>
 </header>
 <main id="content">
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><clipPath id="clipL" clipPathUnits="userSpaceOnUse"><polygon points="-2,-2 12,-2 12,3.2 10.6,6 13.4,8.8 10.6,11.6 13.4,14.4 10.6,17.2 13.4,20 12,21.5 12,26 -2,26"/></clipPath><clipPath id="clipR" clipPathUnits="userSpaceOnUse"><polygon points="26,-2 12,-2 12,3.2 10.6,6 13.4,8.8 10.6,11.6 13.4,14.4 10.6,17.2 13.4,20 12,21.5 12,26 26,26"/></clipPath></defs></svg>
-<!-- TOP HERO, over aerial video. Video only plays (and loops) while it's on screen. -->
+<!-- 1. HOOK. Background is the aerial video; it only plays while on screen. -->
 <!-- TODO: confirm you have rights to use this drone footage -->
-<section class="ask-hero" id="ask" aria-labelledby="ask-h">
+<section class="hook3" id="hook" aria-labelledby="hook-h">
   <video id="askVideo" muted autoplay playsinline loop preload="auto" disablepictureinpicture disableremoteplayback poster="images/cambridge-aerial-poster.jpg" aria-hidden="true" tabindex="-1">
     <source src="images/cambridge-aerial.mp4" type="video/mp4">
   </video>
   <div class="shade" aria-hidden="true"></div>
   <div class="wrap">
-    <h1 id="ask-h">We need to build a <u>future for all</u>.</h1>
-    <p class="when">The vote is Monday, September 28.</p>
-    <div class="btn-row">
+    <h1 id="hook-h">
+      <span class="h-lead"><span class="h-villain">Wealthy landowners</span> are pushing housing out of reach for us.</span>
+      <span class="h-big">Help us <span class="h-mark" id="hl">fight back.</span></span>
+    </h1>
+    <div class="btn-row hero-btns">
       <a class="btn btn-ask" href="act.html#email">Email the Council</a>
-      <a class="btn" href="act.html#attend">Be there</a>
+      <a class="btn btn-ghost" href="act.html#pledge">Pledge to be there</a>
+    </div>
+  </div>
+</section>
+
+<section class="residents" aria-labelledby="residents-h">
+  <div class="wrap res-head">
+    <p class="intro" id="residents-h">We want to live here.</p>
+    <div class="loop-arrows">
+      <button type="button" class="pg" id="loopPrev" aria-label="Previous neighbor"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg></button>
+      <button type="button" class="pg" id="loopNext" aria-label="Next neighbor"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+  <!-- Cards are built from DATA.stories. Scroll or swipe; it loops forever. -->
+  <div class="loop" id="loop" tabindex="0" aria-label="Neighbors' stories. Scroll sideways or use the arrows."></div>
+</section>
+
+<!-- 2. THE PAST -->
+<section class="s past" id="past" aria-labelledby="past-h">
+  <div class="wrap two">
+    <div class="rise">
+      <h2 id="past-h">For 80 years, Cambridge banned apartments.</h2>
+      <p class="sub">The rules were written to keep people out.</p>
+      <div class="proof">
+        <b>Only <span class="stat-red">0.5%</span></b>
+        <p>of residents were Black where the 1943 rules were strictest (30 of 6,515).</p>
+      </div>
+      <p class="source">Source: <a href="https://www.cambridgema.gov/~/media/files/officeofthemayor/2019/acitywhichisdesirableandobtainablecambridgezoninghistory102419.pdf" target="_blank" rel="noopener">City of Cambridge zoning history, 2019</a></p>
+      <!-- TODO: confirm each building would not be allowed under the zoning in place before 2025 (Harvard St sits in Residence C-1, low density only). Swap in full-resolution photos. -->
+      <div class="ill-panel" id="illPanel">
+        <h3>Illegal to build.</h3>
+        <ul class="ill-grid">
+          <li class="ill" data-pin="1" tabindex="0"><div class="ill-ph"><img src="images/garden-st.jpg" alt="Apartment building on Garden St" loading="lazy" width="504" height="270"><span class="stamp">Illegal to build</span></div><span class="ill-name">Garden St</span></li>
+          <li class="ill" data-pin="2" tabindex="0"><div class="ill-ph"><img src="images/linnaean-st.jpg" alt="Apartment building on Linnaean St" loading="lazy" width="504" height="270"><span class="stamp">Illegal to build</span></div><span class="ill-name">Linnaean St</span></li>
+          <li class="ill" data-pin="3" tabindex="0"><div class="ill-ph"><img src="images/oxford-st.jpg" alt="Apartment building on Oxford St" loading="lazy" width="504" height="270"><span class="stamp">Illegal to build</span></div><span class="ill-name">Oxford St</span></li>
+          <li class="ill" data-pin="4" tabindex="0"><div class="ill-ph"><img src="images/harvard-st.jpg" alt="Apartment building on Harvard St" loading="lazy" width="504" height="270"><span class="stamp">Illegal to build</span></div><span class="ill-name">Harvard St</span></li>
+        </ul>
+      </div>
+    </div>
+    <figure class="map-slot rise">
+      <div class="map-tabs" role="tablist" aria-label="Map view">
+        <button type="button" role="tab" id="tabZ" aria-selected="true" aria-controls="paneZ">Apartments banned</button>
+        <button type="button" role="tab" id="tabR" aria-selected="false" aria-controls="paneR">Diversity</button>
+        <button type="button" role="tab" id="tabU" aria-selected="false" aria-controls="paneU">New homes</button>
+      </div>
+      <div class="map-pane" id="paneZ" role="tabpanel" aria-labelledby="tabZ">
+        <svg class="zmap" id="zmap" viewBox="0 0 612 444" role="img" aria-labelledby="zmap-t">
+          <title id="zmap-t">Map of Cambridge zoning before 2025. Apartments were banned across most of West Cambridge, North Cambridge, Neighborhood Nine, and parts of Mid-Cambridge, and allowed mainly in East Cambridge, The Port, Cambridgeport, and along the main corridors.</title>
+          <path class="z-base" d="M187.2 24.3L230.6 91.6L239.8 103.1L251.6 90.8L254.9 97.7L261.7 108.2L275.9 125.7L270.1 129.9L273.5 135.8L268.9 138.8L276.7 149.4L285.6 163.8L309.3 191.4L315.5 192.1L333.2 211.5L329.5 213.7L361.9 253.9L397.5 253.1L421.1 254.7L445.6 257.2L468.9 264.9L472.9 256.4L475.8 261.4L479.2 262.8L491.6 261.8L494.2 260.6L496.1 258.6L503.9 255.7L507.2 258.3L510.9 255.7L513.3 255.5L519.0 260.1L521.1 260.6L525.9 260.1L531.5 256.7L534.1 259.0L538.4 266.2L541.0 269.0L544.6 269.0L552.3 263.4L554.0 268.9L590.3 276.9L606.0 298.4L571.5 299.4L541.7 343.3L538.7 358.9L527.3 379.4L520.4 386.3L518.5 391.9L445.8 419.4L398.5 430.7L387.0 432.7L377.0 434.3L334.9 437.5L321.4 437.9L300.3 434.0L283.5 422.1L280.8 418.6L276.3 409.5L275.8 405.9L279.0 379.8L276.6 349.1L275.9 319.2L273.9 311.6L269.6 304.6L266.1 302.3L259.3 300.7L248.8 301.8L243.6 301.6L240.5 300.8L233.0 297.1L229.0 292.4L216.4 270.0L205.1 259.7L199.7 257.4L189.5 257.6L185.2 258.6L180.2 261.7L176.2 267.4L175.4 272.2L175.8 274.3L183.2 285.3L184.0 295.3L181.2 298.7L171.3 307.7L161.3 313.9L157.1 317.3L141.2 336.0L136.3 338.5L129.8 339.8L126.9 339.3L117.0 334.7L114.5 334.2L110.6 334.6L106.0 321.1L113.2 319.4L117.6 316.9L126.9 297.1L129.7 289.7L130.7 284.5L132.8 260.5L108.4 256.5L110.2 246.3L89.4 248.5L72.7 252.2L43.4 247.9L31.7 200.9L39.2 204.5L39.5 203.4L37.7 198.6L38.4 196.3L36.0 193.8L30.3 192.2L23.5 188.9L23.7 187.8L22.1 186.6L21.0 182.7L6.0 151.8L17.8 149.5L20.7 147.5L23.0 143.0L27.1 120.8L18.3 83.3L30.2 73.6L57.7 28.8L112.3 60.7L113.4 56.8L129.0 40.7L136.3 36.7L146.6 36.1L153.2 31.1L160.0 24.7L166.8 14.6L169.6 6.8L170.6 6.0Z"/>
+          <path class="z-none" d="M174.8 248.9L171.4 248.6L170.4 244.0L171.9 244.1L172.4 246.4L174.3 246.5ZM212.5 246.2L215.0 236.4L217.6 237.3L213.6 246.6L214.8 248.8L213.3 252.1L208.8 251.7L210.2 247.3ZM138.5 241.9L137.9 245.7L143.0 248.1L145.8 247.8L144.9 250.4L130.6 248.2L130.8 243.7L128.4 243.6L128.6 239.5L137.2 237.2ZM264.0 250.8L255.7 252.1L253.7 248.1L256.6 243.4L244.8 236.2L239.7 229.0L253.5 224.3L257.6 207.7L256.5 225.7L258.9 233.8L267.9 239.3L264.8 254.9ZM114.6 214.7L113.8 212.3L117.3 211.4L118.0 213.7L120.8 212.9ZM137.1 155.0L147.4 161.3L140.9 172.2L128.3 164.6L128.7 160.3L135.2 164.0L137.9 159.3L135.4 157.8ZM210.3 144.7L213.7 152.4L207.8 155.9L203.1 148.2ZM183.4 131.5L187.4 139.4L182.8 141.6L186.5 148.9L184.7 149.8L186.1 152.7L180.4 155.5L178.5 157.6L164.5 151.0L163.9 149.2L155.6 139.8L150.2 143.3L158.5 152.4L154.6 154.3L144.7 144.6L144.1 141.5L143.3 141.8L142.8 140.1L130.1 142.8L127.2 142.5L126.9 147.6L130.6 149.8L127.0 153.3L125.8 168.2L123.2 168.3L114.8 184.0L105.8 195.9L104.9 198.8L105.8 206.1L100.3 209.2L94.2 214.9L89.5 216.7L69.7 212.9L63.2 207.8L54.9 206.0L51.1 202.1L45.8 199.7L40.3 194.8L25.5 188.8L23.8 181.3L10.2 154.5L20.7 151.9L23.3 149.5L25.5 145.3L28.2 132.6L25.0 131.8L27.1 120.8L25.5 114.2L67.1 121.2L94.4 128.7L108.2 134.0L109.5 132.1L112.2 130.9L122.4 114.4L125.4 104.7L100.7 99.6L94.0 99.2L89.6 100.4L81.4 99.7L81.3 100.3L60.7 96.8L59.8 102.7L61.3 103.0L59.5 110.4L48.0 107.6L47.8 108.4L41.9 107.1L43.9 104.0L35.7 99.3L37.4 95.1L45.2 98.1L44.8 95.3L50.2 96.1L49.0 88.5L44.0 89.3L43.6 82.2L31.5 85.1L26.5 78.9L41.7 54.7L50.7 57.5L73.2 56.6L75.2 62.8L90.4 62.1L93.4 50.0L112.3 60.7L113.4 56.8L129.0 40.7L136.3 36.7L146.6 36.1L153.2 31.1L160.0 24.7L166.8 14.6L169.6 7.0L168.8 15.4L159.3 29.4L160.5 32.9L145.9 42.9L144.6 41.0L137.9 41.7L133.9 43.7L129.3 48.0L128.5 55.9L131.6 71.4L129.8 72.7L130.7 88.6L129.9 101.9L126.6 112.4L115.5 131.4L114.6 136.1L116.2 139.3L122.7 145.0L126.8 133.0L135.6 120.4L141.1 116.6L155.0 113.0L167.1 114.6L167.5 125.3L171.2 126.7L171.3 127.7L178.7 127.6L178.8 131.2L181.2 130.6ZM175.6 134.6L178.8 140.9L181.7 139.5L179.0 133.8ZM124.8 101.4L125.0 99.0L127.1 97.2L129.0 88.5L128.3 86.5L125.5 84.4L125.6 81.9L127.9 81.0L128.5 78.4L125.5 63.5L103.5 69.8L93.1 71.2L50.5 70.8L79.7 82.6L79.3 83.7L93.1 91.5ZM198.8 125.1L184.9 121.2L185.7 117.5L199.7 120.7ZM199.8 117.4L213.3 119.5L213.0 123.8L199.8 120.7ZM213.6 110.0L213.3 118.6L210.4 118.4L210.6 109.9ZM209.4 117.9L200.6 116.4L200.9 108.1L209.7 108.6ZM195.3 74.2L194.3 75.1L195.7 76.9L195.1 77.3L193.7 75.6L190.4 78.2L190.4 73.9L193.2 71.6ZM150.6 62.6L151.4 56.0L159.6 54.4L160.4 53.0L177.8 54.5L177.8 55.2L189.1 56.4L189.2 57.3L165.7 55.1L165.7 57.6L162.8 57.3L162.6 59.1L152.1 58.2L153.2 58.6L153.3 61.6L152.3 61.7L152.7 73.2L155.6 73.1L155.6 74.3L152.7 74.3L153.2 90.4L143.4 89.3L142.9 82.9L145.7 82.8L145.9 80.4L145.5 78.1L142.9 74.8L142.5 64.2ZM209.8 59.2L206.7 58.9L207.8 58.7L207.1 57.4L201.7 57.0L201.2 58.4L195.9 57.9L197.5 56.1L208.5 57.2ZM194.5 57.5L193.3 57.5L192.0 55.7L195.7 56.1ZM324.8 401.9L326.6 403.3L322.3 408.8L320.5 407.4ZM352.4 404.0L355.0 400.7L359.9 404.7L356.2 407.0ZM343.2 398.7L341.2 401.3L339.5 399.9L340.8 398.3L339.1 397.0L339.9 396.0ZM332.3 392.4L330.2 395.0L328.9 394.0L333.2 388.6L336.3 391.0L334.1 393.8ZM359.6 372.7L362.5 369.1L366.1 372.0L363.1 375.5ZM302.2 364.5L306.5 368.3L305.3 369.7L301.8 366.6L299.5 367.0L299.4 366.0L301.0 365.9ZM329.7 362.8L332.6 359.3L338.0 363.7L335.1 367.3ZM348.8 362.7L350.2 361.0L351.1 361.7L349.7 363.5ZM311.3 344.1L307.5 346.6L305.5 349.3L299.6 350.7L299.2 346.7L300.2 344.4L301.0 344.3L300.8 342.6L301.7 342.5L301.3 339.1L310.0 338.1L310.1 339.0L313.0 338.7L313.3 341.6L311.5 342.9ZM520.9 345.9L528.5 335.2L525.2 332.7L528.1 328.6L531.5 331.0L543.4 313.4L543.2 311.1L540.3 308.9L540.9 308.1L536.4 304.8L538.6 301.9L535.7 299.8L533.7 301.7L530.8 301.8L528.6 300.2L527.9 297.7L524.4 297.0L524.6 296.0L528.0 296.6L529.0 291.4L533.0 292.1L533.5 289.9L534.6 291.3L535.6 289.9L537.1 290.7L534.8 293.9L544.6 300.8L545.7 299.2L544.2 298.2L545.9 295.8L548.1 297.4L547.0 300.2L549.2 297.4L552.7 299.6L548.2 305.5L561.3 314.5L541.7 343.3L538.7 358.9L527.3 379.4L520.4 386.3L518.5 391.9L445.8 419.4L398.5 430.7L377.0 434.3L321.4 437.9L300.3 434.0L296.0 431.5L283.5 422.1L280.8 418.6L276.0 408.8L276.6 396.9L279.0 379.8L276.6 349.1L275.9 319.2L273.9 311.6L272.1 308.3L269.6 304.6L266.1 302.3L259.3 300.7L243.6 301.6L233.0 297.1L229.0 292.4L216.4 270.0L205.1 259.7L199.7 257.4L189.5 257.6L185.2 258.6L180.2 261.7L176.2 267.4L175.4 272.2L175.8 274.3L183.2 285.3L184.0 295.3L171.3 307.7L157.1 317.3L143.5 333.7L139.5 337.1L129.8 339.8L117.0 334.7L110.6 334.6L106.2 321.3L113.8 319.6L118.0 316.8L130.7 290.1L133.1 279.3L139.3 278.2L140.1 280.3L137.6 281.3L137.3 283.4L139.6 290.0L164.4 285.6L162.1 269.7L163.1 269.5L162.3 265.3L161.2 265.7L159.4 261.1L154.9 256.4L155.3 254.9L146.8 251.1L146.5 249.9L150.9 249.0L150.7 251.4L158.5 254.9L170.3 263.1L173.8 261.8L177.8 257.3L181.8 254.6L182.0 250.2L222.4 254.0L217.7 256.5L217.3 260.8L229.1 275.7L229.9 274.8L238.5 280.3L244.0 271.3L244.9 271.9L239.3 280.8L246.0 285.0L242.1 291.1L247.2 292.1L260.5 291.2L261.0 290.1L269.1 292.9L277.4 297.9L276.9 298.5L281.4 308.2L282.2 308.1L281.4 309.8L289.9 310.1L289.8 314.6L282.5 313.9L283.9 318.9L282.7 351.4L291.3 350.4L293.0 358.0L285.9 361.2L284.7 358.4L283.1 359.1L285.9 385.3L288.9 397.5L292.8 404.0L298.5 409.7L308.4 416.5L311.5 412.6L316.5 417.3L315.4 419.3L312.2 419.1L320.2 425.3L329.8 428.7L349.5 428.8L362.6 425.5L504.5 361.1L506.0 359.1L512.9 355.2L514.4 347.2L515.7 347.0L517.1 348.9ZM392.6 330.6L391.2 334.3L393.6 334.9L392.9 337.6L387.7 335.6L390.1 330.0ZM318.0 309.3L316.8 311.0L315.9 310.4L316.9 308.6ZM385.1 308.4L375.9 303.9L378.6 298.8L387.6 303.6ZM334.9 294.6L333.1 296.4L331.6 295.8L332.4 293.6ZM350.2 287.0L351.9 287.8L350.7 290.2L348.7 289.2ZM374.0 283.5L370.8 282.3L371.9 280.3L374.8 281.9ZM287.8 271.2L287.5 274.8L282.8 269.3ZM254.0 268.2L255.7 269.2L254.1 271.8L252.4 270.8ZM357.5 262.0L356.3 264.0L354.6 262.9L355.7 260.9ZM315.4 263.1L319.1 253.3L322.4 253.9L326.8 256.4L321.5 266.3ZM309.6 260.0L311.7 255.9L316.6 258.5L314.5 262.6ZM374.2 257.6L371.6 257.5L371.8 256.4L372.6 255.6ZM279.1 184.2L279.1 180.4L280.9 180.5L280.6 184.2ZM274.4 178.4L273.8 184.1L271.5 184.1L271.5 181.7L267.9 181.5L268.0 178.0ZM393.4 338.4L393.7 337.1L395.4 337.6L395.1 338.9ZM409.8 366.2L410.9 354.4L402.0 353.5L402.5 347.9L421.8 349.9L429.4 331.0L428.0 330.3L427.1 330.8L420.0 326.0L418.6 328.5L410.4 323.9L412.4 319.8L411.2 319.2L412.9 316.2L414.2 316.9L412.7 319.8L418.0 322.6L417.0 324.3L417.8 324.7L419.6 323.4L421.0 324.2L422.5 321.3L426.2 323.3L422.0 319.3L426.7 314.6L433.3 321.8L442.4 300.2L451.8 303.2L451.6 304.5L458.1 305.4L458.6 303.1L474.7 305.9L474.2 308.8L500.1 313.4L501.7 310.6L510.5 312.2L509.5 317.9L519.8 319.7L516.8 336.7L489.5 332.1L491.6 327.0L455.9 321.2L455.6 319.5L449.5 315.5L444.3 343.2L440.6 350.3L439.4 351.7L433.4 351.1ZM532.5 317.2L526.5 325.7L528.1 316.5ZM417.8 311.1L419.5 312.7L417.7 314.5L416.0 313.0ZM504.5 306.3L506.9 306.5L505.8 310.7L503.0 310.3ZM510.5 312.2L512.4 300.7L515.3 301.2L514.3 306.9L516.6 307.3L515.6 313.0ZM489.1 305.5L485.9 305.0L486.3 302.7L489.5 303.2ZM470.5 298.9L469.5 304.5L459.7 302.8L460.2 297.0ZM513.8 289.7L507.0 288.6L507.2 287.4L514.0 288.6ZM440.4 283.2L435.5 294.9L424.9 290.1L429.7 278.3ZM405.3 284.7L403.1 288.4L401.5 286.6L402.8 283.6ZM606.0 298.4L594.1 298.9L581.0 285.4L579.9 286.5L564.6 271.2L590.3 276.9ZM497.5 282.9L499.7 283.3L499.2 286.1L497.0 285.6ZM491.3 266.7L491.1 264.8L489.9 264.9L489.6 266.4L487.2 266.0L486.1 272.2L478.5 270.9L474.5 269.0L477.5 262.5L489.8 262.2L494.2 260.6Z"/>
+          <path class="z-allowed zf" d="M150.7 251.4L181.8 253.2L181.8 254.6L177.8 257.3L173.8 261.8L170.3 263.1L158.5 254.9ZM192.0 248.2L205.3 249.0L205.1 252.1L191.7 251.0ZM72.7 252.2L56.7 249.4L57.2 245.7L71.0 248.1L74.8 238.2L81.9 237.4L82.8 245.9L85.5 245.3L85.2 241.8L86.6 241.6L83.1 231.1L87.7 229.4L92.4 243.9L106.7 241.3L107.5 244.2L119.5 241.1L119.1 245.7L107.8 245.5L108.1 246.5L89.4 248.5ZM37.9 203.9L39.2 204.5L39.5 203.4L37.7 198.6L38.4 196.3L36.1 193.4L40.3 194.8L45.7 199.6L48.4 200.8L45.0 206.0L48.0 208.0L37.1 207.3ZM144.4 192.8L144.7 195.8L146.6 195.6L146.1 198.8L138.7 200.1L137.2 194.2ZM192.0 194.4L185.5 189.5L186.9 188.0L165.5 174.7L169.2 170.2L193.2 185.6L191.3 187.9L194.9 190.8ZM129.7 150.9L127.8 170.6L125.5 170.1L127.6 178.1L116.1 181.9L123.2 168.3L125.8 168.2L127.0 153.3L128.0 151.5ZM180.9 155.9L187.9 151.7L182.8 141.6L187.4 139.4L183.2 131.2L181.2 130.6L178.8 131.2L178.7 127.9L181.4 127.7L181.3 125.7L187.6 125.2L187.8 121.9L198.8 125.1L199.7 120.7L256.8 133.6L255.6 130.4L249.2 122.4L232.7 111.4L229.3 107.9L193.9 65.0L189.8 67.9L189.7 58.5L185.8 58.2L185.9 57.0L189.2 57.3L189.1 56.4L160.4 53.0L159.6 54.4L151.4 56.0L150.6 62.6L142.5 64.2L142.9 74.8L145.5 78.1L145.9 80.4L145.7 82.8L142.9 82.9L143.4 89.3L152.1 90.3L152.7 100.1L155.3 101.3L155.8 110.8L167.2 113.2L167.0 110.5L178.2 112.9L178.3 115.7L185.7 117.5L184.9 121.2L167.2 117.5L167.1 114.6L159.1 113.0L149.6 114.1L141.1 116.6L133.9 122.2L125.7 135.0L122.7 145.0L116.0 139.1L114.7 136.2L115.2 132.2L126.2 113.3L129.9 101.9L130.7 88.6L129.8 72.7L131.6 71.4L128.5 55.9L129.3 48.0L163.3 50.4L165.7 50.1L165.7 49.1L168.8 49.4L168.8 48.5L180.0 49.4L174.9 44.7L177.0 41.9L169.5 36.8L171.2 33.8L180.7 40.6L189.1 49.2L188.6 50.0L190.2 51.2L191.1 49.8L197.6 54.9L195.9 57.9L201.2 58.4L201.7 57.0L207.1 57.4L207.8 58.7L205.0 60.7L205.7 63.1L203.0 65.3L236.2 105.1L237.8 106.2L242.6 101.8L244.6 104.6L243.6 105.5L244.9 107.0L243.2 108.7L244.1 110.6L248.0 113.1L250.3 110.9L255.0 116.1L253.8 117.1L260.2 124.8L269.8 117.7L275.9 125.7L270.1 129.9L273.5 135.8L268.9 138.8L277.0 149.9L267.9 149.2L267.6 153.2L262.3 152.9L261.8 159.4L265.2 159.7L262.4 194.7L263.8 194.8L263.1 202.7L270.4 203.2L272.3 192.6L280.4 193.1L280.0 199.2L291.7 199.6L294.3 203.7L295.6 202.7L303.2 232.1L294.4 234.7L294.1 236.3L301.4 238.0L300.1 245.7L327.1 250.5L329.1 239.6L335.0 240.5L335.8 235.5L345.7 237.2L343.0 253.3L330.2 251.0L321.5 267.4L304.6 258.3L298.4 275.1L293.8 273.4L292.4 275.6L302.9 287.3L302.5 288.2L309.5 291.6L310.1 290.5L314.6 292.7L314.1 293.8L318.9 296.6L319.5 295.3L327.9 298.9L330.5 300.6L329.4 301.9L330.4 303.2L335.6 306.0L342.3 311.6L344.9 308.0L360.2 319.7L367.3 306.3L369.9 307.5L374.3 299.1L350.2 286.2L351.9 283.7L358.7 287.3L360.1 284.5L380.2 295.3L366.2 320.8L386.5 337.1L385.4 339.9L392.7 345.8L392.8 344.1L402.8 345.0L402.0 353.5L410.9 354.4L409.8 366.2L433.4 351.1L439.4 351.7L440.8 350.1L444.3 343.2L449.5 315.5L455.6 319.5L455.9 321.2L491.6 327.0L489.5 332.1L516.8 336.7L519.8 319.7L509.5 317.9L510.5 312.2L515.6 313.0L516.6 307.3L514.3 306.9L515.3 301.2L504.6 299.4L507.0 285.1L444.7 274.3L445.9 271.3L432.9 269.0L431.8 271.9L392.2 264.9L388.5 272.1L390.5 274.4L389.0 277.3L375.3 262.0L368.8 260.9L369.9 254.5L369.2 253.8L382.7 253.5L382.1 256.9L395.1 259.3L396.3 257.0L399.4 257.4L398.9 259.9L412.1 262.2L414.9 254.3L435.2 256.2L433.5 266.0L455.6 269.9L457.2 261.1L468.9 264.9L472.9 256.4L475.4 260.9L477.5 262.5L472.7 272.9L508.1 278.9L508.6 276.1L514.0 277.1L502.5 269.2L506.0 269.7L507.9 268.8L500.2 263.4L499.7 266.2L492.2 265.3L492.9 262.2L495.9 258.7L504.0 255.7L507.4 258.3L512.3 255.3L519.0 260.1L522.2 260.6L526.3 259.9L531.5 256.7L534.1 259.0L538.4 266.2L541.0 269.0L544.6 269.0L552.3 263.4L554.0 268.9L564.6 271.2L579.9 286.5L581.0 285.4L594.1 298.9L571.5 299.4L561.3 314.5L548.2 305.5L552.7 299.6L549.2 297.4L547.0 300.2L548.1 297.4L545.9 295.8L544.2 298.2L545.7 299.2L544.6 300.8L534.8 293.9L536.8 290.4L535.6 289.9L534.6 291.3L533.5 289.9L533.0 292.1L529.0 291.4L528.0 296.6L524.6 296.0L524.4 297.0L527.9 297.7L528.6 300.2L530.8 301.8L533.7 301.7L535.7 299.8L538.6 301.9L536.4 304.8L540.9 308.1L540.3 308.9L543.3 311.5L543.3 313.8L531.5 331.0L528.1 328.6L525.2 332.7L528.5 335.2L520.3 346.7L517.1 348.9L515.7 347.0L514.4 347.2L512.9 355.2L506.0 359.1L504.5 361.1L360.8 426.3L352.4 428.5L345.9 429.1L329.8 428.7L324.8 427.4L319.3 424.8L312.2 419.1L315.7 419.1L316.5 417.4L315.9 415.9L311.4 412.5L308.4 416.5L297.2 408.7L290.5 400.7L288.3 395.7L286.3 387.3L283.1 359.1L284.7 358.4L285.9 361.2L297.7 355.9L297.2 351.4L305.5 349.3L311.5 343.6L313.3 345.6L330.7 337.1L333.2 339.6L340.4 336.4L357.6 350.3L353.2 355.7L359.9 361.1L366.9 350.7L365.1 349.2L366.2 347.6L365.1 346.7L366.1 345.2L367.2 346.1L368.3 344.7L364.2 341.3L360.5 345.5L340.9 329.6L343.2 327.0L334.3 320.7L338.5 316.8L326.9 308.9L328.2 307.2L326.1 305.8L325.3 306.8L320.7 304.3L319.1 306.8L310.8 302.7L312.1 300.2L298.6 293.6L299.0 289.8L284.3 282.8L280.3 292.6L283.4 293.7L284.3 291.1L286.3 292.3L288.2 288.4L289.0 288.8L288.6 289.7L291.5 291.1L290.9 296.4L289.7 296.0L288.8 298.6L290.6 299.2L290.4 313.7L294.3 313.9L294.3 315.8L297.7 315.9L297.6 322.7L290.2 323.0L288.3 337.9L289.7 337.8L289.9 338.6L291.3 350.4L282.7 351.4L283.9 318.9L282.5 313.9L289.8 314.6L289.9 310.1L281.4 309.8L282.2 308.1L281.4 308.2L276.9 298.5L277.4 297.9L269.1 292.9L261.0 290.1L260.5 291.2L247.2 292.1L242.1 291.1L246.0 285.0L239.3 280.8L244.9 271.9L244.0 271.3L238.5 280.3L229.9 274.8L229.1 275.7L217.6 261.6L217.2 258.6L224.4 261.8L223.2 264.5L226.2 266.0L230.3 257.9L231.6 258.5L234.1 256.3L236.8 257.7L242.3 253.5L240.5 251.4L237.9 253.2L235.4 249.5L227.8 247.4L229.7 240.6L229.1 237.0L237.9 233.6L234.1 228.9L237.8 226.1L244.8 236.2L256.6 243.4L253.7 248.1L255.7 252.1L264.0 250.8L264.8 254.9L265.3 253.8L267.9 239.3L258.9 233.8L256.5 225.7L257.6 207.7L253.5 224.3L251.5 224.6L251.2 210.4L244.8 211.8L232.9 217.5L234.4 220.4L231.1 218.0L229.2 220.1L216.7 210.9L218.4 208.6L216.7 207.3L218.4 205.0L224.4 209.4L222.7 211.8L229.5 216.8L237.0 212.0L235.7 209.4L255.0 202.4L257.7 166.3L253.7 167.3L253.0 165.1L250.8 165.8L251.5 168.0L248.9 168.7L248.0 166.6L244.2 168.5L245.2 170.5L237.9 175.1L236.7 172.5L245.7 166.9L255.4 163.4L255.8 159.0L258.3 159.2L258.7 154.4L255.8 154.8L254.6 149.1L259.3 148.1L257.3 135.2L249.0 136.4L248.8 137.4L225.8 130.8L207.4 126.8L205.9 133.1L195.5 138.6L199.2 146.3L190.4 150.5L191.7 153.1L183.3 157.5ZM258.3 279.7L259.9 275.8L274.1 282.8L275.9 278.7L260.0 270.8L254.5 278.2ZM287.5 274.8L287.8 271.2L282.8 269.3ZM254.0 268.2L252.4 270.8L254.1 271.8L255.7 269.2ZM322.4 253.9L319.1 253.3L315.4 263.1L321.5 266.3L326.8 256.4ZM316.6 258.6L311.7 255.9L309.6 260.0L314.5 262.6ZM232.4 218.3L231.4 216.0L231.1 215.8L230.4 216.7ZM195.7 56.1L192.0 55.7L193.3 57.5L194.5 57.5ZM298.3 361.0L307.1 368.3L316.5 357.6L311.7 352.6L298.0 358.8ZM334.0 415.8L342.4 405.0L340.2 403.3L346.6 395.1L340.8 390.4L332.6 401.0L338.5 405.5L330.9 415.1ZM359.9 404.7L355.0 400.7L352.4 404.0L356.2 407.0ZM336.3 391.0L333.2 388.6L328.9 394.0L330.2 395.0L332.3 392.4L334.1 393.8ZM339.7 367.6L334.3 374.4L341.6 380.4L347.1 373.5ZM348.8 362.7L349.7 363.5L351.1 361.7L350.2 361.0ZM335.1 367.3L338.0 363.7L332.6 359.3L329.7 362.9ZM326.6 403.3L324.8 401.9L320.5 407.4L322.3 408.8ZM301.8 366.6L305.3 369.7L306.5 368.3L302.2 364.5L301.0 365.9L299.4 366.0L299.5 367.0ZM362.5 369.1L359.6 372.7L363.1 375.5L366.1 372.0ZM374.2 257.8L372.6 255.6L371.8 256.4L371.6 257.5ZM526.5 325.7L532.5 317.2L528.1 316.5ZM516.8 292.6L517.6 287.5L514.8 287.0L513.8 292.6ZM507.0 288.6L513.8 289.7L514.0 288.6L507.2 287.4ZM516.2 278.3L515.9 280.3L518.4 280.8L518.6 279.6ZM130.1 142.8L142.8 140.1L145.1 144.1L140.6 143.6L135.0 153.1L131.1 150.8L132.4 148.7L131.6 148.3L130.6 149.8L126.9 147.6L127.2 142.5ZM125.4 104.7L122.4 114.4L113.2 129.7L108.2 134.0L94.4 128.7L67.1 121.2L29.4 114.8L35.7 99.3L43.9 104.0L41.9 107.1L47.8 108.4L48.0 107.6L59.5 110.4L61.3 103.0L59.8 102.7L60.7 96.8L81.3 100.3L81.4 99.7L89.6 100.4L94.0 99.2L100.7 99.6ZM185.2 89.9L190.2 89.8L190.2 91.8L188.8 93.5L185.2 93.2ZM21.0 81.2L23.1 87.8L19.5 88.7L18.3 83.3ZM124.8 101.4L88.1 89.2L79.3 83.7L79.7 82.6L50.5 70.8L93.1 71.2L103.5 69.8L125.5 63.5L128.5 78.4L127.9 81.0L125.6 81.9L125.5 84.4L128.3 86.5L129.0 88.5L127.1 97.2L125.0 99.0ZM179.8 60.5L162.6 59.1L162.8 57.3L165.7 57.6L165.7 55.1L179.7 56.4ZM73.2 56.6L48.7 57.2L41.7 54.7L57.7 28.8L93.4 50.0L90.4 62.1L75.2 62.8ZM178.4 35.2L183.2 29.8L188.3 32.6L182.8 38.4ZM215.5 214.2L210.6 216.5L208.8 212.5L213.7 210.3ZM216.9 196.0L210.8 203.0L196.7 192.3L199.4 188.9L201.2 190.4L202.2 189.2L206.3 192.5L211.8 188.9ZM215.6 189.0L228.7 180.9L239.1 198.1L226.0 205.3ZM229.4 180.5L228.3 177.8L233.7 174.3L234.9 177.0ZM204.0 51.7L208.5 57.2L200.2 56.4ZM315.3 338.0L314.7 331.8L320.1 331.2L320.8 337.3ZM340.9 288.0L340.1 289.8L341.5 290.5L345.5 291.9L347.9 289.4L361.0 295.7L357.9 301.8L358.5 299.5L357.1 298.9L356.0 300.9L351.5 298.7L352.8 296.8L352.1 296.5L350.7 295.8L349.3 297.8L346.7 296.5L348.0 293.8L325.8 285.2L327.0 282.5L331.2 284.1L330.2 286.2L333.9 287.6L334.8 285.5ZM315.6 278.3L321.3 280.4L320.3 282.5L322.0 283.1L323.4 281.2L322.2 283.8L307.3 278.4L308.6 275.8L308.0 278.0L309.7 278.6L310.5 276.4L313.9 277.7L312.8 279.8L314.6 280.4ZM341.9 278.3L332.5 273.3L333.9 270.5L343.4 275.6ZM330.5 221.2L334.7 219.9L338.9 225.1L331.3 227.2L331.7 225.2ZM423.8 331.5L418.6 328.5L420.0 326.0L425.2 328.9ZM421.0 324.2L416.3 321.7L419.0 317.3L424.2 311.9L426.7 314.6L422.0 319.3L426.2 323.3L422.5 321.3ZM411.9 315.7L410.6 315.0L411.3 312.7L413.0 313.7ZM402.3 307.0L399.8 312.7L386.9 305.8L389.6 300.3ZM363.2 256.8L350.1 254.5L350.6 251.3L348.6 251.0L350.5 239.6L362.8 254.9Z"/>
+          <path class="z-low zf" d="M226.4 265.9L223.2 264.5L224.4 261.8L217.2 258.6L217.7 256.5L222.4 254.0L230.3 257.9ZM153.1 247.9L182.0 250.2L181.8 253.2L154.7 251.0L150.7 251.4L150.9 249.0L147.7 249.6ZM206.4 243.4L205.3 249.0L192.0 248.0L192.8 238.9ZM229.1 237.0L229.7 240.6L221.9 237.9L223.1 233.0L226.0 229.8L231.1 231.0L234.2 235.1ZM83.1 231.1L86.6 241.6L85.2 241.8L85.5 245.3L82.8 245.9L81.9 237.4L74.8 238.2L81.1 222.2L85.2 221.9L87.7 229.4ZM231.1 218.0L239.9 224.1L244.1 222.4L245.8 226.8L239.7 229.0L237.8 226.1L235.4 227.9L232.1 222.5L229.2 220.1ZM41.2 238.3L31.7 200.9L37.9 203.9L37.1 207.3L48.0 208.0L45.0 206.0L48.4 200.8L50.2 201.6L54.9 206.0L55.1 209.1L51.9 209.7L51.7 212.1L47.8 211.3L45.8 228.9L52.6 231.0L58.9 229.9L60.3 237.3L49.0 239.0ZM196.7 192.3L212.2 204.0L209.6 205.7L199.6 198.4L198.6 199.0L192.3 194.0L194.9 190.8L191.3 187.9L193.2 185.6L191.0 183.8L195.6 178.4L202.9 184.7ZM215.6 189.0L219.4 194.5L216.9 196.0L211.8 188.9L206.3 192.5L202.2 189.2L203.7 187.4L206.5 189.7L212.8 185.4L209.3 180.8L223.1 172.8L227.1 182.0ZM184.7 149.8L186.5 148.9L187.9 151.7L186.1 152.7ZM140.0 156.1L135.0 153.1L140.6 143.6L143.6 143.5L146.0 145.9ZM183.6 157.2L191.7 153.1L190.4 150.5L199.2 146.3L195.5 138.6L205.9 133.1L207.4 126.8L248.2 136.8L226.5 144.3L213.2 150.1L214.3 152.8L210.5 154.9L211.9 157.4L206.0 160.8L207.6 163.6L201.9 167.1L197.0 172.5L191.3 169.5L178.5 157.6L180.4 155.5ZM203.1 148.2L207.8 155.9L213.7 152.4L210.3 144.7ZM162.9 150.7L158.5 152.4L150.2 143.3L155.6 139.8L163.9 149.2L164.5 151.0ZM179.0 133.8L181.7 139.5L178.8 140.9L175.6 134.6ZM21.3 81.0L29.6 74.1L26.5 78.9L31.9 85.8L20.1 91.5L19.5 88.7L23.1 87.8ZM332.6 401.0L340.8 390.4L346.6 395.1L340.2 403.3L342.4 405.0L334.0 415.8L330.9 415.1L338.5 405.5ZM339.5 399.9L341.2 401.3L343.2 398.7L339.9 396.0L339.1 397.0L340.8 398.3ZM334.3 374.4L339.7 367.6L347.1 373.5L341.6 380.4ZM311.7 352.6L316.5 357.6L307.1 368.3L298.3 361.0L298.0 358.8ZM418.0 322.6L419.6 323.4L417.8 324.7L417.0 324.3ZM298.6 293.6L312.1 300.2L310.8 302.7L319.1 306.8L320.7 304.3L325.3 306.8L326.1 305.8L328.2 307.2L326.9 308.9L338.5 316.8L334.3 320.7L343.2 327.0L340.9 329.6L360.5 345.5L364.2 341.3L368.3 344.7L367.2 346.1L366.1 345.2L365.1 346.7L366.2 347.6L365.1 349.2L366.9 350.7L363.8 355.3L340.4 336.4L333.2 339.6L330.7 337.1L313.3 345.6L311.5 342.9L313.3 341.6L313.0 338.7L310.1 339.0L310.0 338.1L301.3 339.1L301.7 342.5L300.8 342.6L301.0 344.3L300.2 344.4L299.2 346.7L299.6 350.7L297.2 351.4L297.7 355.9L293.0 358.0L291.8 355.0L289.9 338.6L289.7 337.8L288.3 337.9L289.4 331.3L288.6 331.3L290.2 323.0L297.6 322.7L297.7 315.9L294.3 315.8L294.3 313.9L290.4 313.7L290.6 299.2L288.8 298.6L289.7 296.0L290.9 296.4L291.5 291.1L288.6 289.7L289.0 288.8L288.2 288.4L286.3 292.3L284.3 291.1L283.4 293.7L280.3 292.6L284.3 282.8L299.0 289.8ZM314.7 331.8L315.3 338.0L320.8 337.3L320.1 331.2ZM316.8 311.0L318.0 309.3L316.9 308.6L315.9 310.4ZM517.6 287.5L516.7 293.0L513.8 292.6L514.8 287.0ZM348.6 251.0L350.6 251.3L350.1 254.5L363.2 256.8L362.0 253.9L369.2 253.8L369.9 254.5L368.8 260.9L375.3 262.0L389.0 277.3L390.5 274.4L388.5 272.1L392.2 264.9L431.8 271.9L432.9 269.0L445.9 271.3L444.7 274.3L497.4 283.4L497.0 285.6L499.1 286.0L499.6 283.8L507.0 285.1L504.6 299.4L512.4 300.7L510.5 312.2L501.7 310.6L500.1 313.4L474.2 308.8L474.7 305.9L458.6 303.1L458.1 305.4L451.6 304.5L451.8 303.2L442.4 300.2L433.3 321.8L424.2 311.9L419.3 316.8L416.3 321.7L412.7 319.8L414.2 316.9L412.9 316.2L411.2 319.2L412.4 319.8L410.4 323.9L423.8 331.5L424.9 329.5L429.4 331.0L421.8 349.9L402.5 347.9L402.8 345.0L392.8 344.1L392.7 345.8L385.4 339.9L386.5 337.1L375.4 328.2L381.9 315.5L374.8 312.3L373.6 314.6L370.3 312.9L380.2 295.3L360.1 284.5L358.7 287.3L351.9 283.7L350.2 286.2L374.3 299.1L369.9 307.5L367.3 306.3L360.2 319.7L344.9 308.0L342.3 311.6L335.6 306.0L330.4 303.2L329.4 301.9L330.5 300.6L327.9 298.9L319.5 295.3L318.9 296.6L314.1 293.8L314.6 292.7L310.1 290.5L309.5 291.6L302.5 288.2L302.9 287.3L292.4 275.6L293.8 273.4L298.4 275.1L304.6 258.3L321.5 267.4L330.2 251.0L343.0 253.3L345.7 237.2L335.8 235.5L335.0 240.5L329.1 239.6L327.1 250.5L315.7 248.5L320.1 224.2L330.5 221.2L331.7 225.2L331.3 227.2L338.9 225.1L350.5 239.6ZM504.5 306.3L503.0 310.3L505.8 310.7L506.9 306.5ZM485.9 305.0L489.1 305.5L489.5 303.2L486.3 302.7ZM470.5 298.9L460.2 297.0L459.3 302.2L469.5 304.5ZM435.5 294.9L440.4 283.2L429.7 278.3L424.9 290.1ZM419.5 312.7L417.8 311.1L416.0 313.0L417.7 314.5ZM413.0 313.8L411.3 312.7L410.6 315.0L411.9 315.7ZM403.2 283.8L401.5 286.6L403.1 288.4L405.3 284.7ZM402.3 307.0L389.6 300.3L386.9 305.8L399.8 312.7ZM395.1 338.9L395.4 337.6L393.7 337.1L393.4 338.4ZM390.1 330.0L387.7 335.6L392.9 337.6L393.6 334.9L391.2 334.3L392.6 330.6ZM387.6 303.6L378.6 298.8L375.9 303.9L385.1 308.4ZM371.9 280.3L370.8 282.3L373.9 284.0L374.8 281.9ZM354.6 262.9L353.0 261.9L346.3 273.1L345.5 272.6L343.4 275.6L333.9 270.5L332.5 273.3L346.3 280.7L348.1 277.8L351.0 279.4L353.1 276.7L356.2 278.2L361.2 270.3L355.2 265.9L357.5 262.0L355.7 260.9ZM327.0 282.5L325.8 285.2L348.0 293.8L346.7 296.5L349.3 297.8L350.7 295.8L352.1 296.5L352.8 296.8L351.5 298.7L356.0 300.9L357.1 298.9L358.5 299.5L357.9 301.8L361.0 295.7L347.9 289.4L345.5 291.9L340.1 289.9L341.0 287.8L334.8 285.5L333.9 287.6L330.2 286.2L331.2 284.1ZM350.2 287.0L348.7 289.2L350.7 290.2L351.9 287.8ZM332.4 293.6L331.6 295.8L333.1 296.4L334.9 294.6ZM307.3 278.4L322.2 283.8L323.4 281.2L322.0 283.1L320.3 282.5L321.3 280.4L319.5 279.7L315.6 278.3L314.6 280.4L313.8 280.1L312.8 279.8L313.9 277.7L310.5 276.4L309.7 278.6L308.0 278.0L308.6 275.8ZM518.4 280.8L515.9 280.3L516.2 278.3L518.6 279.6ZM260.0 270.8L275.9 278.7L274.1 282.8L259.9 275.8L258.1 280.1L254.5 278.2ZM505.5 269.7L502.5 269.2L514.0 277.1L508.6 276.1L508.1 278.9L472.7 272.9L474.6 269.1L478.5 270.9L486.1 272.2L487.2 266.0L489.6 266.4L489.9 264.9L491.1 264.8L491.9 266.8L492.1 265.3L499.7 266.2L500.2 263.4L507.9 268.8ZM457.2 261.1L455.6 269.9L433.5 266.0L435.2 256.2L445.6 257.2ZM398.9 259.9L399.4 257.4L396.3 257.0L395.1 259.3L382.1 256.9L382.7 253.5L397.5 253.1L414.9 254.3L412.1 262.2ZM294.4 234.7L305.3 231.6L302.8 246.2L300.1 245.7L301.4 238.0L294.1 236.3ZM251.4 219.7L251.5 224.6L249.6 225.2L247.3 221.2ZM263.0 187.9L272.5 189.5L272.5 188.6L280.9 188.1L282.0 173.9L281.4 156.9L285.6 163.8L309.8 191.4L294.3 203.7L291.7 199.6L280.0 199.2L280.4 193.1L272.3 192.6L270.4 203.2L263.1 202.7L263.8 194.8L262.4 194.7ZM259.3 148.1L249.6 149.8L249.4 145.8L247.1 139.7L249.1 139.3L249.0 136.4L257.3 135.2Z"/>
+          <path class="z-banned zf" d="M133.1 279.3L130.5 290.6L118.0 316.9L113.8 319.6L106.2 321.3L108.4 327.2L106.0 321.1L113.2 319.4L117.6 316.8L129.7 289.7L131.5 279.1L132.8 260.5L108.4 256.5L110.2 246.3L108.1 246.5L107.8 245.5L119.1 245.7L119.5 241.1L107.5 244.2L106.7 241.3L92.4 243.9L85.2 221.9L81.1 222.2L71.0 248.1L57.2 245.7L56.7 249.4L43.4 247.9L41.2 238.3L49.0 239.0L60.3 237.3L58.9 229.9L52.6 231.0L45.8 228.9L47.8 211.3L51.7 212.1L51.9 209.7L55.1 209.1L54.9 206.0L63.2 207.8L70.5 213.2L85.9 216.6L89.5 216.7L95.0 214.3L100.3 209.2L105.8 206.1L104.9 199.0L105.5 196.5L116.1 181.9L127.6 178.1L125.5 170.1L127.8 170.6L128.3 164.6L140.9 172.2L147.4 161.3L137.1 155.0L135.4 157.8L137.9 159.3L135.2 164.0L128.7 160.3L129.3 153.5L131.6 148.3L132.4 148.7L131.1 150.8L140.0 156.1L146.0 145.9L154.6 154.3L164.0 150.7L179.2 158.0L191.3 169.5L197.0 172.5L201.9 167.1L207.6 163.6L206.0 160.8L211.9 157.4L210.5 154.9L214.3 152.8L213.2 150.1L226.5 144.3L248.4 137.0L249.1 139.3L247.1 139.7L249.4 145.8L249.6 149.8L254.6 149.1L255.8 154.8L258.7 154.4L258.3 159.2L255.8 159.0L255.4 163.4L245.7 166.9L236.7 172.5L237.9 175.1L245.2 170.5L244.2 168.5L248.0 166.6L248.9 168.7L251.5 168.0L250.8 165.8L253.0 165.1L253.7 167.3L257.7 166.3L255.0 202.4L235.7 209.4L237.0 212.0L229.5 216.8L222.7 211.8L224.4 209.4L218.4 205.0L216.7 207.3L218.4 208.6L216.7 210.9L232.1 222.5L235.4 227.9L234.1 228.9L237.9 233.6L234.4 235.3L231.1 231.0L226.0 229.8L223.1 233.0L221.9 237.9L229.7 240.6L227.8 247.4L235.4 249.5L237.9 253.2L240.5 251.4L242.3 253.5L236.8 257.7L234.1 256.3L231.6 258.5L221.8 253.8L205.1 252.1L206.4 243.4L192.8 238.9L191.7 251.0L155.5 248.0L150.8 248.3L145.5 250.6L155.3 254.9L154.9 256.4L159.4 261.1L161.2 265.7L162.3 265.3L163.1 269.5L162.1 269.7L164.4 285.6L139.6 290.0L137.3 283.4L137.6 281.3L140.1 280.3L139.3 278.2ZM195.4 178.7L191.0 183.8L169.2 170.2L165.5 174.7L186.9 188.0L185.5 189.5L191.4 194.4L192.3 194.0L198.6 199.0L199.6 198.4L209.6 205.7L212.2 204.0L210.8 203.0L215.0 197.3L219.4 194.5L226.0 205.3L239.1 198.1L228.7 180.9L227.1 182.0L223.1 172.8L209.3 180.8L212.8 185.4L206.5 189.7L203.7 187.4L201.2 190.4L199.4 188.9L202.9 184.7ZM128.4 243.6L130.8 243.7L130.6 248.2L144.9 250.4L145.8 247.8L143.0 248.1L137.9 245.7L138.5 241.9L137.2 237.2L128.6 239.5ZM171.4 248.6L174.8 248.9L174.3 246.5L172.4 246.4L171.9 244.1L170.4 244.0ZM138.7 200.1L146.1 198.8L146.6 195.6L144.7 195.8L144.4 192.8L137.2 194.2ZM113.8 212.3L114.6 214.7L120.8 213.0L118.0 213.7L117.3 211.4ZM213.6 246.6L217.6 237.3L215.0 236.4L212.5 246.2L210.2 247.3L208.8 251.7L213.3 252.1L214.8 248.8ZM234.7 177.1L233.7 174.3L228.3 177.8L229.4 180.5ZM215.5 214.2L213.7 210.3L208.8 212.5L210.6 216.5ZM23.5 188.9L6.0 151.8L17.8 149.5L20.7 147.5L23.0 143.0L25.0 131.8L28.2 132.6L26.2 143.4L23.6 149.1L19.5 152.5L10.2 154.5L23.8 181.3L25.5 188.8L36.2 192.9L36.0 193.8ZM187.6 125.2L181.3 125.7L181.4 127.7L171.3 127.7L171.2 126.7L167.5 125.3L167.2 117.5L187.8 121.9ZM44.8 95.3L45.2 98.1L37.4 95.1L29.4 114.8L25.5 114.2L20.1 91.5L31.9 85.8L31.9 85.0L43.6 82.2L44.0 89.3L49.0 88.5L50.2 96.1ZM187.2 24.3L205.8 53.1L204.0 51.7L200.2 56.4L196.6 56.0L197.6 54.9L192.9 50.9L191.1 49.8L190.2 51.2L188.6 50.0L189.1 49.2L180.7 40.6L171.2 33.8L169.5 36.8L177.0 41.9L174.9 44.7L180.0 49.4L168.8 48.5L168.8 49.4L165.7 49.1L165.7 50.1L163.3 50.4L130.1 47.5L133.9 43.7L138.1 41.6L144.6 41.0L145.9 42.9L160.5 32.9L159.3 29.4L168.3 16.5L169.6 12.3L169.6 7.0L170.6 6.0ZM188.3 32.6L183.2 29.8L178.4 35.2L182.8 38.4ZM359.9 361.1L353.2 355.7L357.6 350.3L363.8 355.3ZM374.8 312.3L381.9 315.5L375.4 328.2L366.2 320.8L370.3 312.9L373.6 314.6ZM358.7 268.0L358.3 268.5L361.2 270.3L356.2 278.2L353.1 276.7L351.0 279.4L348.1 277.8L346.3 280.7L341.9 278.3L345.5 272.6L346.3 273.1L353.0 261.9L356.3 264.0L355.2 265.9ZM315.7 248.5L302.8 246.2L305.3 231.6L303.2 232.1L295.6 202.7L309.8 191.4L315.5 192.1L333.2 211.5L329.5 213.7L334.7 219.9L320.1 224.2ZM245.8 226.8L244.1 222.4L239.9 224.1L234.4 220.4L232.9 217.5L244.8 211.8L251.2 210.4L251.4 219.7L247.3 221.2L249.6 225.2ZM281.4 156.9L282.0 173.9L280.9 188.1L272.5 188.6L272.5 189.5L263.0 187.9L265.2 159.7L261.8 159.4L262.3 152.9L267.6 153.2L267.9 149.2L277.0 149.9ZM279.1 180.4L279.1 184.2L280.6 184.2L280.9 180.5ZM274.4 179.0L268.0 178.0L267.9 181.5L271.5 181.7L271.5 184.1L273.8 184.1ZM189.8 67.9L193.9 65.0L229.3 107.9L232.7 111.4L249.2 122.4L255.6 130.4L256.8 133.6L213.0 123.8L213.3 119.5L199.8 117.4L199.8 120.7L178.3 115.7L178.2 112.9L167.0 110.5L167.2 113.2L155.8 110.8L155.3 101.3L154.2 101.4L152.5 98.8L152.1 90.3L153.2 90.4L152.7 74.3L155.6 74.3L155.6 73.1L152.7 73.2L152.3 61.7L153.3 61.6L153.2 58.6L152.1 58.2L179.8 60.5L179.7 56.4L185.9 57.0L185.8 58.2L189.7 58.5ZM210.4 118.4L213.3 118.6L213.6 110.0L210.6 109.9ZM208.9 118.1L209.7 108.6L200.9 108.1L200.6 116.4ZM190.4 78.2L193.7 75.6L195.1 77.3L195.7 76.9L194.3 75.1L195.3 74.2L193.2 71.6L190.4 73.9ZM188.8 93.5L190.2 89.8L185.2 89.9L185.2 93.2ZM209.8 59.2L230.6 91.6L239.8 103.1L251.6 90.8L254.9 97.7L261.7 108.2L269.8 117.7L260.2 124.8L253.8 117.1L255.0 116.1L250.3 110.9L248.0 113.1L244.1 110.6L243.2 108.7L244.9 107.0L243.6 105.5L244.6 104.6L242.6 101.8L237.8 106.2L235.7 104.7L203.0 65.3L205.7 63.1L205.0 60.7L207.0 58.9Z"/>
+          <g class="z-hoods"><path d="M388.5 272.0L437.8 326.9L438.8 329.9L446.0 333.6L443.9 344.6L439.4 351.7L411.0 371.3L357.2 327.9L363.0 320.7Z"/><path d="M158.6 112.5L260.9 136.2L262.7 146.7L256.5 225.7L259.8 234.4L266.3 238.8L272.7 239.9L267.8 242.5L266.3 248.7L244.8 236.2L234.4 220.4L188.9 186.0L122.5 146.1L125.7 135.0L132.2 124.3L136.8 119.3L143.9 115.3L151.9 112.9Z"/><path d="M460.1 262.0L446.0 333.6L438.8 329.9L437.8 326.9L372.0 253.7L397.5 253.1L445.6 257.2Z"/><path d="M336.8 222.4L361.9 253.9L372.0 253.7L388.5 272.0L363.0 320.7L357.2 327.9L330.0 305.9L302.9 291.6L282.2 268.9L261.3 261.4L265.3 253.8L267.1 243.7L269.3 241.2Z"/><path d="M30.8 72.7L57.7 28.8L112.3 60.7L113.4 56.8L129.0 40.7L136.3 36.7L146.6 36.1L153.2 31.1L160.0 24.7L166.8 14.6L170.6 6.0L187.2 24.3L230.6 91.6L239.8 103.1L251.6 90.8L261.7 108.2L275.9 125.7L270.1 129.9L273.5 135.8L268.9 138.8L272.1 143.1L265.7 138.7L254.7 134.0L106.2 99.8L93.7 94.7L68.9 80.1L49.2 74.1Z"/><path d="M18.3 83.3L30.8 72.7L38.8 72.8L53.5 75.1L72.3 81.5L92.5 94.1L102.6 98.7L166.4 113.7L153.6 112.6L140.7 116.8L135.6 120.4L130.2 127.2L124.8 137.2L122.5 146.1L119.7 149.5L87.5 158.9L62.7 172.1L40.4 160.7L30.7 158.2L20.1 148.1L23.0 143.0L27.1 120.8Z"/><path d="M31.7 200.9L39.2 204.5L37.7 198.6L38.4 196.3L36.0 193.8L23.5 188.9L6.0 151.8L20.1 148.1L30.7 158.2L40.4 160.7L62.7 172.1L76.0 184.9L99.1 199.4L85.0 216.1L70.4 251.9L43.4 247.9Z"/><path d="M141.2 336.0L136.3 338.5L129.8 339.8L117.0 334.7L110.6 334.6L106.0 321.1L113.2 319.4L117.6 316.9L126.9 297.1L130.7 284.5L132.8 260.5L108.4 256.5L110.2 246.3L70.4 251.9L85.0 216.1L99.1 199.4L76.0 184.9L62.7 172.1L87.5 158.9L108.3 152.2L118.1 150.6L122.5 146.1L188.9 186.0L234.4 220.4L244.8 236.2L266.3 248.7L262.8 260.3L237.7 299.6L233.0 297.1L229.6 293.4L216.4 270.0L205.1 259.7L199.7 257.4L189.5 257.6L185.2 258.6L180.2 261.7L176.2 267.4L175.4 272.2L183.2 285.3L184.0 295.3L171.3 307.7L157.1 317.3Z"/><path d="M237.7 299.6L261.3 261.4L266.5 262.6L282.5 269.1L302.9 291.6L330.0 305.9L357.2 327.9L355.2 330.3L347.7 332.5L277.5 364.7L275.9 319.2L272.1 308.3L269.6 304.6L260.9 300.9L243.6 301.6Z"/><path d="M277.5 364.7L347.7 332.5L355.2 330.3L357.2 327.9L411.0 371.3L329.6 426.0L317.8 437.4L300.3 434.0L283.5 422.1L280.8 418.6L276.3 409.5L275.8 405.9L279.0 383.2Z"/><path d="M518.5 391.8L445.8 419.4L398.5 430.7L377.0 434.3L334.9 437.5L317.8 437.4L329.8 425.9L437.4 353.6L443.5 345.7L446.0 333.6L487.2 357.2L536.4 362.2L527.3 379.4L520.4 386.3Z"/><path d="M512.2 255.4L519.0 260.1L522.2 260.6L526.3 259.9L531.6 256.8L541.3 269.1L544.9 268.8L552.3 263.4L554.0 268.9L590.3 276.9L606.0 298.4L571.5 299.4L541.7 343.3L538.7 358.9L536.4 362.2L487.2 357.2L446.0 333.6L460.1 262.0L468.9 264.9L472.9 256.4L475.7 261.3L479.0 262.8L491.6 261.8L496.1 258.6L503.9 255.7L506.9 258.3Z"/><path d="M329.6 213.9L336.8 222.4L272.7 239.9L266.3 238.8L258.8 233.4L256.5 225.7L262.7 146.7L260.9 136.2L272.1 143.1L285.6 163.8L309.3 191.4L315.5 192.1L333.2 211.5Z"/></g>
+          <path class="z-edge" d="M187.2 24.3L230.6 91.6L239.8 103.1L251.6 90.8L254.9 97.7L261.7 108.2L275.9 125.7L270.1 129.9L273.5 135.8L268.9 138.8L276.7 149.4L285.6 163.8L309.3 191.4L315.5 192.1L333.2 211.5L329.5 213.7L361.9 253.9L397.5 253.1L421.1 254.7L445.6 257.2L468.9 264.9L472.9 256.4L475.8 261.4L479.2 262.8L491.6 261.8L494.2 260.6L496.1 258.6L503.9 255.7L507.2 258.3L510.9 255.7L513.3 255.5L519.0 260.1L521.1 260.6L525.9 260.1L531.5 256.7L534.1 259.0L538.4 266.2L541.0 269.0L544.6 269.0L552.3 263.4L554.0 268.9L590.3 276.9L606.0 298.4L571.5 299.4L541.7 343.3L538.7 358.9L527.3 379.4L520.4 386.3L518.5 391.9L445.8 419.4L398.5 430.7L387.0 432.7L377.0 434.3L334.9 437.5L321.4 437.9L300.3 434.0L283.5 422.1L280.8 418.6L276.3 409.5L275.8 405.9L279.0 379.8L276.6 349.1L275.9 319.2L273.9 311.6L269.6 304.6L266.1 302.3L259.3 300.7L248.8 301.8L243.6 301.6L240.5 300.8L233.0 297.1L229.0 292.4L216.4 270.0L205.1 259.7L199.7 257.4L189.5 257.6L185.2 258.6L180.2 261.7L176.2 267.4L175.4 272.2L175.8 274.3L183.2 285.3L184.0 295.3L181.2 298.7L171.3 307.7L161.3 313.9L157.1 317.3L141.2 336.0L136.3 338.5L129.8 339.8L126.9 339.3L117.0 334.7L114.5 334.2L110.6 334.6L106.0 321.1L113.2 319.4L117.6 316.9L126.9 297.1L129.7 289.7L130.7 284.5L132.8 260.5L108.4 256.5L110.2 246.3L89.4 248.5L72.7 252.2L43.4 247.9L31.7 200.9L39.2 204.5L39.5 203.4L37.7 198.6L38.4 196.3L36.0 193.8L30.3 192.2L23.5 188.9L23.7 187.8L22.1 186.6L21.0 182.7L6.0 151.8L17.8 149.5L20.7 147.5L23.0 143.0L27.1 120.8L18.3 83.3L30.2 73.6L57.7 28.8L112.3 60.7L113.4 56.8L129.0 40.7L136.3 36.7L146.6 36.1L153.2 31.1L160.0 24.7L166.8 14.6L169.6 6.8L170.6 6.0Z"/>
+          <g class="z-lbl" aria-hidden="true"><text x="394.8" y="325.8">The Port</text><text x="222.5" y="169.1">Neighborhood Nine</text><text x="324.2" y="267.0">Mid-Cambridge</text><text x="168.4" y="75.4">North Cambridge</text><text x="146.2" y="219.1">West Cambridge</text><text x="303.5" y="326.8">Riverside</text><text x="317.5" y="392.5">Cambridgeport</text><text x="504.1" y="313.4">East Cambridge</text></g>
+        
+          <!-- TODO: pins are placed at approximate points on each street; move to the exact addresses of the photographed buildings -->
+          <g class="z-pins" aria-hidden="true"><g class="z-pin" data-pin="1" transform="translate(219.5 194.5)"><circle r="7"/></g><g class="z-pin" data-pin="2" transform="translate(247.4 179.5)"><circle r="7"/></g><g class="z-pin" data-pin="3" transform="translate(280.3 175.3)"><circle r="7"/></g><g class="z-pin" data-pin="4" transform="translate(317.5 279.8)"><circle r="7"/></g></g>
+        </svg>
+        <figcaption>
+          <ul class="map-key">
+            <li><i style="background:var(--red)"></i>Apartments banned</li>
+            <li><i style="background:var(--sea)"></i>Low density only</li>
+            <li><i style="background:var(--teal)"></i>Apartments allowed</li>
+            <li><i style="background:#C9D3D1"></i>Parks and industrial</li>
+            <li><i class="key-dot"></i>Homes shown in "Illegal to build"</li>
+          </ul>
+          <p class="source">Zoning districts as of March 2024, before the 2025 ordinance. Official boundaries from <a href="https://github.com/cambridgegis/cambridgegis_data" target="_blank" rel="noopener">City of Cambridge GIS</a>.</p>
+        </figcaption>
+      </div>
+      <div class="map-pane" id="paneR" role="tabpanel" aria-labelledby="tabR" hidden>
+        <svg class="zmap hmap" id="dmap" viewBox="0 0 612 444" role="img" aria-labelledby="dmap-t">
+          <title id="dmap-t">Diversity index by neighborhood. West Cambridge is the least diverse neighborhood at 0.29; North Cambridge, Area 2/MIT, and The Port are the most diverse, at 0.57 to 0.60.</title>
+          <g class="h-fill"><path d="M388.5 272.0L437.8 326.9L438.8 329.9L446.0 333.6L443.9 344.6L439.4 351.7L411.0 371.3L357.2 327.9L363.0 320.7Z" fill="#0F3B38"/><path d="M158.6 112.5L260.9 136.2L262.7 146.7L256.5 225.7L259.8 234.4L266.3 238.8L272.7 239.9L267.8 242.5L266.3 248.7L244.8 236.2L234.4 220.4L188.9 186.0L122.5 146.1L125.7 135.0L132.2 124.3L136.8 119.3L143.9 115.3L151.9 112.9Z" fill="#A7D4C9"/><path d="M460.1 262.0L446.0 333.6L438.8 329.9L437.8 326.9L372.0 253.7L397.5 253.1L445.6 257.2Z" fill="#A7D4C9"/><path d="M336.8 222.4L361.9 253.9L372.0 253.7L388.5 272.0L363.0 320.7L357.2 327.9L330.0 305.9L302.9 291.6L282.2 268.9L261.3 261.4L265.3 253.8L267.1 243.7L269.3 241.2Z" fill="#A7D4C9"/><path d="M30.8 72.7L57.7 28.8L112.3 60.7L113.4 56.8L129.0 40.7L136.3 36.7L146.6 36.1L153.2 31.1L160.0 24.7L166.8 14.6L170.6 6.0L187.2 24.3L230.6 91.6L239.8 103.1L251.6 90.8L261.7 108.2L275.9 125.7L270.1 129.9L273.5 135.8L268.9 138.8L272.1 143.1L265.7 138.7L254.7 134.0L106.2 99.8L93.7 94.7L68.9 80.1L49.2 74.1Z" fill="#0F3B38"/><path d="M18.3 83.3L30.8 72.7L38.8 72.8L53.5 75.1L72.3 81.5L92.5 94.1L102.6 98.7L166.4 113.7L153.6 112.6L140.7 116.8L135.6 120.4L130.2 127.2L124.8 137.2L122.5 146.1L119.7 149.5L87.5 158.9L62.7 172.1L40.4 160.7L30.7 158.2L20.1 148.1L23.0 143.0L27.1 120.8Z" fill="#3D8C81"/><path d="M31.7 200.9L39.2 204.5L37.7 198.6L38.4 196.3L36.0 193.8L23.5 188.9L6.0 151.8L20.1 148.1L30.7 158.2L40.4 160.7L62.7 172.1L76.0 184.9L99.1 199.4L85.0 216.1L70.4 251.9L43.4 247.9Z" fill="#3D8C81"/><path d="M141.2 336.0L136.3 338.5L129.8 339.8L117.0 334.7L110.6 334.6L106.0 321.1L113.2 319.4L117.6 316.9L126.9 297.1L130.7 284.5L132.8 260.5L108.4 256.5L110.2 246.3L70.4 251.9L85.0 216.1L99.1 199.4L76.0 184.9L62.7 172.1L87.5 158.9L108.3 152.2L118.1 150.6L122.5 146.1L188.9 186.0L234.4 220.4L244.8 236.2L266.3 248.7L262.8 260.3L237.7 299.6L233.0 297.1L229.6 293.4L216.4 270.0L205.1 259.7L199.7 257.4L189.5 257.6L185.2 258.6L180.2 261.7L176.2 267.4L175.4 272.2L183.2 285.3L184.0 295.3L171.3 307.7L157.1 317.3Z" fill="#F7E1DC"/><path d="M237.7 299.6L261.3 261.4L266.5 262.6L282.5 269.1L302.9 291.6L330.0 305.9L357.2 327.9L355.2 330.3L347.7 332.5L277.5 364.7L275.9 319.2L272.1 308.3L269.6 304.6L260.9 300.9L243.6 301.6Z" fill="#3D8C81"/><path d="M277.5 364.7L347.7 332.5L355.2 330.3L357.2 327.9L411.0 371.3L329.6 426.0L317.8 437.4L300.3 434.0L283.5 422.1L280.8 418.6L276.3 409.5L275.8 405.9L279.0 383.2Z" fill="#3D8C81"/><path d="M518.5 391.8L445.8 419.4L398.5 430.7L377.0 434.3L334.9 437.5L317.8 437.4L329.8 425.9L437.4 353.6L443.5 345.7L446.0 333.6L487.2 357.2L536.4 362.2L527.3 379.4L520.4 386.3Z" fill="#0F3B38"/><path d="M512.2 255.4L519.0 260.1L522.2 260.6L526.3 259.9L531.6 256.8L541.3 269.1L544.9 268.8L552.3 263.4L554.0 268.9L590.3 276.9L606.0 298.4L571.5 299.4L541.7 343.3L538.7 358.9L536.4 362.2L487.2 357.2L446.0 333.6L460.1 262.0L468.9 264.9L472.9 256.4L475.7 261.3L479.0 262.8L491.6 261.8L496.1 258.6L503.9 255.7L506.9 258.3Z" fill="#3D8C81"/><path d="M329.6 213.9L336.8 222.4L272.7 239.9L266.3 238.8L258.8 233.4L256.5 225.7L262.7 146.7L260.9 136.2L272.1 143.1L285.6 163.8L309.3 191.4L315.5 192.1L333.2 211.5Z" fill="#A7D4C9"/></g>
+          <path class="z-edge" d="M187.2 24.3L230.6 91.6L239.8 103.1L251.6 90.8L254.9 97.7L261.7 108.2L275.9 125.7L270.1 129.9L273.5 135.8L268.9 138.8L276.7 149.4L285.6 163.8L309.3 191.4L315.5 192.1L333.2 211.5L329.5 213.7L361.9 253.9L397.5 253.1L421.1 254.7L445.6 257.2L468.9 264.9L472.9 256.4L475.8 261.4L479.2 262.8L491.6 261.8L494.2 260.6L496.1 258.6L503.9 255.7L507.2 258.3L510.9 255.7L513.3 255.5L519.0 260.1L521.1 260.6L525.9 260.1L531.5 256.7L534.1 259.0L538.4 266.2L541.0 269.0L544.6 269.0L552.3 263.4L554.0 268.9L590.3 276.9L606.0 298.4L571.5 299.4L541.7 343.3L538.7 358.9L527.3 379.4L520.4 386.3L518.5 391.9L445.8 419.4L398.5 430.7L387.0 432.7L377.0 434.3L334.9 437.5L321.4 437.9L300.3 434.0L283.5 422.1L280.8 418.6L276.3 409.5L275.8 405.9L279.0 379.8L276.6 349.1L275.9 319.2L273.9 311.6L269.6 304.6L266.1 302.3L259.3 300.7L248.8 301.8L243.6 301.6L240.5 300.8L233.0 297.1L229.0 292.4L216.4 270.0L205.1 259.7L199.7 257.4L189.5 257.6L185.2 258.6L180.2 261.7L176.2 267.4L175.4 272.2L175.8 274.3L183.2 285.3L184.0 295.3L181.2 298.7L171.3 307.7L161.3 313.9L157.1 317.3L141.2 336.0L136.3 338.5L129.8 339.8L126.9 339.3L117.0 334.7L114.5 334.2L110.6 334.6L106.0 321.1L113.2 319.4L117.6 316.9L126.9 297.1L129.7 289.7L130.7 284.5L132.8 260.5L108.4 256.5L110.2 246.3L89.4 248.5L72.7 252.2L43.4 247.9L31.7 200.9L39.2 204.5L39.5 203.4L37.7 198.6L38.4 196.3L36.0 193.8L30.3 192.2L23.5 188.9L23.7 187.8L22.1 186.6L21.0 182.7L6.0 151.8L17.8 149.5L20.7 147.5L23.0 143.0L27.1 120.8L18.3 83.3L30.2 73.6L57.7 28.8L112.3 60.7L113.4 56.8L129.0 40.7L136.3 36.7L146.6 36.1L153.2 31.1L160.0 24.7L166.8 14.6L169.6 6.8L170.6 6.0Z"/>
+          <g class="h-lbl" aria-hidden="true"><text x="394.8" y="327.8" fill="#F3F7F6">.57</text><text x="222.5" y="171.1" fill="#122322">.44</text><text x="430.5" y="287.6" fill="#122322">.46</text><text x="324.2" y="269.0" fill="#122322">.42</text><text x="168.4" y="77.4" fill="#F3F7F6">.60</text><text x="66.6" y="131.0" fill="#F3F7F6">.56</text><text x="63.5" y="211.2" fill="#F3F7F6">.55</text><text x="146.2" y="221.1" fill="#122322">.29</text><text x="303.5" y="328.8" fill="#F3F7F6">.55</text><text x="317.5" y="394.5" fill="#F3F7F6">.54</text><text x="458.5" y="385.1" fill="#F3F7F6">.59</text><text x="504.1" y="315.4" fill="#F3F7F6">.55</text><text x="286.3" y="213.7" fill="#122322">.41</text></g>
+        </svg>
+        <figcaption>
+          <ul class="map-key">
+            <li><i style="background:#F7E1DC;outline:1px solid var(--line)"></i>0.29, least diverse</li>
+            <li><i style="background:#A7D4C9"></i>0.41 to 0.46</li>
+            <li><i style="background:#3D8C81"></i>0.47 to 0.56</li>
+            <li><i style="background:#0F3B38"></i>0.57 to 0.60, most diverse</li>
+          </ul>
+          <p class="source">Racial diversity index (Gini-Simpson) by neighborhood, redrawn on official neighborhood boundaries. Values from <a href="https://www.cambridgema.gov/-/media/files/cdd/zoningdevel/amendments/2022/singleandtwofamily/cddpresentationenvisioncambridgecontext.pdf#page=16" target="_blank" rel="noopener">City of Cambridge CDD, Jan 2022, p. 16</a> (2013 to 2017 American Community Survey). <a href="images/cdd-diversity-map.jpg" target="_blank" rel="noopener">See the original</a>.</p>
+        </figcaption>
+      </div>
+      <div class="map-pane" id="paneU" role="tabpanel" aria-labelledby="tabU" hidden>
+        <svg class="zmap hmap" id="umap" viewBox="0 0 612 444" role="img" aria-labelledby="umap-t">
+          <title id="umap-t">Net homes permitted by neighborhood since 2018. East Cambridge added 1,690 and North Cambridge 834, while West Cambridge lost 66, Mid-Cambridge lost 23, and Strawberry Hill lost 6.</title>
+          <g class="h-fill"><path d="M388.5 272.0L437.8 326.9L438.8 329.9L446.0 333.6L443.9 344.6L439.4 351.7L411.0 371.3L357.2 327.9L363.0 320.7Z" fill="#3F807A"/><path d="M158.6 112.5L260.9 136.2L262.7 146.7L256.5 225.7L259.8 234.4L266.3 238.8L272.7 239.9L267.8 242.5L266.3 248.7L244.8 236.2L234.4 220.4L188.9 186.0L122.5 146.1L125.7 135.0L132.2 124.3L136.8 119.3L143.9 115.3L151.9 112.9Z" fill="#8CC0B5"/><path d="M460.1 262.0L446.0 333.6L438.8 329.9L437.8 326.9L372.0 253.7L397.5 253.1L445.6 257.2Z" fill="#E4EFEC"/><path d="M336.8 222.4L361.9 253.9L372.0 253.7L388.5 272.0L363.0 320.7L357.2 327.9L330.0 305.9L302.9 291.6L282.2 268.9L261.3 261.4L265.3 253.8L267.1 243.7L269.3 241.2Z" fill="#D22B1F"/><path d="M30.8 72.7L57.7 28.8L112.3 60.7L113.4 56.8L129.0 40.7L136.3 36.7L146.6 36.1L153.2 31.1L160.0 24.7L166.8 14.6L170.6 6.0L187.2 24.3L230.6 91.6L239.8 103.1L251.6 90.8L261.7 108.2L275.9 125.7L270.1 129.9L273.5 135.8L268.9 138.8L272.1 143.1L265.7 138.7L254.7 134.0L106.2 99.8L93.7 94.7L68.9 80.1L49.2 74.1Z" fill="#1F5F5B"/><path d="M18.3 83.3L30.8 72.7L38.8 72.8L53.5 75.1L72.3 81.5L92.5 94.1L102.6 98.7L166.4 113.7L153.6 112.6L140.7 116.8L135.6 120.4L130.2 127.2L124.8 137.2L122.5 146.1L119.7 149.5L87.5 158.9L62.7 172.1L40.4 160.7L30.7 158.2L20.1 148.1L23.0 143.0L27.1 120.8Z" fill="#1F5F5B"/><path d="M31.7 200.9L39.2 204.5L37.7 198.6L38.4 196.3L36.0 193.8L23.5 188.9L6.0 151.8L20.1 148.1L30.7 158.2L40.4 160.7L62.7 172.1L76.0 184.9L99.1 199.4L85.0 216.1L70.4 251.9L43.4 247.9Z" fill="#D22B1F"/><path d="M141.2 336.0L136.3 338.5L129.8 339.8L117.0 334.7L110.6 334.6L106.0 321.1L113.2 319.4L117.6 316.9L126.9 297.1L130.7 284.5L132.8 260.5L108.4 256.5L110.2 246.3L70.4 251.9L85.0 216.1L99.1 199.4L76.0 184.9L62.7 172.1L87.5 158.9L108.3 152.2L118.1 150.6L122.5 146.1L188.9 186.0L234.4 220.4L244.8 236.2L266.3 248.7L262.8 260.3L237.7 299.6L233.0 297.1L229.6 293.4L216.4 270.0L205.1 259.7L199.7 257.4L189.5 257.6L185.2 258.6L180.2 261.7L176.2 267.4L175.4 272.2L183.2 285.3L184.0 295.3L171.3 307.7L157.1 317.3Z" fill="#D22B1F"/><path d="M237.7 299.6L261.3 261.4L266.5 262.6L282.5 269.1L302.9 291.6L330.0 305.9L357.2 327.9L355.2 330.3L347.7 332.5L277.5 364.7L275.9 319.2L272.1 308.3L269.6 304.6L260.9 300.9L243.6 301.6Z" fill="#E4EFEC"/><path d="M277.5 364.7L347.7 332.5L355.2 330.3L357.2 327.9L411.0 371.3L329.6 426.0L317.8 437.4L300.3 434.0L283.5 422.1L280.8 418.6L276.3 409.5L275.8 405.9L279.0 383.2Z" fill="#E4EFEC"/><path d="M518.5 391.8L445.8 419.4L398.5 430.7L377.0 434.3L334.9 437.5L317.8 437.4L329.8 425.9L437.4 353.6L443.5 345.7L446.0 333.6L487.2 357.2L536.4 362.2L527.3 379.4L520.4 386.3Z" fill="#8CC0B5"/><path d="M512.2 255.4L519.0 260.1L522.2 260.6L526.3 259.9L531.6 256.8L541.3 269.1L544.9 268.8L552.3 263.4L554.0 268.9L590.3 276.9L606.0 298.4L571.5 299.4L541.7 343.3L538.7 358.9L536.4 362.2L487.2 357.2L446.0 333.6L460.1 262.0L468.9 264.9L472.9 256.4L475.7 261.3L479.0 262.8L491.6 261.8L496.1 258.6L503.9 255.7L506.9 258.3Z" fill="#1F5F5B"/><path d="M329.6 213.9L336.8 222.4L272.7 239.9L266.3 238.8L258.8 233.4L256.5 225.7L262.7 146.7L260.9 136.2L272.1 143.1L285.6 163.8L309.3 191.4L315.5 192.1L333.2 211.5Z" fill="#E4EFEC"/></g>
+          <path class="z-edge" d="M187.2 24.3L230.6 91.6L239.8 103.1L251.6 90.8L254.9 97.7L261.7 108.2L275.9 125.7L270.1 129.9L273.5 135.8L268.9 138.8L276.7 149.4L285.6 163.8L309.3 191.4L315.5 192.1L333.2 211.5L329.5 213.7L361.9 253.9L397.5 253.1L421.1 254.7L445.6 257.2L468.9 264.9L472.9 256.4L475.8 261.4L479.2 262.8L491.6 261.8L494.2 260.6L496.1 258.6L503.9 255.7L507.2 258.3L510.9 255.7L513.3 255.5L519.0 260.1L521.1 260.6L525.9 260.1L531.5 256.7L534.1 259.0L538.4 266.2L541.0 269.0L544.6 269.0L552.3 263.4L554.0 268.9L590.3 276.9L606.0 298.4L571.5 299.4L541.7 343.3L538.7 358.9L527.3 379.4L520.4 386.3L518.5 391.9L445.8 419.4L398.5 430.7L387.0 432.7L377.0 434.3L334.9 437.5L321.4 437.9L300.3 434.0L283.5 422.1L280.8 418.6L276.3 409.5L275.8 405.9L279.0 379.8L276.6 349.1L275.9 319.2L273.9 311.6L269.6 304.6L266.1 302.3L259.3 300.7L248.8 301.8L243.6 301.6L240.5 300.8L233.0 297.1L229.0 292.4L216.4 270.0L205.1 259.7L199.7 257.4L189.5 257.6L185.2 258.6L180.2 261.7L176.2 267.4L175.4 272.2L175.8 274.3L183.2 285.3L184.0 295.3L181.2 298.7L171.3 307.7L161.3 313.9L157.1 317.3L141.2 336.0L136.3 338.5L129.8 339.8L126.9 339.3L117.0 334.7L114.5 334.2L110.6 334.6L106.0 321.1L113.2 319.4L117.6 316.9L126.9 297.1L129.7 289.7L130.7 284.5L132.8 260.5L108.4 256.5L110.2 246.3L89.4 248.5L72.7 252.2L43.4 247.9L31.7 200.9L39.2 204.5L39.5 203.4L37.7 198.6L38.4 196.3L36.0 193.8L30.3 192.2L23.5 188.9L23.7 187.8L22.1 186.6L21.0 182.7L6.0 151.8L17.8 149.5L20.7 147.5L23.0 143.0L27.1 120.8L18.3 83.3L30.2 73.6L57.7 28.8L112.3 60.7L113.4 56.8L129.0 40.7L136.3 36.7L146.6 36.1L153.2 31.1L160.0 24.7L166.8 14.6L169.6 6.8L170.6 6.0Z"/>
+          <g class="h-lbl" aria-hidden="true"><text x="394.8" y="327.8" fill="#F3F7F6">338</text><text x="222.5" y="171.1" fill="#122322">118</text><text x="430.5" y="287.6" fill="#122322">32</text><text x="324.2" y="269.0" fill="#F3F7F6">-23</text><text x="168.4" y="77.4" fill="#F3F7F6">834</text><text x="66.6" y="131.0" fill="#F3F7F6">676</text><text x="63.5" y="211.2" fill="#F3F7F6">-6</text><text x="146.2" y="221.1" fill="#F3F7F6">-66</text><text x="303.5" y="328.8" fill="#122322">4</text><text x="317.5" y="394.5" fill="#122322">17</text><text x="458.5" y="385.1" fill="#122322">163</text><text x="504.1" y="315.4" fill="#F3F7F6">1,690</text><text x="286.3" y="213.7" fill="#122322">88</text></g>
+        </svg>
+        <figcaption>
+          <ul class="map-key">
+            <li><i style="background:var(--red)"></i>Lost homes (0 or fewer)</li>
+            <li><i style="background:#E4EFEC;outline:1px solid var(--line)"></i>1 to 100</li>
+            <li><i style="background:#8CC0B5"></i>101 to 250</li>
+            <li><i style="background:#3F807A"></i>251 to 500</li>
+            <li><i style="background:#1F5F5B"></i>More than 500</li>
+          </ul>
+          <!-- TODO: David to confirm the time frame; ideally 2018 to 2024, after Envision and before the 2025 ordinance -->
+          <p class="source">Net homes permitted since Envision Cambridge (2018).</p>
+        </figcaption>
+      </div>
+    </figure>
+  </div>
+
+</section>
+
+<!-- 3. THE WIN -->
+<section class="s win" id="win" aria-labelledby="win-h">
+  <div class="wrap">
+    <h2 id="win-h" class="rise">Together, we passed the Multifamily Housing Ordinance in 2025.</h2>
+    <div class="win-stat"><b id="winNum">147</b><span>permanently affordable homes proposed</span></div>
+    <p class="win-sub">A record year for affordable homes.</p>
+    <p class="win-body">Building for future generations in the Cambridge community.</p>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <radialGradient id="warmLight" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#F7E2A8"/><stop offset=".45" stop-color="#F2C356"/><stop offset="1" stop-color="#E5992F"/></radialGradient>
+  <filter id="warmGlow" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur in="SourceGraphic" stdDeviation="1.8" result="b"/><feColorMatrix in="b" type="matrix" values="1 0 0 0 0  0 .78 0 0 0  0 0 .3 0 0  0 0 0 .98 0" result="w"/><feMerge><feMergeNode in="w"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs></svg>
+    <div class="porch" id="porch" role="img" aria-label="30 homes with their porch lights on, each standing for 5 permanently affordable homes, mixed with photos of residents."></div>
+    <div class="win-foot">
+      <span><i aria-hidden="true"></i>Each porch light is 5 permanently affordable homes</span>
+      <!-- TODO: source for 147 and comparison with earlier years (David to confirm) -->
+      <p class="source">Source: pending. <a href="numbers.html">How we counted</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. PUSHED OUT -->
+<section class="s never" id="never" aria-labelledby="never-h">
+  <div class="wrap">
+    <h2 id="never-h" class="never-h">Homes don't get delayed.<br>They never get built.</h2>
+    <p class="sub">Members of our community are being pushed out.</p>
+    <figure class="mig">
+      <h3 class="mig-t">Massachusetts population loss</h3>
+      <!-- Bars come from DATA.migration. TODO: replace the illustrative values with Boston Indicators' yearly series -->
+      <div class="mig-box"><svg id="migSvg" role="img" aria-labelledby="mig-d"><desc id="mig-d">Illustrative chart: Massachusetts loses more 25 to 44-year-olds to other states each year from 2009 to 2022, and the losses grow over time. Each bar removes the neighbors it reaches.</desc></svg></div>
+      <figcaption>
+        <p class="mig-key"><img class="mig-key-f" id="migKeyF" src="images/neighbor-1.jpg" alt="" width="22" height="22">Each face is [N] residents ages 25 to 44</p>
+        <p class="mig-cap"><b>Net loss of 25 to 44-year-olds to other states, Massachusetts, by year.</b> 25 to 44-year-olds make up about 60% of the state's net losses (2022).</p>
+        <p class="source">Illustrative until Boston Indicators shares the yearly data. Source: <a href="https://www.bostonindicators.org/article-pages/2024/april/domestic-migration" target="_blank" rel="noopener">Boston Indicators, Mass. Migration (April 2024)</a></p>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 6. WE ALL PAY -->
+<section class="s pay" id="pay" aria-labelledby="pay-h">
+  <div class="wrap">
+    <h2 id="pay-h">And we all pay the price.</h2>
+    <p class="sub">Renters pay in <span class="pinku">higher rent</span>.<br>Homeownership becomes <span class="pinkh">impossible</span>.</p>
+    <div class="chart" id="costChart" role="img" aria-label="Illustrative trend: rents and home prices in Cambridge keep climbing when new homes don't get built.">
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <polyline class="axis" vector-effect="non-scaling-stroke" points="0,0 0,100 100,100"/>
+        <polyline class="ln rent" id="rentLine" vector-effect="non-scaling-stroke" points=""/>
+        <polyline class="ln price" id="priceLine" vector-effect="non-scaling-stroke" points=""/>
+      </svg>
+    </div>
+    <div class="legend"><span><i></i>Rent</span><span><i class="rose"></i>Home prices</span></div>
+    <!-- TODO: replace illustrative lines with a real Cambridge rent and price series -->
+    <p class="source">Illustrative trend until the rent and home price series is in. <a href="numbers.html">Sources</a></p>
+  </div>
+</section>
+
+<!-- 7. THE ASK -->
+<section class="s ask" id="ask" aria-labelledby="ask-h">
+  <div class="wrap">
+    <h2 id="ask-h">The fight isn't over.</h2>
+    <p class="sub">The Council voted to start drafting a rollback, but nothing has changed yet.</p>
+    <ol class="steps">
+      <li class="done cur"><span class="nx"></span><span class="sdot" aria-hidden="true"></span><b>Staff options</b><small>mid-November</small></li>
+      <li aria-current="step"><span class="nx">Next step</span><span class="sdot" aria-hidden="true"></span><b>Zoning drafted</b><small>date not set</small></li>
+      <li><span class="nx"></span><span class="sdot" aria-hidden="true"></span><b>Two hearings</b><small>public comment</small></li>
+      <li><span class="nx"></span><span class="sdot" aria-hidden="true"></span><b>Two Council votes</b><small>two weeks apart</small></li>
+      <li><span class="nx"></span><span class="sdot" aria-hidden="true"></span><b>Six months' notice</b><small>before it applies</small></li>
+    </ol>
+    <div class="btn-row ask-btns">
+      <a class="btn btn-ask" href="act.html#email">Email the Council</a>
+      <a class="btn" href="act.html#pledge">Pledge to be there</a>
       <a class="btn" href="stories.html">Tell us your story</a>
     </div>
   </div>
 </section>
 
-<!-- PART 1: THE HOOK -->
-<section class="frame hook" id="hook" aria-labelledby="hook-h">
-  <div class="stage" id="hookStage"><div class="wrap">
-    <div class="hook-copy">
-      <h2 id="hook-h" class="hook-h">Let's make room for our neighbors.</h2>
-      <p>We want to live here.</p>
-    </div>
-    <div class="cards" id="cards">
-      <!-- TODO: placeholder stock photo, quote, and name. Swap for a real resident before launch. -->
-      <figure class="card">
-        <div class="polaroid"><span class="tape t1" aria-hidden="true"></span><span class="tape t2" aria-hidden="true"></span><div class="photo"><img src="images/megan.jpg" alt="Megan" width="480" height="480" loading="eager"></div><figcaption class="who">Megan, North Cambridge</figcaption></div>
-        <p class="says"><em>I want to live here because</em> my kids go to school here and I want them to be able to stay.</p>
-      </figure>
-      <!-- TODO: placeholder stock photo, quote, and name. Swap for a real resident before launch. -->
-      <figure class="card">
-        <div class="polaroid"><span class="tape t1" aria-hidden="true"></span><span class="tape t2" aria-hidden="true"></span><div class="photo"><img src="images/daniel.jpg" alt="Daniel" width="480" height="480" loading="lazy"></div><figcaption class="who">Daniel, The Port</figcaption></div>
-        <p class="says"><em>I want to live here because</em> I work at the hospital two blocks from an apartment I can't afford.</p>
-      </figure>
-      <!-- TODO: placeholder stock photo, quote, and name. Swap for a real resident before launch. -->
-      <figure class="card">
-        <div class="polaroid"><span class="tape t1" aria-hidden="true"></span><span class="tape t2" aria-hidden="true"></span><div class="photo"><img src="images/ruth.jpg" alt="Ruth" width="480" height="480" loading="lazy"></div><figcaption class="who">Ruth, Mid-Cambridge</figcaption></div>
-        <p class="says"><em>I want to live here because</em> I raised my family on this street, and now I want a smaller place without leaving it.</p>
-      </figure>
-      <a class="card yours" href="stories.html">
-        <div class="polaroid"><span class="tape t1" aria-hidden="true"></span><span class="tape t2" aria-hidden="true"></span><div class="photo empty"><span>Your photo</span></div><span class="who">You, your neighborhood</span></div>
-        <div><p class="says"><em>I want to live here because</em></p>
-        <p class="big">Your turn.</p></div>
-      </a>
-    </div>
-  </div></div>
-</section>
-
-<!-- PART 2: THE SUCCESS -->
-<section class="frame success" aria-labelledby="success-h">
+<!-- EVENTS. Edit events.js; this page, act.html and pledged.html all read it. -->
+<section class="s events-s" id="events" aria-labelledby="events-h">
   <div class="wrap">
-    <h2 id="success-h">We said yes. It worked.</h2>
-    <div class="chart" id="yesChart" role="img" aria-label="New homes in Cambridge stayed nearly flat for forty years, then rose to 1,460 after the city changed its zoning.">
-      <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-        <polyline class="axis" vector-effect="non-scaling-stroke" points="0,0 0,100 100,100"/>
-        <polyline class="ln" id="yesLine" vector-effect="non-scaling-stroke" points=""/>
-      </svg>
-      <span class="lbl" style="left:0;top:102%">1985</span>
-      <span class="lbl" style="left:50%;top:102%;transform:translateX(-50%)">Forty years of almost nothing</span>
-      <span class="lbl" style="right:0;top:102%">2026</span>
-      <span class="lbl fade" id="yesKnee">The yes</span>
-      <div class="dot" id="yesDot"></div>
-      <div class="tag" id="yesTag"><b id="yesNum">0</b><span>new homes</span></div>
-    </div>
-    <!-- TODO: real source -->
-    <p class="source" style="margin-top:34px">Source: [City of Cambridge data]. <a href="numbers.html">How we counted</a></p>
-    <!-- IRL PHOTO -->
-    <figure class="irl irl-single">
-      <div class="frame-img"><img src="images/irl-block-party.jpg" alt="Neighbors talking around a picnic table at an outdoor block party" width="860" height="527" loading="lazy"></div>
-    </figure>
-  </div>
-</section>
-
-<!-- PART 3: THE THREAT -->
-<section class="frame threat" aria-labelledby="threat-h">
-  <div class="wrap">
-    <h2 id="threat-h">Then came the amendments.</h2>
-    <div class="threat-card" id="threatCard">
-      <div>
-        <div class="houses" id="houses" aria-hidden="true"><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg><svg class="h" viewBox="0 0 24 24" aria-hidden="true"><g class="half l"><g clip-path="url(#clipL)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g><g class="half r"><g clip-path="url(#clipR)"><path d="M3.5 11.2 12 4l8.5 7.2V20a.5.5 0 0 1-.5.5H4a.5.5 0 0 1-.5-.5z"/><path d="M9.5 20.5v-5h5v5"/></g><polyline class="crack" points="12,3.5 10,8 14,12.5 10,17 12,21.5"/></g></svg></div>
-        <div class="counter" aria-live="polite">
-          <div class="k">Homes lost</div>
-          <div class="v" id="lostNum">0</div>
-        </div>
-      </div>
-      <div>
-        <!-- TODO: exact amendment language and sponsors; one-line plain-English effect for each -->
-        <ul class="amends" id="amends"></ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PART 4: THE COST + THE ASK -->
-<section class="frame cost">
-  <div class="wrap">
-    <p class="lead">And you pay for it in <u>your</u> housing costs.</p>
-    <div class="chart" id="costChart" role="img" aria-label="Rents and home prices in Cambridge keep climbing when new homes don't get built.">
-      <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-        <polyline class="axis" vector-effect="non-scaling-stroke" points="0,100 100,100"/>
-        <polyline class="ln teal" id="rentLine" vector-effect="non-scaling-stroke" points=""/>
-        <polyline class="ln teal dash" id="priceLine" vector-effect="non-scaling-stroke" points=""/>
-      </svg>
-    </div>
-    <div class="legend"><span><i></i>Rent</span><span><i class="dash"></i>Home price</span></div>
-    <!-- TODO: replace illustrative lines with a real Cambridge rent and price series -->
-    <p class="source">Illustrative trend. <a href="numbers.html">Sources</a></p>
-  </div>
-</section>
-
-<!-- CLOSING: TAKE ACTION -->
-<section class="act-final" id="act-now" aria-labelledby="act-now-h">
-  <div class="wrap">
-    <h2 id="act-now-h">Take action before Monday.</h2>
-    <p class="act-when">The Council votes September 28 at 5:30 PM. Three ways to help:</p>
-    <div class="act-tiles">
-      <a class="act-tile primary" href="act.html#email">
-        <h3>Email the Council</h3>
-        <p>Two minutes. The letter is written; add one line about you.</p>
-        <span class="go">Write your email</span>
-      </a>
-      <a class="act-tile" href="act.html#attend">
-        <h3>Be there Monday</h3>
-        <p>Sullivan Chamber, City Hall. Sign up to speak, or just fill a seat.</p>
-        <span class="go">Get the details</span>
-      </a>
-      <a class="act-tile" href="stories.html">
-        <h3>Tell your story</h3>
-        <p>Finish the sentence: I want to live here because...</p>
-        <span class="go">Share your story</span>
-      </a>
-    </div>
+    <h2 id="events-h">Upcoming events</h2>
+    <div class="ev-list" data-events></div>
   </div>
 </section>
 
@@ -580,9 +1063,8 @@ section.frame.hook{background:var(--teal);color:var(--on-teal)}
       </div>
     </div>
     <div>
-      <!-- TODO: confirm who is publishing this and whether a paid-for line is required -->
-      <p>Paid for by [Organization name]</p>
-      <p style="margin-top:4px"><a href="privacy.html">Privacy</a></p>
+      <!-- TODO: check with OCPF whether a "Paid for by" line is required before launch -->
+      <p><a href="privacy.html">Privacy</a></p>
     </div>
   </div>
 </footer>
@@ -593,28 +1075,53 @@ section.frame.hook{background:var(--teal);color:var(--on-teal)}
   b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
 })();
 </script>
+<script src="storycards.js"></script>
 <script>
 /* ============================================================
    EDIT THE NUMBERS HERE. Everything on the page reads from this.
    ============================================================ */
 var DATA = {
-  total: 1460,
-  // TODO: real series. Illustrative: new homes per year, 1985 to 2026.
-  yes: [40,35,52,30,28,45,38,33,50,41,36,29,44,39,47,31,35,42,38,30,
-        46,34,40,37,43,32,49,36,41,38,45,33,39,44,52,48,58,70,130,600,1460],
-  // Cumulative homes lost after each amendment passes.
-  amendments: [
-    { title: "5% more open space",           body: "[One line: what this requires and why it cuts homes.]", lostAfter: 70  },
-    { title: "Five feet farther back",       body: "[One line: deeper setbacks shrink what fits on a lot.]", lostAfter: 230 },
-    { title: "Three stories instead of six", body: "[One line: the height cap that does the most damage.]", lostAfter: 410 }
-  ],
+  // TODO: confirm with David. Permanently affordable homes proposed since the 2025 ordinance.
+  affordable: 147,
+  // Affordable homes at risk if the rollback passes (Now + Never built screens). TODO: confirm.
+  atRisk: 147,
+  // A resident photo appears after every N homes in the porch-light grid.
+  // One porch light stands for this many affordable homes.
+  perLight: 5,
+  // A resident photo appears after every N houses.
+  photoEvery: 6,
+  photos: ['megan','daniel','ruth','marco','james'],   // TODO: real resident photos
+  // Never built: every story goes here. Five show at a time; arrows page through.
+  // TODO: real residents. Duplicated for now so paging can be tested.
+  stories: (function(){
+    var base = [
+      { photo:'megan',  name:'Megan',  where:'North Cambridge', quote:'My kids go to school here and I want them to be able to stay.' },
+      { photo:'daniel', name:'Daniel', where:'The Port',        quote:"I work at the hospital two blocks from an apartment I can't afford." },
+      { photo:'ruth',   name:'Ruth',   where:'Mid-Cambridge',   quote:'I raised my family on this street, and now I want a smaller place without leaving it.' },
+      { photo:'marco',  name:'Marco',  where:'Cambridgeport',   quote:"I grew up on Columbia Street and can't afford to rent a block from my mom." },
+      { photo:'james',  name:'James',  where:'East Cambridge',  quote:'I teach at the high school and drive an hour each way to get there.' },
+      // TODO: placeholder names, neighborhoods and quotes. Replace with each person's real name, neighborhood and own words, plus photo consent
+      { photo:'neighbor-1', name:'Hannah', where:'Riverside', quote:'I came here for grad school and want to stay after I graduate.' },
+      { photo:'neighbor-2', name:'Maya', where:'The Port', quote:'I grew up in the Port and want to raise my own kids here.' },
+      { photo:'neighbor-3', name:'Ben', where:'Wellington-Harrington', quote:'I bike to work in Kendall and do not want to move three towns away.' },
+      { photo:'neighbor-4', name:'Andre', where:'Cambridgeport', quote:'I work two jobs in Central Square and half my pay goes to rent.' },
+      { photo:'neighbor-5', name:'Nick', where:'North Cambridge', quote:'I coach youth sports here and want to stay close to the kids on my team.' },
+      { photo:'neighbor-6', name:'Luis', where:'Strawberry Hill', quote:'My family has been in Cambridge for three generations and I want to be the fourth.' },
+      { photo:'neighbor-7', name:'Walt', where:'Neighborhood Nine', quote:'I have lived on my street for forty years and my grandkids cannot afford to live near me.' },
+      { photo:'neighbor-8', name:'Diane', where:'Baldwin', quote:'My kids are grown and I want a smaller place without leaving my friends.' },
+      { photo:'neighbor-9', name:'June', where:'Area 2/MIT', quote:'I have photographed this city for decades and I want to grow old in it.' }
+    ];
+    return base;
+  })(),
+  // Pushed out: net loss per year, 2009 to 2022, in whole faces (0 to 5), so every bar stops exactly at a row. Each figure is DATA.migPer people.
+  // TODO: illustrative only. Replace with Boston Indicators' yearly net loss of 25 to 44-year-olds.
+  migStart: 2009,
+  migration: [1,1,2,1,2,2,2,3,2,3,3,4,4,5],
   // TODO: real index series. Illustrative only.
-  // rent is the old series x1.2, price is x0.6
-  rent:  [24,28,32,37,43,50,56,66,73,84,96],
-  price: [11,12,14,16,18,21,25,28,32,36,40]
+  rent:  [6,11,8,15,12,21,17,27,23,33,29,41,36,48,45,57,52,65,61,72],
+  price: [4,7,5,9,7,12,9,14,12,18,15,21,19,26,22,30,27,35,33,42]
 };
 
-/* ---------- helpers ---------- */
 var fmt = function(n){ return Math.round(n).toLocaleString('en-US'); };
 var clamp = function(v){ return Math.max(0, Math.min(1, v)); };
 var ease = function(t){ return t<.5 ? 2*t*t : 1-Math.pow(-2*t+2,2)/2; };
@@ -622,7 +1129,6 @@ var $ = function(id){ return document.getElementById(id); };
 var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 document.documentElement.classList.add('js');
 
-// run fn once when el scrolls into view (immediately if motion is reduced or IO is missing)
 function onEnter(el, fn, threshold){
   if (reduce || !('IntersectionObserver' in window)) { fn(true); return; }
   var io = new IntersectionObserver(function(es){
@@ -630,159 +1136,253 @@ function onEnter(el, fn, threshold){
   }, { threshold: threshold || 0.35 });
   io.observe(el);
 }
-// time-based tween; returns a cancel function
 function tween(ms, fn, done){
-  var t0 = null, stop = false;
+  var t0 = null;
   function step(ts){
-    if (stop) return;
     if (t0 === null) t0 = ts;
     var t = clamp((ts - t0) / ms);
     fn(t);
     if (t < 1) requestAnimationFrame(step); else if (done) done();
   }
   requestAnimationFrame(step);
-  return function(){ stop = true; };
 }
+function countUp(el, to, ms){ tween(ms, function(t){ el.textContent = fmt(ease(t) * to); }); }
+
+/* hook highlight wipes in on load */
+setTimeout(function(){ $('hl').classList.add('on'); }, reduce ? 0 : 100);
+
+/* fade-up for blocks marked .rise */
+[].forEach.call(document.querySelectorAll('.rise'), function(el, i){
+  onEnter(el, function(){ el.classList.add('in'); }, 0.2);
+});
+
+/* ---------- 1b. we want to live here: native scroll that loops forever ---------- */
+(function(){
+  var S = DATA.stories, track = $('loop');
+  // every neighbor gets one of the seven card layouts, dealt at random on each visit
+  var looks = StoryCard.deal(S.length);
+  // colors too: a shuffled deck of the palette, never the same color twice in a row
+  var tints = [], deck = [];
+  for (var i = 0; i < S.length; i++){
+    if (!deck.length){
+      deck = StoryCard.COLORS.map(function(c){ return c.slug; }).sort(function(){ return Math.random() - .5; });
+      if (tints.length && deck[deck.length - 1] === tints[tints.length - 1]) deck.unshift(deck.pop());
+    }
+    tints.push(deck.pop());
+  }
+  if (tints.length > 1 && tints[0] === tints[tints.length - 1]){ var t = tints[0]; tints[0] = tints[1]; tints[1] = t; } // the row loops, so the ends meet
+  function card(st, k){
+    var c = { name: st.name, where: st.where, quote: st.quote, photo: 'images/' + st.photo + '.jpg', x: st.x, y: st.y, zoom: st.zoom, color: st.color || tints[k] };
+    return '<figure class="card sc">' + StoryCard.html(c, st.layout || looks[k]) + '</figure>';
+  }
+  var one = S.map(card).join('');
+  // three copies: start in the middle one, and jump a full set when you near either end
+  track.innerHTML = '<div class="clone" style="display:contents" aria-hidden="true">' + one + '</div>' + one + '<div class="clone" style="display:contents" aria-hidden="true">' + one + '</div>';
+  track.querySelectorAll('.clone a').forEach(function(a){ a.tabIndex = -1; });
+  var n = S.length, setW = 0, step = 0;
+  function measure(){
+    var c = track.querySelectorAll('.card');
+    step = c[1].offsetLeft - c[0].offsetLeft; setW = step * n;
+  }
+  function recenter(){
+    if (!setW) return;
+    if (track.scrollLeft < setW * 0.5) track.scrollLeft += setW;
+    else if (track.scrollLeft > setW * 1.5) track.scrollLeft -= setW;
+  }
+  // on a computer, open with "Your turn" as the fourth card in view; phones start at the first story
+  function startPos(){ return setW + (window.innerWidth > 900 ? Math.max(0, n - 4) * step : 0); }
+  StoryCard.fit(track);
+  measure(); track.scrollLeft = startPos();
+  window.addEventListener('load', function(){ StoryCard.fit(track); measure(); track.scrollLeft = startPos(); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ StoryCard.fit(track); });
+  var idle;
+  track.addEventListener('scroll', function(){ clearTimeout(idle); idle = setTimeout(recenter, 140); }, { passive: true });
+  window.addEventListener('resize', function(){ var r = (track.scrollLeft % setW) / setW; StoryCard.fit(track); measure(); track.scrollLeft = setW + r * setW; });
+  function go(d){ track.scrollBy({ left: d * step, behavior: reduce ? 'auto' : 'smooth' }); }
+  $('loopPrev').addEventListener('click', function(){ go(-1); });
+  $('loopNext').addEventListener('click', function(){ go(1); });
+  track.addEventListener('keydown', function(e){ if (e.key === 'ArrowRight'){ e.preventDefault(); go(1); } else if (e.key === 'ArrowLeft'){ e.preventDefault(); go(-1); } });
+
+  // constant drift; freezes while hovered, focused or touched, and resumes after a short rest
+  if (reduce) return;
+  var SPEED = 107, pos = track.scrollLeft, held = 0, last = 0, onScreen = true, hover = false;
+  track.classList.add('drift');
+  function hold(ms){ held = Math.max(held, performance.now() + ms); }
+  function frame(ts){
+    var dt = last ? Math.min(ts - last, 50) / 1000 : 0; last = ts;
+    if (hover || ts < held || !onScreen || document.hidden || !setW) pos = track.scrollLeft;
+    else {
+      pos += SPEED * dt;
+      if (pos > setW * 1.5) pos -= setW;
+      track.scrollLeft = pos;
+    }
+    requestAnimationFrame(frame);
+  }
+  track.addEventListener('mouseenter', function(){ hover = true; });
+  track.addEventListener('mouseleave', function(){ hover = false; });
+  track.addEventListener('focusin', function(){ hover = true; });
+  track.addEventListener('focusout', function(){ hover = false; });
+  ['touchstart','wheel','pointerdown'].forEach(function(ev){ track.addEventListener(ev, function(){ hold(3000); }, { passive: true }); });
+  [$('loopPrev'), $('loopNext')].forEach(function(b){ b.addEventListener('click', function(){ hold(4000); }); });
+  if ('IntersectionObserver' in window) new IntersectionObserver(function(es){ onScreen = es[0].isIntersecting; }).observe(track);
+  requestAnimationFrame(frame);
+})();
+
+/* ---------- 2. the past: map tabs, red fills in first ---------- */
+(function(){
+  var tabs=[$('tabZ'),$('tabR'),$('tabU')], panes=[$('paneZ'),$('paneR'),$('paneU')];
+  tabs.forEach(function(t,i){ t.addEventListener('click',function(){
+    tabs.forEach(function(u,j){ u.setAttribute('aria-selected', String(i===j)); panes[j].hidden = i!==j; });
+  }); });
+  onEnter($('zmap'), function(){ $('zmap').classList.add('in'); }, 0.4);
+  onEnter($('illPanel'), function(){ $('illPanel').classList.add('in'); }, 0.4);
+})();
+
+/* past: hovering or focusing a photo card lights up its pin */
+(function(){
+  [].forEach.call(document.querySelectorAll('.ill'), function(card){
+    var pin=document.querySelector('.z-pin[data-pin="'+card.getAttribute('data-pin')+'"]');
+    function on(){ pin.classList.add('hi'); } function off(){ pin.classList.remove('hi'); }
+    card.addEventListener('mouseenter',on); card.addEventListener('mouseleave',off);
+    card.addEventListener('focus',on); card.addEventListener('blur',off);
+  });
+})();
+
+/* ---------- 3. the win: porch lights come on ---------- */
+(function(){
+  var DEEP='#174A47', GLASS='#8CC0B5', DIM='#2C6B66';
+  var HOUSES=[
+    '<path d="M3 16L20 3L37 16V36H3Z" fill="'+DEEP+'" stroke="'+GLASS+'" stroke-linejoin="round"/><rect class="pl" x="15" y="21" width="10" height="9"/>',
+    '<rect x="7" y="2" width="26" height="34" fill="'+DEEP+'" stroke="'+GLASS+'"/><rect x="5" y="0" width="30" height="3" fill="'+GLASS+'"/><rect x="15" y="6" width="10" height="6" fill="'+DIM+'"/><rect class="pl" x="15" y="16" width="10" height="6"/><rect x="15" y="26" width="10" height="6" fill="'+DIM+'"/>',
+    '<path d="M0 18L20 8L40 18V36H0Z" fill="'+DEEP+'" stroke="'+GLASS+'" stroke-linejoin="round"/><rect class="pl" x="7" y="23" width="8" height="8"/><rect x="25" y="23" width="8" height="8" fill="'+DIM+'"/>',
+    '<rect x="3" y="6" width="34" height="30" fill="'+DEEP+'" stroke="'+GLASS+'"/><rect x="9" y="11" width="8" height="7" fill="'+DIM+'"/><rect x="23" y="11" width="8" height="7" fill="'+DIM+'"/><rect class="pl" x="9" y="23" width="8" height="7"/><rect x="23" y="23" width="8" height="7" fill="'+DIM+'"/>'
+  ];
+  // seeded random so the layout is the same on every visit
+  function rng(seed){ return function(){ seed |= 0; seed = seed + 0x6D2B79F5 | 0; var t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  var porch = $('porch'), nLit = Math.ceil(DATA.affordable / DATA.perLight), nFaces = 6, cols = 0, played = false, lights = [], order = [];
+  function measure(){
+    // measure one probe tile without touching the built grid (phones fire resize while scrolling)
+    var t = document.createElement('span'); t.className = 't hs'; t.style.position = 'absolute'; t.style.visibility = 'hidden';
+    porch.appendChild(t);
+    var w = t.offsetWidth, gap = parseFloat(getComputedStyle(porch).columnGap) || 14;
+    porch.removeChild(t);
+    return Math.max(4, Math.floor((porch.clientWidth + gap) / (w + gap)));
+  }
+  function build(){
+    var c = measure(); if (c === cols && lights.length) return; cols = c;
+    var rows = Math.max(3, Math.ceil((nLit + nFaces) / cols)), total = rows * cols, R = rng(147);
+    // faces: spread across rows, never in a column already used, never side by side
+    var faceAt = {}, usedCols = {}, perRow = [];
+    for (var f = 0; f < nFaces; f++) perRow[f % rows] = (perRow[f % rows] || 0) + 1;
+    for (var r = 0; r < rows; r++){
+      var want = perRow[r] || 0, tries = 0, inRow = [];
+      while (want && tries++ < 400){
+        var col = Math.floor(R() * cols);
+        if (usedCols[col] || inRow.some(function(x){ return Math.abs(x - col) < 2; })) continue;
+        inRow.push(col); usedCols[col] = true; faceAt[r * cols + col] = true; want--;
+      }
+    }
+    // pick which houses are lit, also at random
+    var houseIdx = []; for (var i = 0; i < total; i++) if (!faceAt[i]) houseIdx.push(i);
+    var shuffled = houseIdx.slice().sort(function(){ return R() - .5; }), litSet = {};
+    shuffled.slice(0, nLit).forEach(function(i){ litSet[i] = true; });
+    var html = '', p = 0, prevType = -1;
+    for (i = 0; i < total; i++){
+      if (faceAt[i]){ html += '<span class="t p"><img src="images/' + DATA.photos[p++ % DATA.photos.length] + '.jpg" alt="" loading="lazy"></span>'; prevType = -1; continue; }
+      var type; do { type = Math.floor(R() * 4); } while (type === prevType); prevType = type;
+      html += '<span class="t hs' + (litSet[i] ? ' lit' : '') + '"><svg viewBox="0 0 40 38" aria-hidden="true">' + HOUSES[type] + '</svg></span>';
+    }
+    porch.innerHTML = html;
+    lights = [].slice.call(porch.querySelectorAll('.t.lit .pl'));
+    porch.querySelectorAll('.pl').forEach(function(pl){ pl.setAttribute('fill', DIM); });
+    order = lights.map(function(_, i){ return i; }).sort(function(){ return R() - .5; });
+    paint(played ? lights.length : 0);
+  }
+  function paint(k){
+    for (var j = 0; j < order.length; j++){ lights[order[j]].setAttribute('fill', j < k ? 'url(#warmLight)' : DIM); lights[order[j]].classList.toggle('glow', j < k); }
+    $('winNum').textContent = fmt(Math.min(DATA.affordable, k * DATA.perLight));
+  }
+  build();
+  var rt, lastW = window.innerWidth; window.addEventListener('resize', function(){ if (window.innerWidth === lastW) return; lastW = window.innerWidth; clearTimeout(rt); rt = setTimeout(build, 150); });
+  window.addEventListener('load', build);
+  onEnter(porch, function(now){
+    played = true;
+    if (now) return paint(lights.length);
+    tween(2400, function(t){ paint(Math.round(ease(t) * lights.length)); });
+  }, 0.3);
+})();
+
+/* ---------- 5. pushed out: each year's loss wipes out a column of neighbors ---------- */
+(function(){
+  var NS='http://www.w3.org/2000/svg', svg=$('migSvg'), V=DATA.migration, N=V.length, ROWS=5;
+  var CW=56, RH=54, TOP=40, W=N*CW, H=TOP+ROWS*RH+8;
+  svg.setAttribute('viewBox','0 0 '+W+' '+H);
+  function el(tag, at, par){ var n=document.createElementNS(NS,tag); for (var k in at) n.setAttribute(k, at[k]); par.appendChild(n); return n; }
+  var cols=[];
+  // faces: every neighbor's photo, dealt out in a shuffled order so no column repeats the same pattern
+  var defs=el('defs',{},svg); el('circle',{r:22},el('clipPath',{id:'migClip'},defs));
+  el('feColorMatrix',{type:'saturate',values:'0'},el('filter',{id:'migGray'},defs));
+  var all=DATA.stories.map(function(st){ return st.photo; });
+  var pool=all.filter(function(ph){ return DATA.photos.indexOf(ph) < 0; });
+  if (pool.length < 6) pool=all;   // not enough faces yet to keep the two sections apart
+  var deck=[], seed=7;
+  $('migKeyF').src='images/'+pool[0]+'.jpg';
+  function rnd(){ seed=(seed*16807)%2147483647; return seed/2147483647; }
+  function face(){ if(!deck.length) deck=pool.slice().sort(function(){ return rnd()-.5; }); return deck.pop(); }
+  for (var c=0;c<N;c++){
+    var cx=c*CW+CW/2, g=el('g',{},svg), people=[];
+    for (var r=0;r<ROWS;r++){
+      var p=el('g',{'class':'mig-p',transform:'translate('+cx+' '+(TOP+r*RH+RH/2)+')'},g);
+      el('circle',{r:23.5,'class':'mig-c'},p);
+      el('image',{href:'images/'+face()+'.jpg',x:-22,y:-22,width:44,height:44,'clip-path':'url(#migClip)',preserveAspectRatio:'xMidYMid slice'},p);
+      people.push(p);
+    }
+    var bar=el('rect',{x:cx-22,y:TOP,width:44,height:0,'class':'mig-bar'},g);
+    cols.push({bar:bar,people:people,v:V[c]});
+  }
+  el('line',{x1:0,x2:W,y1:TOP,y2:TOP,'class':'mig-axis'},svg);
+  [0, Math.floor((N-1)/2), N-1].forEach(function(c){
+    el('text',{x:c*CW+CW/2,y:TOP-12,'class':'mig-yr'},svg).textContent=String(DATA.migStart+c);
+  });
+  // t runs 0..1 across the whole chart; columns start one after another
+  function draw(t){
+    cols.forEach(function(col,c){
+      var start=c/N*0.6, k=ease(clamp((t-start)/0.4)), h=k*Math.max(0, col.v*RH-4);
+      col.bar.setAttribute('height',h.toFixed(1));
+      col.people.forEach(function(p,r){
+        var doomed = r < col.v;   // the bar will reach this face
+        p.classList.toggle('gray', doomed && h > 1 && h > r*RH - RH*0.55);
+        p.classList.toggle('gone', doomed && h > r*RH+RH*0.35);
+      });
+    });
+  }
+  draw(0);
+  onEnter(svg, function(now){ if (now) return draw(1); tween(5200, draw); }, 0.45);
+})();
+
+/* ---------- 6. cost chart draws once ---------- */
 function along(pts, t){
   var f = t * (pts.length - 1), i = Math.floor(f), k = f - i;
-  var out = pts.slice(0, i + 1), end = pts[i];
-  if (i < pts.length - 1){
-    end = [pts[i][0] + (pts[i+1][0]-pts[i][0])*k, pts[i][1] + (pts[i+1][1]-pts[i][1])*k];
-    out.push(end);
-  }
-  return { pts: out, end: end };
+  var out = pts.slice(0, i + 1);
+  if (i < pts.length - 1) out.push([pts[i][0] + (pts[i+1][0]-pts[i][0])*k, pts[i][1] + (pts[i+1][1]-pts[i][1])*k]);
+  return out;
 }
 var ptsStr = function(p){ return p.map(function(q){ return q[0].toFixed(2)+','+q[1].toFixed(2); }).join(' '); };
-function place(el, x, y){ el.style.left = x + '%'; el.style.top = y + '%'; }
-
-var lostFinal = DATA.amendments[DATA.amendments.length-1].lostAfter;
-
-/* ---------- 1. cards slide in ---------- */
-// card 1 is there on load; the rest slide in from the right as you scroll
-var cards = [].slice.call(document.querySelectorAll('#cards .card'));
-// the top holds still while the cards come in, then the page carries on
-var hook = $('hook'), hookStage = $('hookStage');
-// more scroll per card on phones so the swipe feels less twitchy
-function cardRun(){ return reduce ? 0 : (window.innerWidth <= 520 ? Math.max(900, window.innerHeight * 1.6) : Math.max(450, window.innerHeight * 0.9)); }
-// empty viewport below the cards; the next section only rises into it after the last card lands
-function slack(){ return Math.max(0, window.innerHeight - hook.offsetTop - hookStage.offsetHeight); }
-function sizeHook(){ hook.style.height = (hookStage.offsetHeight + (reduce ? 0 : cardRun() + slack())) + 'px'; }
-function drawCards(){
-  var run = cardRun();
-  // how far the stage has been held in place = how far through the swipe we are
-  var p = run ? clamp((hookStage.getBoundingClientRect().top - hook.getBoundingClientRect().top) / run) : 1;
-  var n = cards.length - 1;
-  cards.forEach(function(c, i){
-    if (i === 0) return;
-    var l = ease(clamp(p * n - (i - 1)));
-    c.style.transform = l >= 1 ? '' : 'translateX(' + ((1 - l) * 110) + 'vw)';
-  });
-}
-var cardTick = false;
-window.addEventListener('scroll', function(){
-  if (cardTick) return; cardTick = true;
-  requestAnimationFrame(function(){ cardTick = false; drawCards(); });
-}, { passive: true });
-window.addEventListener('resize', function(){ sizeHook(); drawCards(); });
-sizeHook(); drawCards();
-
-/* ---------- 2. the yes line plays on its own ---------- */
-var yesMax = Math.max.apply(null, DATA.yes);
-var yesPts = DATA.yes.map(function(v, i){ return [ i / (DATA.yes.length - 1) * 100, 100 - v / yesMax * 90 ]; });
-var kneeIdx = DATA.yes.length - 4;
-place($('yesKnee'), yesPts[kneeIdx][0] - 20, yesPts[kneeIdx][1] - 12);
-function drawYes(t){
-  var a = along(yesPts, t);
-  $('yesLine').setAttribute('points', ptsStr(a.pts));
-  place($('yesDot'), a.end[0], a.end[1]);
-  place($('yesTag'), a.end[0], a.end[1]);
-  $('yesTag').classList.toggle('right', a.end[0] < 20);
-  $('yesNum').textContent = fmt((100 - a.end[1]) / 90 * yesMax);
-  $('yesKnee').classList.toggle('on', t >= kneeIdx / (DATA.yes.length - 1));
-}
-drawYes(0);
-onEnter($('yesChart'), function(now){
-  if (now) return drawYes(1);
-  // linear through the flat years, so the jump arrives as a jump
-  tween(2600, drawYes);
-}, 0.5);
-
-/* ---------- 3. amendments play one after another ---------- */
-var A = DATA.amendments;
-var housesEls = [].slice.call(document.querySelectorAll('#houses .h'));
-$('amends').innerHTML = A.map(function(a, i){ var cut = a.lostAfter - (i ? A[i-1].lostAfter : 0); return '<li><h3>' + a.title + '</h3><p>' + a.body + '</p><span class="tag-risk">' + fmt(cut) + ' homes cut</span></li>'; }).join('');
-var amendEls = [].slice.call(document.querySelectorAll('#amends li'));
-var stepVals = [0].concat(A.map(function(a){ return a.lostAfter; }));
-var fMin = DATA.total - lostFinal;
-// break order: top row first, right to left within each row
-var order = [];
-function sortHouses(){
-  order = housesEls.slice().sort(function(a, b){
-    var ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
-    return Math.abs(ra.top - rb.top) > 4 ? ra.top - rb.top : rb.left - ra.left;
-  });
-}
-sortHouses();
-var shown = 0;
-window.addEventListener('resize', function(){ sortHouses(); paintHouses(shown); });
-function paintHouses(n){
-  shown = n;
-  order.forEach(function(h, i){ h.classList.toggle('lost', i < n); });
-}
-// houses lost after each amendment, on the 40-house grid
-var houseSteps = stepVals.map(function(v){ return Math.round(v / DATA.total * housesEls.length); });
-var PER_HOUSE = 385;   // ms between each house breaking, same pace all the way through (was 550; 30% faster)
-
-function drawThreat(lost, houses){
-  $('lostNum').textContent = fmt(lost);
-  paintHouses(houses);
-}
-function mark(active){
-  amendEls.forEach(function(li, i){
-    li.classList.toggle('on', i === active);
-    li.classList.toggle('done', i < active);
-  });
-}
-function playThreat(){
-  drawThreat(0, 0); mark(-1);
-  var total = houseSteps[houseSteps.length - 1];
-  setTimeout(function(){
-    tween(total * PER_HOUSE, function(x){
-      var h = Math.min(total, Math.floor(x * total + 0.5));
-      // which amendment we're in, and how far through it, by house count
-      var k = 0;
-      while (k < A.length - 1 && x * total >= houseSteps[k + 1]) k++;
-      var seg = (x * total - houseSteps[k]) / Math.max(1, houseSteps[k + 1] - houseSteps[k]);
-      var lost = stepVals[k] + (stepVals[k + 1] - stepVals[k]) * Math.min(1, seg);
-      mark(k);
-      drawThreat(lost, h);
-    }, function(){ mark(A.length); });
-  }, 210);
-}
-drawThreat(0, 0);
-onEnter($('threatCard'), function(now){
-  if (now){ drawThreat(lostFinal, houseSteps[houseSteps.length-1]); mark(A.length); return; }
-  playThreat();
-}, 0.45);
-
-/* ---------- cost chart draws once ---------- */
-function linePts(arr){ return arr.map(function(v, i){ return [ i / (arr.length - 1) * 100, 100 - v ]; }); }
+function linePts(arr){ return arr.map(function(v, i){ return [ i / (arr.length - 1) * 100, 98 - v ]; }); }
 var rentPts = linePts(DATA.rent), pricePts = linePts(DATA.price);
 function drawCost(t){
-  $('rentLine').setAttribute('points', ptsStr(along(rentPts, t).pts));
-  $('priceLine').setAttribute('points', ptsStr(along(pricePts, t).pts));
+  $('rentLine').setAttribute('points', ptsStr(along(rentPts, t)));
+  $('priceLine').setAttribute('points', ptsStr(along(pricePts, t)));
 }
 drawCost(0);
 onEnter($('costChart'), function(now){ if (now) return drawCost(1); tween(1500, function(t){ drawCost(ease(t)); }); }, 0.5);
 
-/* ---------- hero video: plays and loops only while on screen ----------
-   Earlier freezes came from calling load() while play() was starting, which aborts playback.
-   Now the video loads once, and a watchdog restarts it if it stalls. */
+/* ---------- hook video: plays and loops only while on screen ---------- */
 (function(){
   var v = $('askVideo');
   if (!v) return;
-  v.muted = true;   // some browsers only allow autoplay when muted is set as a property too
-  if (reduce){ v.removeAttribute('autoplay'); v.pause(); return; }   // reduced motion: still frame
+  v.muted = true;
+  if (reduce){ v.removeAttribute('autoplay'); v.pause(); return; }
   var inView = true, last = -1, stuck = 0;
   function want(){ return inView && !document.hidden; }
   function play(){ var p = v.play(); if (p && p.catch) p.catch(function(){}); }
@@ -791,10 +1391,9 @@ onEnter($('costChart'), function(now){ if (now) return drawCost(1); tween(1500, 
     new IntersectionObserver(function(es){ inView = es[0].isIntersecting; update(); }, { threshold: 0.15 }).observe(v);
   }
   document.addEventListener('visibilitychange', update);
-  window.addEventListener('pageshow', update);            // back/forward cache on iPhone
+  window.addEventListener('pageshow', update);
   v.addEventListener('canplay', function(){ if (want() && v.paused) play(); });
-  v.addEventListener('ended', function(){ v.currentTime = 0; if (want()) play(); });   // backup for loop
-  // watchdog: if it should be playing but the clock hasn't moved for ~2s, nudge it
+  v.addEventListener('ended', function(){ v.currentTime = 0; if (want()) play(); });
   setInterval(function(){
     if (!want() || v.readyState < 2) { stuck = 0; return; }
     if (v.paused || v.currentTime === last){
@@ -805,5 +1404,6 @@ onEnter($('costChart'), function(now){ if (now) return drawCost(1); tween(1500, 
   update();
 })();
 </script>
+<script src="events.js"></script>
 </body>
 </html>
