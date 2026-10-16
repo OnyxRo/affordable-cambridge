@@ -6,7 +6,6 @@
    ============================================================ */
 window.AC_EVENTS = [
   {
-    // TODO: set the date once the Council posts the agenda
     title: "City staff present rollback options to the Council",
     when: "Mid-November",
     start: null,

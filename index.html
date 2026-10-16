@@ -4,10 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Affordable Cambridge | Stop the rollback</title>
-<meta name="description" content="Wealthy landowners want to roll back the Multifamily Housing Ordinance that produced a record year for affordable homes. Help stop it.">
+<meta name="description" content="Wealthy landowners want to roll back the Multifamily Housing Ordinance that opened Cambridge to new homes. Help stop it.">
 <meta property="og:title" content="Affordable Cambridge | Stop the rollback">
-<meta property="og:description" content="Wealthy landowners want to roll back the Multifamily Housing Ordinance that produced a record year for affordable homes. Help stop it.">
-<!-- TODO: add og:image and og:url once the Netlify URL exists -->
+<meta property="og:description" content="Wealthy landowners want to roll back the Multifamily Housing Ordinance that opened Cambridge to new homes. Help stop it.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -467,9 +466,6 @@ section.frame.hook{background:var(--teal);color:var(--on-teal)}
 .rules li::before{content:"";position:absolute;left:0;top:20px;width:12px;height:12px;border-radius:50%;background:var(--red)}
 .rules h3{font-size:1.5rem}
 .rules p{color:var(--muted);font-size:1rem;margin-top:4px}
-.lose{margin-top:28px;padding-top:20px;border-top:2px solid var(--line)}
-.lose b{font-family:var(--display);font-weight:400;font-size:clamp(4rem,10vw,6.5rem);line-height:.85;color:var(--red);font-variant-numeric:tabular-nums}
-.lose span{display:block;font-size:.9rem;color:var(--muted);margin-top:8px}
 .nowsvg{display:block;width:100%;height:auto;margin-top:8px}
 
 /* 5. never built */
@@ -676,7 +672,7 @@ section.frame.hook{background:var(--teal);color:var(--on-teal)}
 .fg img{display:block;width:100%;height:100%;object-fit:cover}
 
 /* ===== hero 4a ===== */
-.hook3{min-height:640px;display:flex;align-items:center;padding:80px 0}
+.hook3{min-height:400px;display:flex;align-items:center;padding:56px 0}
 .hook3 .shade{background:rgba(18,35,34,.8)}
 .hook3 .wrap{width:100%}
 .hook3 h1{display:flex;flex-direction:column;gap:28px;font-family:var(--sans);text-transform:none;letter-spacing:0;max-width:none}
@@ -689,7 +685,7 @@ section.frame.hook{background:var(--teal);color:var(--on-teal)}
 .hero-btns{gap:20px;margin-top:52px}
 .hook3 .btn-ghost{background:transparent;color:var(--on-teal);border:2px solid var(--on-teal)}
 .hook3 .btn-ghost:hover{background:rgba(243,247,246,.12)}
-@media (max-width:800px){.hook3{min-height:0;padding:56px 0}.h-lead{font-size:22px}.h-big{font-size:64px}}
+@media (max-width:800px){.hook3{min-height:0;padding:40px 0}.h-lead{font-size:22px}.h-big{font-size:64px}}
 @media (max-width:400px){.h-big{font-size:52px}}
 @media (prefers-reduced-motion:reduce){.js .h-mark{transition:none}}
 
@@ -708,25 +704,6 @@ section.frame.hook{background:var(--teal);color:var(--on-teal)}
 /* ===== pushed out: population loss chart ===== */
 .never-h{font-size:clamp(2.4rem,6vw,4.4rem);line-height:.95}
 .never .sub{color:var(--ink)}
-.mig{margin:40px 0 0}
-.mig-t{font-family:var(--display);font-weight:400;text-transform:uppercase;color:var(--red);font-size:clamp(1.5rem,3vw,2.1rem);line-height:1}
-.mig-box{margin-top:14px;background:var(--surface);border:2px solid var(--line);padding:12px 16px 16px}
-#migSvg{display:block;width:100%;height:auto;overflow:visible}
-.mig-axis{stroke:var(--ink);stroke-width:2}
-.mig-yr{font-family:var(--sans);font-size:14px;font-weight:700;fill:var(--muted);text-anchor:middle}
-.mig-bar{fill:var(--red)}
-.mig-c{fill:var(--surface);stroke:var(--rose);stroke-width:2.5}
-.mig-g{fill:var(--teal)}
-.mig-p{transition:opacity .3s}
-.mig-p image{transition:opacity .25s}
-.mig-p.gray image{filter:url(#migGray);opacity:.75}
-.mig-p.gray .mig-c{stroke:var(--muted)}
-.mig-p.gone{opacity:0}
-.mig-key{display:flex;align-items:center;gap:8px;font-size:.875rem;color:var(--muted);margin-top:12px}
-.mig-key i{width:14px;height:14px;border-radius:50%;background:var(--sea);display:inline-block}
-.mig-cap{font-size:.9rem;margin-top:6px;max-width:760px}
-@media (max-width:600px){.mig-box{padding:8px}.mig-yr{font-size:22px}}
-@media (prefers-reduced-motion:reduce){.mig-p{transition:none}}
 /* residents: constant drift needs snapping off */
 .loop.drift{scroll-snap-type:none}
 
@@ -757,8 +734,6 @@ section.frame.hook{background:var(--teal);color:var(--on-teal)}
 /* ===== pink accents ===== */
 .loop .card.r1 .polaroid::before,.loop .card.r3 .polaroid::before{background:var(--rose)}
 .proof{border-color:var(--teal);box-shadow:8px 8px 0 var(--rose)}
-.mig-key-f{width:22px;height:22px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px var(--surface),0 0 0 4px var(--rose);margin:0 4px 0 2px}
-.mig-t{color:var(--red)}
 .map-tabs button:hover{border-color:var(--rose)}
 .ill:hover,.ill:focus-visible{border-color:var(--rose)}
 .z-pin.hi circle{fill:var(--rose)}
@@ -956,6 +931,27 @@ footer.site{border-top:6px solid var(--rose)}
 @media (max-width:480px){.lot-pair{grid-template-columns:1fr 22px 1fr;gap:6px}.lot-arrow{width:22px}.pol{padding:6px 6px 10px}.pol p{font-size:.78rem}.pol-tag{left:11px;top:11px;font-size:.6rem;padding:2px 8px}.lot-more{font-size:.88rem}}
 @media (prefers-reduced-motion:reduce){.js .lot-fig .pol{opacity:1;transition:none}.js .lot-fig .pol-b{transform:rotate(-3deg)}.js .lot-fig .pol-a{transform:rotate(2.5deg)}.lw{transition:none}}
 
+
+/* ===== v39: the past plays on its own; one stat row for pushed out; hero is shorter ===== */
+.js .story{height:auto}
+.js .st-stage{position:static;height:calc(100svh - var(--head-h) - 72px);min-height:600px;max-height:840px}
+.st-foot{position:relative;max-width:1120px;margin:0 auto;padding:0 22px 22px}
+.st-prog{height:4px;background:var(--line);border-radius:2px;overflow:hidden}
+.st-prog i{display:block;height:100%;background:var(--teal);transform-origin:0 50%;transform:scaleX(0)}
+.st-more{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:14px;font-weight:700;color:var(--muted);text-decoration:none;font-size:.95rem;transition:color .3s}
+.st-more svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.st-foot.done .st-more{color:var(--teal)}
+.st-foot.done .st-more svg{animation:stBob 1.4s ease-in-out infinite}
+@keyframes stBob{0%,100%{transform:translateY(-2px)}50%{transform:translateY(4px)}}
+.st-replay{position:absolute;right:22px;top:-44px;font:inherit;font-weight:700;font-size:.85rem;padding:6px 14px;border-radius:9999px;border:2px solid var(--teal);background:var(--surface);color:var(--teal);cursor:pointer}
+.st-replay[hidden]{display:none}
+@media (prefers-reduced-motion:reduce){.st-foot.done .st-more svg{animation:none}}
+.mig-stats{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:40px}
+.mig-stats li{background:var(--surface);border-top:4px solid var(--red);padding:22px 20px}
+.mig-stats b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,6vw,4rem);line-height:.95;color:var(--red)}
+.mig-stats span{display:block;margin-top:10px;font-size:1rem;line-height:1.35}
+.mig-src{margin-top:16px}
+@media (max-width:700px){.mig-stats{grid-template-columns:1fr;gap:12px}}
 </style>
 </head>
 <body>
@@ -983,7 +979,6 @@ footer.site{border-top:6px solid var(--rose)}
 <main id="content">
 
 <!-- 1. HOOK. Background is the aerial video; it only plays while on screen. -->
-<!-- TODO: confirm you have rights to use this drone footage -->
 <section class="hook3" id="hook" aria-labelledby="hook-h">
   <video id="askVideo" muted autoplay playsinline loop preload="auto" disablepictureinpicture disableremoteplayback poster="images/cambridge-aerial-poster.jpg" aria-hidden="true" tabindex="-1">
     <source src="images/cambridge-aerial.mp4" type="video/mp4">
@@ -1013,7 +1008,7 @@ footer.site{border-top:6px solid var(--rose)}
   <div class="loop" id="loop" tabindex="0" aria-label="Neighbors' stories. Scroll sideways or use the arrows."></div>
 </section>
 
-<!-- 2. THE PAST, ZOOMED IN, AND THE WIN. One sticky stage; scrolling moves the map from 1930 to 2024, zooms into West Cambridge, then flips the city green for 2025. -->
+<!-- 2. THE PAST, ZOOMED IN, AND THE WIN. One stage that plays through on its own once it is on screen: the map runs from 1930 to 2024, zooms into West Cambridge, then flips the city green for 2025. -->
 <section class="story" id="past" aria-labelledby="past-h">
   <div class="st-stage" id="stStage">
     <div class="st-text">
@@ -1032,18 +1027,16 @@ footer.site{border-top:6px solid var(--rose)}
         <h2>Homes merged <span class="st-red st-line">into mansions.</span></h2>
         <p class="st-sub">In West Cambridge, two and three-family houses were converted to single-family homes.</p>
         <div class="st-stat"><b id="convNum">0</b><span>homes lost to single-family conversions</span></div>
-        <!-- TODO: confirm the 48 and its source (city permit data, 1996 to 2024) -->
-        <p class="source">City permit data, 1996 to 2024.</p>
+        <p class="source">City of Cambridge building permits, West Cambridge, 1996 to 2024. <a href="numbers.html">How we counted</a></p>
       </div>
       <div class="st-panel" data-beat="win">
         <h2 class="st-teal">In 2025, we legalized homes for everyone.</h2>
         <p class="st-sub">The Multifamily Housing Ordinance made it possible to build apartment homes across all of Cambridge.</p>
-        <!-- TODO: confirm "all-electric homes" is a requirement of the 2025 ordinance -->
         <ul class="st-tiles">
-          <li><b>More homes</b><span>lower rents</span></li>
+          <li><b>Four stories</b><span>allowed on any lot</span></li>
+          <li><b>Six stories</b><span>with 20% affordable homes</span></li>
           <li><b>Apartments legal</b><span>citywide again</span></li>
-          <li><b>Built clean</b><span>all-electric homes</span></li>
-          <li><b>Affordable homes</b><span>across the city</span></li>
+          <li><b>10x more growth</b><span>projected by 2030</span></li>
         </ul>
       </div>
     </div>
@@ -1068,7 +1061,6 @@ footer.site{border-top:6px solid var(--rose)}
             <path class="m-edge" d="M187.2 24.3L230.6 91.6L239.8 103.1L251.6 90.8L254.9 97.7L261.7 108.2L275.9 125.7L270.1 129.9L273.5 135.8L268.9 138.8L276.7 149.4L285.6 163.8L309.3 191.4L315.5 192.1L333.2 211.5L329.5 213.7L361.9 253.9L397.5 253.1L421.1 254.7L445.6 257.2L468.9 264.9L472.9 256.4L475.8 261.4L479.2 262.8L491.6 261.8L494.2 260.6L496.1 258.6L503.9 255.7L507.2 258.3L510.9 255.7L513.3 255.5L519.0 260.1L521.1 260.6L525.9 260.1L531.5 256.7L534.1 259.0L538.4 266.2L541.0 269.0L544.6 269.0L552.3 263.4L554.0 268.9L590.3 276.9L606.0 298.4L571.5 299.4L541.7 343.3L538.7 358.9L527.3 379.4L520.4 386.3L518.5 391.9L445.8 419.4L398.5 430.7L387.0 432.7L377.0 434.3L334.9 437.5L321.4 437.9L300.3 434.0L283.5 422.1L280.8 418.6L276.3 409.5L275.8 405.9L279.0 379.8L276.6 349.1L275.9 319.2L273.9 311.6L269.6 304.6L266.1 302.3L259.3 300.7L248.8 301.8L243.6 301.6L240.5 300.8L233.0 297.1L229.0 292.4L216.4 270.0L205.1 259.7L199.7 257.4L189.5 257.6L185.2 258.6L180.2 261.7L176.2 267.4L175.4 272.2L175.8 274.3L183.2 285.3L184.0 295.3L181.2 298.7L171.3 307.7L161.3 313.9L157.1 317.3L141.2 336.0L136.3 338.5L129.8 339.8L126.9 339.3L117.0 334.7L114.5 334.2L110.6 334.6L106.0 321.1L113.2 319.4L117.6 316.9L126.9 297.1L129.7 289.7L130.7 284.5L132.8 260.5L108.4 256.5L110.2 246.3L89.4 248.5L72.7 252.2L43.4 247.9L31.7 200.9L39.2 204.5L39.5 203.4L37.7 198.6L38.4 196.3L36.0 193.8L30.3 192.2L23.5 188.9L23.7 187.8L22.1 186.6L21.0 182.7L6.0 151.8L17.8 149.5L20.7 147.5L23.0 143.0L27.1 120.8L18.3 83.3L30.2 73.6L57.7 28.8L112.3 60.7L113.4 56.8L129.0 40.7L136.3 36.7L146.6 36.1L153.2 31.1L160.0 24.7L166.8 14.6L169.6 6.8L170.6 6.0Z"/>
             <path class="m-west" id="mWest" d="M141.2 336.0L136.3 338.5L129.8 339.8L117.0 334.7L110.6 334.6L106.0 321.1L113.2 319.4L117.6 316.9L126.9 297.1L130.7 284.5L132.8 260.5L108.4 256.5L110.2 246.3L70.4 251.9L85.0 216.1L99.1 199.4L76.0 184.9L62.7 172.1L87.5 158.9L108.3 152.2L118.1 150.6L122.5 146.1L188.9 186.0L234.4 220.4L244.8 236.2L266.3 248.7L262.8 260.3L237.7 299.6L233.0 297.1L229.6 293.4L216.4 270.0L205.1 259.7L199.7 257.4L189.5 257.6L185.2 258.6L180.2 261.7L176.2 267.4L175.4 272.2L183.2 285.3L184.0 295.3L171.3 307.7L157.1 317.3Z"/>
             <g class="m-lbl" id="mLbl" aria-hidden="true"><text x="394.8" y="325.8">The Port</text><text x="222.5" y="169.1">Neighborhood Nine</text><text x="324.2" y="267.0">Mid-Cambridge</text><text x="168.4" y="75.4">North Cambridge</text><text x="146.2" y="219.1">West Cambridge</text><text x="303.5" y="326.8">Riverside</text><text x="317.5" y="392.5">Cambridgeport</text><text x="504.1" y="313.4">East Cambridge</text></g>
-            <!-- TODO: pins sit at approximate points on each street; move to the exact addresses -->
             <g class="m-pins" aria-hidden="true">
               <g data-pin="1" transform="translate(219.5 194.5)"><circle r="8"/><text y="3.6">1</text></g>
               <g data-pin="2" transform="translate(247.4 179.5)"><circle r="8"/><text y="3.6">2</text></g>
@@ -1091,34 +1083,35 @@ footer.site{border-top:6px solid var(--rose)}
       </figcaption>
     </figure>
 
-    <!-- TODO: confirm each building could not be built under the zoning in place before 2025. Swap in full-resolution photos. -->
     <ul class="st-cards" id="stCards" aria-label="Apartment buildings that were illegal to build">
       <li class="legal" data-pin="1"><div class="st-ph"><img src="images/garden-st.jpg" alt="Apartment building on Garden St" width="504" height="270"><span class="chip"><span class="c-l">Legal</span><span class="c-i">Illegal<span class="c-long"> to build</span></span><span class="c-a">Legal again</span></span><span class="num">1</span></div><span class="st-name">Garden St</span></li>
       <li class="legal" data-pin="2"><div class="st-ph"><img src="images/linnaean-st.jpg" alt="Apartment building on Linnaean St" width="504" height="270"><span class="chip"><span class="c-l">Legal</span><span class="c-i">Illegal<span class="c-long"> to build</span></span><span class="c-a">Legal again</span></span><span class="num">2</span></div><span class="st-name">Linnaean St</span></li>
       <li class="legal" data-pin="3"><div class="st-ph"><img src="images/oxford-st.jpg" alt="Apartment building on Oxford St" width="504" height="270"><span class="chip"><span class="c-l">Legal</span><span class="c-i">Illegal<span class="c-long"> to build</span></span><span class="c-a">Legal again</span></span><span class="num">3</span></div><span class="st-name">Oxford St</span></li>
       <li class="legal" data-pin="4"><div class="st-ph"><img src="images/harvard-st.jpg" alt="Apartment building on Harvard St" width="504" height="270"><span class="chip"><span class="c-l">Legal</span><span class="c-i">Illegal<span class="c-long"> to build</span></span><span class="c-a">Legal again</span></span><span class="num">4</span></div><span class="st-name">Harvard St</span></li>
     </ul>
-    <!-- TODO: the year-by-year spread is approximate (first apartment bans in the 1943 ordinance, more downzoning in 1962). Replace with historical district maps if David has them. -->
     <p class="source st-src">The 2024 map shows official zoning districts from <a href="https://github.com/cambridgegis/cambridgegis_data" target="_blank" rel="noopener">City of Cambridge GIS</a>, and earlier years are approximate. Quote from the <a href="https://www.cambridgema.gov/~/media/files/officeofthemayor/2019/acitywhichisdesirableandobtainablecambridgezoninghistory102419.pdf" target="_blank" rel="noopener">City's zoning history</a>. <a href="numbers.html#maps">More maps</a></p>
+  </div>
+  <div class="st-foot" id="stFoot">
+    <div class="st-prog" aria-hidden="true"><i id="stBar"></i></div>
+    <button type="button" class="st-replay" id="stReplay" hidden>Replay</button>
+    <a class="st-more" href="#win">The story keeps going: what 2025 changed<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9l7 7 7-7"/></svg></a>
   </div>
 </section>
 
-<!-- 3. THE WIN, ON THE GROUND: one lot, nine families; then the record year -->
+<!-- 3. THE WIN, ON THE GROUND: one lot, nine families; then the affordable homes in the pipeline -->
 <section class="s win" id="win" aria-labelledby="lot-h">
   <div class="wrap two lot">
     <div class="rise">
       <h2 id="lot-h">Now homes can be built <span class="lot-y">for everyone, not just mansions for the wealthy.</span></h2>
-      <p class="lot-p">In 2025 we opened every neighborhood to new homes. On Rindge Ave, a lot slated for one luxury house now holds nine.</p>
+      <p class="lot-p">In 2025 we opened every neighborhood to new homes. On a lot where the rules once allowed one large house, four stories now make room for nine families.</p>
     </div>
-    <!-- TODO: confirm address and unit counts. Swap the drawing for the rendering of the planned house (images/rindge-before.jpg). -->
     <figure class="lot-fig" id="lotFig">
-      <figcaption class="lot-addr">121 Rindge Ave, North Cambridge</figcaption>
+      <figcaption class="lot-addr">Illustration: one lot, before and after 2025</figcaption>
       <div class="lot-pair">
         <div class="pol pol-b">
-          <span class="pol-tag">Before</span>
-          <div class="pol-ph" data-photo="images/rindge-before.jpg">
-            <img src="images/rindge-before.jpg" alt="The luxury house planned for 121 Rindge Ave" hidden onload="this.hidden=false" onerror="this.hidden=true">
-            <svg viewBox="0 0 200 170" role="img" aria-label="Drawing of one large luxury house">
+          <span class="pol-tag">Before 2025</span>
+          <div class="pol-ph">
+            <svg viewBox="0 0 200 170" role="img" aria-label="Drawing of one large house">
               <rect width="200" height="170" fill="#C9D3D1"/>
               <rect y="138" width="200" height="32" fill="#9FB1AD"/>
               <path d="M34 140V70L112 34L168 70V140Z" fill="#3B4746"/>
@@ -1130,7 +1123,7 @@ footer.site{border-top:6px solid var(--rose)}
               <path d="M26 72L112 30L176 72" fill="none" stroke="#E4EBE9" stroke-width="4"/>
             </svg>
           </div>
-          <p>1 luxury home planned</p>
+          <p>1 large home</p>
         </div>
         <svg class="lot-arrow" viewBox="0 0 40 20" aria-hidden="true"><path d="M2 10H36M28 3l8 7-8 7"/></svg>
         <div class="pol pol-a">
@@ -1143,25 +1136,24 @@ footer.site{border-top:6px solid var(--rose)}
               <g class="lw-g"></g>
             </svg>
           </div>
-          <p><b>9 homes now proposed</b></p>
+          <p><b>9 homes now allowed</b></p>
         </div>
       </div>
     </figure>
   </div>
 
   <div class="wrap rec">
-    <h2 id="win-h" class="rise">A record year for affordable homes.</h2>
-    <div class="win-stat"><b id="winNum">147</b><span>permanently affordable homes proposed</span></div>
-    <p class="win-body">Building for future generations in the Cambridge community.</p>
+    <h2 id="win-h" class="rise">Affordable homes are in the pipeline.</h2>
+    <div class="win-stat"><b id="winNum">134</b><span>permanently affordable homes in the pipeline</span></div>
+    <p class="win-body">Every larger new building must set aside 20% of its homes as permanently affordable.</p>
     <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
   <radialGradient id="warmLight" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#F7E2A8"/><stop offset=".45" stop-color="#F2C356"/><stop offset="1" stop-color="#E5992F"/></radialGradient>
   <filter id="warmGlow" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur in="SourceGraphic" stdDeviation="1.8" result="b"/><feColorMatrix in="b" type="matrix" values="1 0 0 0 0  0 .78 0 0 0  0 0 .3 0 0  0 0 0 .98 0" result="w"/><feMerge><feMergeNode in="w"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 </defs></svg>
-    <div class="porch" id="porch" role="img" aria-label="30 homes with their porch lights on, each standing for 5 permanently affordable homes, mixed with photos of residents."></div>
+    <div class="porch" id="porch" role="img" aria-label="27 homes with their porch lights on, each standing for 5 permanently affordable homes, mixed with photos of residents."></div>
     <div class="win-foot">
       <span><i aria-hidden="true"></i>Each porch light is 5 permanently affordable homes</span>
-      <!-- TODO: source for 147 and comparison with earlier years (David to confirm) -->
-      <p class="source">Source: pending. <a href="numbers.html">How we counted</a></p>
+      <p class="source">Source: A Better Cambridge, from Councillor Zusy's Multifamily Housing Ordinance pipeline tracker, June 2026. <a href="numbers.html">How we counted</a></p>
     </div>
   </div>
 </section>
@@ -1174,19 +1166,14 @@ footer.site{border-top:6px solid var(--rose)}
       <p class="sub">That means more expensive homes for all.</p>
       <ul class="rules">
         <li><h3>Wider setbacks</h3><p>Less of every lot can be built on</p></li>
-        <li><h3>More open space</h3><p>A bigger share of each lot left unbuilt</p></li>
+        <li><h3>More green space</h3><p>More of each lot kept as bare, permeable ground</p></li>
         <li><h3>Three-story caps</h3><p>Fewer floors on larger buildings</p></li>
       </ul>
     </div>
     <div id="nowViz">
-      <div class="lose">
-        <b id="loseNum">0</b>
-        <span>affordable homes we could lose</span>
-      </div>
-      <svg id="nowSvg" class="nowsvg" viewBox="638 180 540 540" role="img" aria-label="One building with 12 homes shrinks to 3 under the rollback, 9 homes lost. Then a whole block of buildings is cut down the same way, each one narrower and capped at three stories."></svg>
+      <svg id="nowSvg" class="nowsvg" viewBox="638 215 540 495" role="img" aria-label="One building with 12 homes shrinks to 3 under the rollback, 9 homes lost. Then a whole block of buildings is cut down the same way, each one narrower and capped at three stories."></svg>
       <p class="blockcap"><b>And then the whole block does.</b> <span>Every lot, building by building.</span></p>
-      <!-- TODO: cite the inclusionary zoning threshold and the pipeline count -->
-      <p class="source">Source: Cambridge inclusionary zoning ordinance; homes lost across the pipeline, pending. <a href="numbers.html">How we counted</a></p>
+      <p class="source">Illustration of a 12-home building under three-story caps; not a specific project. Rules: City of Cambridge staff proposal, June 2026. <a href="numbers.html">The rollback</a></p>
     </div>
   </div>
 </section>
@@ -1196,16 +1183,12 @@ footer.site{border-top:6px solid var(--rose)}
   <div class="wrap">
     <h2 id="never-h" class="never-h">Homes don't get delayed.<br>They never get built.</h2>
     <p class="sub">Members of our community are being pushed out.</p>
-    <figure class="mig">
-      <h3 class="mig-t">Massachusetts population loss</h3>
-      <!-- Bars come from DATA.migration. TODO: replace the illustrative values with Boston Indicators' yearly series -->
-      <div class="mig-box"><svg id="migSvg" role="img" aria-labelledby="mig-d"><desc id="mig-d">Illustrative chart: Massachusetts loses more 25 to 44-year-olds to other states each year from 2009 to 2022, and the losses grow over time. Each bar removes the neighbors it reaches.</desc></svg></div>
-      <figcaption>
-        <p class="mig-key"><img class="mig-key-f" id="migKeyF" src="images/neighbor-1.jpg" alt="" width="22" height="22">Each face is [N] residents ages 25 to 44</p>
-        <p class="mig-cap"><b>Net loss of 25 to 44-year-olds to other states, Massachusetts, by year.</b> 25 to 44-year-olds make up about 60% of the state's net losses (2022).</p>
-        <p class="source">Illustrative until Boston Indicators shares the yearly data. Source: <a href="https://www.bostonindicators.org/article-pages/2024/april/domestic-migration" target="_blank" rel="noopener">Boston Indicators, Mass. Migration (April 2024)</a></p>
-      </figcaption>
-    </figure>
+    <ul class="mig-stats">
+      <li><b>129,800</b><span>more residents ages 25 to 44 left Massachusetts for other states than moved in, 2006 to 2022</span></li>
+      <li><b>3 in 5</b><span>of the state's net losses by age group in 2022 were people ages 25 to 44</span></li>
+      <li><b>+33%</b><span>rise in typical Massachusetts home prices in 2022 alone, after +20% in 2021</span></li>
+    </ul>
+    <p class="source mig-src">Source: <a href="https://www.bostonindicators.org/article-pages/2024/april/domestic-migration" target="_blank" rel="noopener">Boston Indicators, Mass. Migration (April 2024)</a>. The 129,800 total is as reported by <a href="https://patch.com/massachusetts/across-ma/mass-migration-state-continues-lose-residents-study-finds" target="_blank" rel="noopener">Patch</a>.</p>
   </div>
 </section>
 
@@ -1226,13 +1209,13 @@ footer.site{border-top:6px solid var(--rose)}
 <section class="s ask" id="ask" aria-labelledby="ask-h">
   <div class="wrap">
     <h2 id="ask-h">The fight isn't over.</h2>
-    <p class="sub">The Council voted to start drafting a rollback, but nothing has changed yet.</p>
+    <p class="sub">The Council has asked city staff for options to change the ordinance. Nothing has changed yet.</p>
     <ol class="steps">
       <li class="done cur"><span class="nx"></span><span class="sdot" aria-hidden="true"></span><b>Staff options</b><small>mid-November</small></li>
-      <li aria-current="step"><span class="nx">Next step</span><span class="sdot" aria-hidden="true"></span><b>Zoning drafted</b><small>date not set</small></li>
-      <li><span class="nx"></span><span class="sdot" aria-hidden="true"></span><b>Two hearings</b><small>public comment</small></li>
-      <li><span class="nx"></span><span class="sdot" aria-hidden="true"></span><b>Two Council votes</b><small>two weeks apart</small></li>
-      <li><span class="nx"></span><span class="sdot" aria-hidden="true"></span><b>Six months' notice</b><small>before it applies</small></li>
+      <li aria-current="step"><span class="nx">Next step</span><span class="sdot" aria-hidden="true"></span><b>Council direction</b><small>date not set</small></li>
+      <li><span class="nx"></span><span class="sdot" aria-hidden="true"></span><b>Public hearings</b><small>public comment</small></li>
+      <li><span class="nx"></span><span class="sdot" aria-hidden="true"></span><b>Council votes</b><small>before any change</small></li>
+      <li><span class="nx"></span><span class="sdot" aria-hidden="true"></span><b>Effective date</b><small>may be delayed</small></li>
     </ol>
     <div class="btn-row ask-btns">
       <a class="btn btn-ask" href="act.html#email">Email the Council</a>
@@ -1257,12 +1240,10 @@ footer.site{border-top:6px solid var(--rose)}
       <svg class="logo" viewBox="0 0 1095 1095" aria-hidden="true"><use href="#ac-logo"/></svg>
       <div>
       <strong>Affordable Cambridge</strong><br>
-      <!-- TODO: real contact email -->
       <a href="mailto:hello@example.org">hello@example.org</a>
       </div>
     </div>
     <div>
-      <!-- TODO: check with OCPF whether a "Paid for by" line is required before launch -->
       <p><a href="privacy.html">Privacy</a></p>
     </div>
   </div>
@@ -1280,20 +1261,16 @@ footer.site{border-top:6px solid var(--rose)}
    EDIT THE NUMBERS HERE. Everything on the page reads from this.
    ============================================================ */
 var DATA = {
-  // TODO: confirm with David. Permanently affordable homes proposed since the 2025 ordinance.
-  affordable: 147,
-  // Affordable homes at risk if the rollback passes (Now + Never built screens). TODO: confirm.
-  atRisk: 147,
-  // West Cambridge: homes lost to single-family conversions, 1996 to 2024 (zoomed-in screen). TODO: confirm with city permit data.
-  conversions: 48,
+  // Permanently affordable inclusionary homes in the ordinance pipeline (A Better Cambridge, from Councillor Zusy's tracker, June 2026).
+  affordable: 134,
+  // West Cambridge: homes lost when buildings with 2+ homes were permitted as 1 home, 1996 to 2024 (zoomed-in screen). City permit data.
+  conversions: 46,
   // A resident photo appears after every N homes in the porch-light grid.
   // One porch light stands for this many affordable homes.
   perLight: 5,
   // A resident photo appears after every N houses.
   photoEvery: 6,
-  photos: ['megan','daniel','ruth','marco','james'],   // TODO: real resident photos
-  // Never built: every story goes here. Five show at a time; arrows page through.
-  // TODO: real residents. Duplicated for now so paging can be tested.
+  photos: ['megan','daniel','ruth','marco','james'],  // Never built: every story goes here. Five show at a time; arrows page through.
   stories: (function(){
     var base = [
       { photo:'megan',  name:'Megan',  where:'North Cambridge', quote:'My kids go to school here and I want them to be able to stay.' },
@@ -1301,7 +1278,6 @@ var DATA = {
       { photo:'ruth',   name:'Ruth',   where:'Mid-Cambridge',   quote:'I raised my family on this street, and now I want a smaller place without leaving it.' },
       { photo:'marco',  name:'Marco',  where:'Cambridgeport',   quote:"I grew up on Columbia Street and can't afford to rent a block from my mom." },
       { photo:'james',  name:'James',  where:'East Cambridge',  quote:'I teach at the high school and drive an hour each way to get there.' },
-      // TODO: placeholder names, neighborhoods and quotes. Replace with each person's real name, neighborhood and own words, plus photo consent
       { photo:'neighbor-1', name:'Hannah', where:'Riverside', quote:'I came here for grad school and want to stay after I graduate.' },
       { photo:'neighbor-2', name:'Maya', where:'The Port', quote:'I grew up in the Port and want to raise my own kids here.' },
       { photo:'neighbor-3', name:'Ben', where:'Wellington-Harrington', quote:'I bike to work in Kendall and do not want to move three towns away.' },
@@ -1314,10 +1290,6 @@ var DATA = {
     ];
     return base;
   })(),
-  // Pushed out: net loss per year, 2009 to 2022, in whole faces (0 to 5), so every bar stops exactly at a row. Each figure is DATA.migPer people.
-  // TODO: illustrative only. Replace with Boston Indicators' yearly net loss of 25 to 44-year-olds.
-  migStart: 2009,
-  migration: [1,1,2,1,2,2,2,3,2,3,3,4,4,5],
   // Typical Cambridge home value, $ thousands, January of each year. Zillow Home Value Index (single-family + condo, middle tier, smoothed, seasonally adjusted), from A Better Cambridge's housing data project. Nominal dollars.
   homeValue: { start: 2000, vals: [314,373,421,455,473,505,517,494,491,479,481,490,478,521,593,660,733,784,851,904,904,929,996,978,995,1044,1038] }
 };
@@ -1435,10 +1407,6 @@ setTimeout(function(){ $('hl').classList.add('on'); }, reduce ? 0 : 100);
    0.52 to 0.66   houses turn into mansions; the counter runs to -DATA.conversions
    0.68 to 0.74   zoom back out to the 2024 map
    0.76 to 0.90   2025: apartments legal again, spreading back from East Cambridge */
-function scrollProgress(el){
-  var r = el.getBoundingClientRect(), span = r.height - window.innerHeight;
-  return span > 0 ? clamp(-r.top / span) : (r.top < 0 ? 1 : 0);
-}
 var seg = function(p, a, b){ return clamp((p - a) / (b - a)); };
 var lerp = function(a, b, t){ return a + (b - a) * t; };
 
@@ -1479,19 +1447,14 @@ var lerp = function(a, b, t){ return a + (b - a) * t; };
       g += '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="#fff" stroke="#1F5F5B" stroke-width="2"/>';
       for (var u = 0; u < units; u++){
         var uy = y + 5 + u * uh;
-        g += '<rect x="' + (x + 9) + '" y="' + uy + '" width="' + (w - 18) + '" height="' + (uh - 5) + '" fill="#CFE3DE"/>';
-        g += '<circle cx="' + cx + '" cy="' + (uy + 8) + '" r="3.6" fill="#1F5F5B"/>';
-        g += '<path d="M' + (cx - 6.5) + ' ' + (uy + 20) + 'q0-7 6.5-7t6.5 7Z" fill="#1F5F5B"/>';
+        g += '<rect x="' + (x + 9) + '" y="' + uy + '" width="' + (w - 18) + '" height="' + (uh - 5) + '" fill="#CFE3DE" stroke="#1F5F5B" stroke-width="1"/>';
+        g += '<path d="M' + (x + 9) + ' ' + (uy + (uh - 5) / 2) + 'h' + (w - 18) + '" stroke="#1F5F5B" stroke-width="1"/>';
       }
       g += '</g><g class="h-man">';
       g += '<path d="' + roof + '" fill="#1F5F5B" stroke="#D22B1F" stroke-width="2.5" stroke-linejoin="round"/>';
       g += '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="#1F5F5B" stroke="#D22B1F" stroke-width="2.5"/>';
-      var hy = y + h * .42;
-      g += '<path d="M' + (cx - 15) + ' ' + (y + h - 2) + 'q0-' + (h * .34) + ' 15-' + (h * .34) + 't15 ' + (h * .34) + 'Z" fill="#A7D4C9"/>';
-      g += '<circle cx="' + cx + '" cy="' + hy + '" r="7.5" fill="#F3F7F6"/>';
-      g += '<path d="M' + (cx - 7.5) + ' ' + (hy - 1) + 'a7.5 7.5 0 0 1 15 0q-7.5-4-15 0Z" fill="#122322"/>';
-      g += '<path d="M' + (cx - 5) + ' ' + (hy + 7) + 'L' + cx + ' ' + (hy + 15) + 'L' + (cx + 5) + ' ' + (hy + 7) + 'Z" fill="#fff"/>';
-      g += '<path d="M' + (cx - 1.6) + ' ' + (hy + 10) + 'h3.2l1 7-2.6 3-2.6-3Z" fill="#122322"/>';
+      g += '<rect x="' + (x + 8) + '" y="' + (y + 8) + '" width="' + (w - 16) + '" height="' + Math.max(12, h * .28) + '" fill="#A7D4C9"/>';
+      g += '<rect x="' + (cx - 5) + '" y="' + (y + h - 20) + '" width="10" height="20" fill="#122322"/>';
       g += '</g></g>';
       html += g;
     });
@@ -1503,9 +1466,9 @@ var lerp = function(a, b, t){ return a + (b - a) * t; };
   var KEY = [0, .2, .3, .4, .48, .6, .66, .74, .9];
   function snap(p){ if (!reduce) return p; var k = KEY[0]; KEY.forEach(function(v){ if (p >= v) k = v; }); return k; }
 
-  var last = -1, lastState = {};
+  var prog = 0, last = -1, lastState = {};
   function render(){
-    var p = snap(scrollProgress(sec));
+    var p = snap(prog);
     if (p === last) return; last = p;
 
     var yr = 1930 + Math.round(seg(p, .05, .36) * (2024 - 1930));
@@ -1556,11 +1519,23 @@ var lerp = function(a, b, t){ return a + (b - a) * t; };
       }
     });
   }
-  var ticking = false;
-  function onScroll(){ if (!ticking){ ticking = true; requestAnimationFrame(function(){ ticking = false; render(); }); } }
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', function(){ last = -1; onScroll(); });
-  render();
+  // The story plays on its own once half of it is on screen: about 14 seconds from 1930 to the 2025 win.
+  var DUR = 14000, t0 = null, raf = 0, foot = $('stFoot'), bar = $('stBar'), replay = $('stReplay'), started = false;
+  function frame(now){
+    if (t0 === null) t0 = now;
+    prog = clamp((now - t0) / DUR); render(); bar.style.transform = 'scaleX(' + prog.toFixed(3) + ')';
+    if (prog < 1) raf = requestAnimationFrame(frame); else { foot.classList.add('done'); replay.hidden = false; }
+  }
+  function play(){ cancelAnimationFrame(raf); t0 = null; prog = 0; last = -1; bar.style.transform = 'scaleX(0)'; foot.classList.remove('done'); replay.hidden = true; render(); raf = requestAnimationFrame(frame); }
+  replay.addEventListener('click', play);
+  if (reduce){ prog = 1; render(); bar.style.transform = 'scaleX(1)'; foot.classList.add('done'); }
+  else {
+    render();
+    var stage = $('stStage');
+    if ('IntersectionObserver' in window){
+      new IntersectionObserver(function(es, io){ es.forEach(function(e){ if (e.isIntersecting && !started){ started = true; io.disconnect(); play(); } }); }, { threshold: .5 }).observe(stage);
+    } else play();
+  }
 })();
 
 /* ---------- 3. one lot: nine windows light up ---------- */
@@ -1638,8 +1613,7 @@ var lerp = function(a, b, t){ return a + (b - a) * t; };
   }
   var T0=1.8, T1=9;   // start with the building held for a moment, as in the 05 scene
   var rules=[].slice.call(document.querySelectorAll('.rules li'));
-  function lost(t){ var v=t<4.6?0:Math.max(2/DATA.atRisk,Math.pow(lin(t,6.2,8.4),2)); $('loseNum').textContent=fmt(v*DATA.atRisk); }
-  function frame(t){ draw(t); lost(t); }
+  function frame(t){ draw(t); }
   frame(T0);
   onEnter($('nowViz'), function(now){
     if (now){ rules.forEach(function(li){ li.classList.add('on'); }); return frame(T1); }
@@ -1712,54 +1686,6 @@ var lerp = function(a, b, t){ return a + (b - a) * t; };
   }, 0.3);
 })();
 
-/* ---------- 5. pushed out: each year's loss wipes out a column of neighbors ---------- */
-(function(){
-  var NS='http://www.w3.org/2000/svg', svg=$('migSvg'), V=DATA.migration, N=V.length, ROWS=5;
-  var CW=56, RH=54, TOP=40, W=N*CW, H=TOP+ROWS*RH+8;
-  svg.setAttribute('viewBox','0 0 '+W+' '+H);
-  function el(tag, at, par){ var n=document.createElementNS(NS,tag); for (var k in at) n.setAttribute(k, at[k]); par.appendChild(n); return n; }
-  var cols=[];
-  // faces: every neighbor's photo, dealt out in a shuffled order so no column repeats the same pattern
-  var defs=el('defs',{},svg); el('circle',{r:22},el('clipPath',{id:'migClip'},defs));
-  el('feColorMatrix',{type:'saturate',values:'0'},el('filter',{id:'migGray'},defs));
-  var all=DATA.stories.map(function(st){ return st.photo; });
-  var pool=all.filter(function(ph){ return DATA.photos.indexOf(ph) < 0; });
-  if (pool.length < 6) pool=all;   // not enough faces yet to keep the two sections apart
-  var deck=[], seed=7;
-  $('migKeyF').src='images/'+pool[0]+'.jpg';
-  function rnd(){ seed=(seed*16807)%2147483647; return seed/2147483647; }
-  function face(){ if(!deck.length) deck=pool.slice().sort(function(){ return rnd()-.5; }); return deck.pop(); }
-  for (var c=0;c<N;c++){
-    var cx=c*CW+CW/2, g=el('g',{},svg), people=[];
-    for (var r=0;r<ROWS;r++){
-      var p=el('g',{'class':'mig-p',transform:'translate('+cx+' '+(TOP+r*RH+RH/2)+')'},g);
-      el('circle',{r:23.5,'class':'mig-c'},p);
-      el('image',{href:'images/'+face()+'.jpg',x:-22,y:-22,width:44,height:44,'clip-path':'url(#migClip)',preserveAspectRatio:'xMidYMid slice'},p);
-      people.push(p);
-    }
-    var bar=el('rect',{x:cx-22,y:TOP,width:44,height:0,'class':'mig-bar'},g);
-    cols.push({bar:bar,people:people,v:V[c]});
-  }
-  el('line',{x1:0,x2:W,y1:TOP,y2:TOP,'class':'mig-axis'},svg);
-  [0, Math.floor((N-1)/2), N-1].forEach(function(c){
-    el('text',{x:c*CW+CW/2,y:TOP-12,'class':'mig-yr'},svg).textContent=String(DATA.migStart+c);
-  });
-  // t runs 0..1 across the whole chart; columns start one after another
-  function draw(t){
-    cols.forEach(function(col,c){
-      var start=c/N*0.6, k=ease(clamp((t-start)/0.4)), h=k*Math.max(0, col.v*RH-4);
-      col.bar.setAttribute('height',h.toFixed(1));
-      col.people.forEach(function(p,r){
-        var doomed = r < col.v;   // the bar will reach this face
-        p.classList.toggle('gray', doomed && h > 1 && h > r*RH - RH*0.55);
-        p.classList.toggle('gone', doomed && h > r*RH+RH*0.35);
-      });
-    });
-  }
-  draw(0);
-  onEnter(svg, function(now){ if (now) return draw(1); tween(5200, draw); }, 0.45);
-})();
-
 /* ---------- 6. cost chart: typical Cambridge home value, drawn once ---------- */
 (function(){
   var svg = $('costSvg'); if (!svg) return;
@@ -1783,10 +1709,9 @@ var lerp = function(a, b, t){ return a + (b - a) * t; };
   var line = mk('path', { d: d, 'class': 'ln2' });
   var s0 = mk('g', { 'class': 'pt' }), s1 = mk('g', { 'class': 'pt' });
   mk('circle', { cx: pts[0][0], cy: pts[0][1], r: 5 }, s0);
-  tx(pts[0][0] + 12, pts[0][1] + 30, money(HV.vals[0]), { 'class': 'vl' }, s0);
   var e = pts[n - 1];
   mk('circle', { cx: e[0], cy: e[1], r: 6 }, s1);
-  tx(e[0] - 12, e[1] - 4, money(HV.vals[n - 1]), { 'class': 'vl big', 'text-anchor': 'end' }, s1);
+  tx(e[0] - 12, e[1] - 22, money(HV.vals[n - 1]), { 'class': 'vl big', 'text-anchor': 'end' }, s1);
   $('costMult').textContent = (HV.vals[n - 1] / HV.vals[0]).toFixed(1);
   var len = line.getTotalLength();
   function draw(t){
