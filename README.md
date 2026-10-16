@@ -17,16 +17,16 @@ images/           Portrait photos go here
 Visual system follows DESIGN.md (Porch Teal): Anton for headlines, DM Serif Display italic for residents' words, DM Sans for everything else. Tokens live in :root and the "Porch Teal design system" block at the end of each page's <style>. The alert band style is still in the CSS for hearing weeks; the band itself is removed until a hearing date is set.
 
 ## How the animations work
-One section now pins the page while you scroll through them (V4 animatic). The past (#past, 640vh tall): the map runs 1930 to 2024 as the ban spreads out from West Cambridge, the 1942 quote appears, and the four building cards flip from Legal to Illegal to build as the red reaches their pins; then the map zooms into West Cambridge and houses turn into mansions while the counter runs to -48; then it zooms out and the city turns green from East Cambridge for 2025 and the cards flip to Legal again. Timings are listed at the top of the story script. The rollback (#now) is the earlier version: the rules light up one at a time, the 147 counter climbs, the example building shrinks from 12 homes to 9, then the whole block shrinks. Visitors with reduced motion turned on get the same states in steps, without tweening.
+One section now pins the page while you scroll through them (V4 animatic). The past (#past, 640vh tall): the map runs 1930 to 2024 as the ban spreads out from West Cambridge, the 1942 quote appears, and the four building cards flip from Legal to Illegal to build as the red reaches their pins; then the map zooms into West Cambridge and houses turn into mansions while the counter runs to -48; then it zooms out and the city turns green from East Cambridge for 2025 and the cards flip to Legal again. Timings are listed at the top of the story script. The rollback (#now) is the earlier version: the rules light up one at a time, the 147 counter climbs, the example building shrinks from 12 homes to 3 (SVG scene ported from 05-now-buildings), then the whole block shrinks. Visitors with reduced motion turned on get the same states in steps, without tweening.
 
-Everything else plays once when it scrolls into view. The "We want to live here" row drifts sideways on its own and freezes while hovered, focused or touched. Each other piece plays once when it scrolls into view: resident cards fade up, the porch lights come on with the 147 counter, numbered pins drop onto the zoning map (hovering a street photo lights its pin), the population-loss bars grow year by year and wipe out the neighbors they reach, and the cost chart draws. Visitors with reduced motion turned on see the finished state.
+Everything else plays once when it scrolls into view. The "We want to live here" row drifts sideways on its own and freezes while hovered, focused or touched. Each other piece plays once when it scrolls into view: resident cards fade up, the porch lights come on with the 147 counter, numbered pins drop onto the zoning map (hovering a street photo lights its pin), the population-loss bars grow year by year and wipe out the neighbors they reach, and the home value chart draws. Visitors with reduced motion turned on see the finished state.
 
 ## Deploy
 Drag the folder onto app.netlify.com/drop, or push to a repo linked to Netlify.
 After the first deploy, turn on form detection: Site settings > Forms.
 
 ## Editing numbers
-All homepage numbers live in one block at the top of the last <script> in index.html (`var DATA = {...}`): affordable (porch lights and the win counter), atRisk (the Now and Never built counters), conversions (the West Cambridge mansions counter), resident photos in the porch grid, and the illustrative rent/price series.
+All homepage numbers live in one block at the top of the last <script> in index.html (`var DATA = {...}`): affordable (porch lights and the win counter), atRisk (the Now and Never built counters), conversions (the West Cambridge mansions counter), resident photos in the porch grid, and the Zillow home value series (homeValue).
 
 ## Before launch
 Search every file for TODO and [square brackets]. Main ones:
@@ -38,7 +38,7 @@ Search every file for TODO and [square brackets]. Main ones:
 - West Cambridge conversions (-48, city permit data 1996 to 2024): confirm figure and query
 - 121 Rindge Ave: confirm address and 1 to 9 homes; add the rendering of the planned house as the Before photo
 - Win tiles: confirm "all-electric homes" is part of the 2025 ordinance
-- Rent and home price series for We all pay (chart is illustrative)
+- We all pay shows real Zillow home values; add a sourced Cambridge rent series next to it
 - Pushed out chart: DATA.migration is illustrative; replace with Boston Indicators' yearly net loss of 25 to 44-year-olds (2006 to 2022) and fill in [N] residents per figure
 - Illegal to build cards: photos in images/garden-st.jpg etc. are low-res crops; swap in originals, confirm each building is nonconforming, and move the map pins to exact addresses
 - Nine new neighbor photos (images/neighbor-1.jpg to neighbor-9.jpg) need names, neighborhoods, quotes and written consent; they also fill the faces in the Pushed out chart

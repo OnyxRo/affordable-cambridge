@@ -209,7 +209,7 @@ section.frame>.wrap{width:100%}
 
 /* part 4 */
 .cost .lead{font-size:clamp(1.3rem,2.8vw,1.8rem);max-width:640px}
-#costChart{height:min(40vh,300px);margin-top:36px}
+
 .legend{display:flex;gap:22px;font-size:.9rem;margin-top:14px}
 .legend i{display:inline-block;width:26px;height:0;border-top:3px solid var(--teal);vertical-align:middle;margin-right:8px}
 .legend i.dash{border-top-style:dashed}
@@ -469,31 +469,8 @@ section.frame.hook{background:var(--teal);color:var(--on-teal)}
 .rules p{color:var(--muted);font-size:1rem;margin-top:4px}
 .lose{margin-top:28px;padding-top:20px;border-top:2px solid var(--line)}
 .lose b{font-family:var(--display);font-weight:400;font-size:clamp(4rem,10vw,6.5rem);line-height:.85;color:var(--red);font-variant-numeric:tabular-nums}
-.lose svg{width:100%;height:70px;overflow:visible}
-.lose path{fill:none;stroke:var(--red);stroke-width:3;stroke-linecap:round}
-.lose circle{fill:var(--red)}
 .lose span{display:block;font-size:.9rem;color:var(--muted);margin-top:8px}
-.bkey{font-size:.875rem;color:var(--muted);margin-top:28px}
-.bkey i{display:inline-block;width:14px;height:14px;border:1.5px solid var(--muted);border-radius:3px;background:var(--data-muted);vertical-align:-2px;margin-right:8px}
-.bldgs{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:16px;margin-top:12px}
-.bldg{display:flex;flex-direction:column;align-items:center}
-.frame-b{position:relative;width:100%;max-width:170px;display:flex;align-items:flex-end;justify-content:center}
-/* the outline of the original building, shown once it shrinks */
-.ghost-b{position:absolute;left:0;right:0;bottom:0;height:var(--gh,144px);border:2px dashed var(--red);border-bottom:0;opacity:0;transition:opacity .5s .2s;pointer-events:none}
-.after.shrunk .ghost-b{opacity:1}
-.tower{width:100%;border:2px solid var(--muted);border-bottom:0;background:var(--surface);padding:12px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;transition:width .9s ease}
-.tower .w{height:22px;border:1.5px solid var(--muted);border-radius:3px;transition:background .6s,opacity .6s,height .6s,margin .6s,border-width .6s}
-.tower .w.aff{background:var(--data-muted)}
-.ground{width:100%;max-width:200px;height:2px;background:var(--ink)}
-.bldg figcaption{text-align:center;margin-top:8px;font-size:.9rem;line-height:1.3}
-.bldg figcaption b{display:block;font-weight:700}
-.bldg figcaption span{color:var(--muted)}
-.arrow{align-self:center;text-align:center;font-size:.85rem;color:var(--red);font-weight:700;padding-bottom:40px}
-.arrow svg{display:block;width:56px;height:14px;margin:4px auto 0;fill:none;stroke:var(--red);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.after.shrunk .tower{width:76%}
-.after.shrunk .w.top{height:0;opacity:0;border-width:0;margin-bottom:-10px}
-.after.shrunk .w.aff{background:transparent}
-@media (prefers-reduced-motion:reduce){.tower,.tower .w{transition:none}}
+.nowsvg{display:block;width:100%;height:auto;margin-top:8px}
 
 /* 5. never built */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:0}
@@ -528,11 +505,19 @@ section.frame.hook{background:var(--teal);color:var(--on-teal)}
 /* 6. we all pay */
 .pay{background:var(--surface)}
 .ymark{background:var(--yellow);color:var(--ink);padding:0 .1em}
-.pay #costChart{height:min(40vh,300px);margin-top:40px}
-.pay .chart .ln.rent{stroke:var(--red)}
-.pay .chart .ln.price{stroke:var(--rose)}
-.pay .legend i{border-top-color:var(--red)}
-.pay .legend i.rose{border-top-color:var(--rose);border-top-style:solid}
+.vchart{margin:36px 0 0}
+.vc-t b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(1.5rem,3.6vw,2.25rem);line-height:1.1;text-transform:uppercase}
+.vc-t>span{display:block;color:var(--muted);font-size:.9rem;margin-top:6px}
+.vchart svg{display:block;width:100%;height:auto;margin-top:14px;overflow:visible}
+.vchart .gl{stroke:var(--line);stroke-width:1}
+.vchart .ax{stroke:var(--ink);stroke-width:2}
+.vchart .yl,.vchart .xl{font-family:var(--sans,'DM Sans',sans-serif);font-size:13px;fill:var(--muted)}
+.vchart .ar{fill:var(--rose);fill-opacity:.35}
+.vchart .ln2{fill:none;stroke:var(--red);stroke-width:4;stroke-linejoin:round;stroke-linecap:round}
+.vchart .pt circle{fill:var(--red);stroke:#fff;stroke-width:2}
+.vchart .vl{font-family:var(--display);font-size:20px;fill:var(--ink)}
+.vchart .vl.big{font-size:34px;fill:var(--red)}
+@media (max-width:560px){.vchart .yl,.vchart .xl{font-size:17px}.vchart .vl{font-size:26px}.vchart .vl.big{font-size:42px}}
 
 /* 7. the ask */
 .ask .sub{color:var(--muted)}
@@ -581,17 +566,9 @@ section.frame.hook{background:var(--teal);color:var(--on-teal)}
 /* now: rules light up one at a time; then the whole block shrinks */
 .js .rules li{opacity:.4;transition:opacity .35s}
 .rules li.on{opacity:1}
-.blockv{margin-top:24px;background:var(--surface);border:1px solid var(--line);padding:12px 12px 10px}
-.blockv svg{display:block;width:100%;height:auto}
-.blockv .b{transition:transform .7s ease;transform-box:fill-box;transform-origin:50% 100%}
-.blockv .b.s{transform:scale(.76,.75)}
-.blockv .aw{transition:fill .4s,stroke .4s}
-.blockv .b.s .aw{fill:none;stroke:var(--line)}
-.blockv .gh{opacity:0;transition:opacity .5s}
-.blockv .gh.s{opacity:1}
 .blockcap{font-size:.9rem;margin-top:6px}
 .blockcap span{color:var(--muted)}
-@media (prefers-reduced-motion:reduce){.js .rules li{opacity:1}.blockv .b,.blockv .gh{transition:none}}
+@media (prefers-reduced-motion:reduce){.js .rules li{opacity:1}}
 /* hook: the highlight wipes in */
 .js .hl{background:linear-gradient(var(--rose),var(--rose)) no-repeat 0 0/0% 100%;transition:background-size .9s ease .3s;color:inherit}
 .js .hl.on{background-size:100% 100%;color:var(--ink)}
@@ -1204,27 +1181,10 @@ footer.site{border-top:6px solid var(--rose)}
     <div id="nowViz">
       <div class="lose">
         <b id="loseNum">0</b>
-        <svg viewBox="0 0 200 70" preserveAspectRatio="none" aria-hidden="true"><circle cx="6" cy="10" r="5"/><path id="loseLine" d="M6 10 C 70 10, 140 30, 196 62"/></svg>
         <span>affordable homes we could lose</span>
       </div>
-      <p class="bkey"><i aria-hidden="true"></i>Affordable home</p>
-      <div class="bldgs" role="img" aria-label="Before, a building with 12 homes, 2 of them affordable. After the rollback, 9 homes, none affordable. 3 homes lost.">
-        <figure class="bldg before" aria-hidden="true">
-          <div class="frame-b"><div class="tower"><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w aff"></i><i class="w aff"></i><i class="w"></i></div></div>
-          <div class="ground"></div>
-          <figcaption><b>Before</b><span>12 homes, 2 affordable</span></figcaption>
-        </figure>
-        <div class="arrow" aria-hidden="true">3 lost</div>
-        <figure class="bldg after" id="afterB" aria-hidden="true">
-          <div class="frame-b"><div class="tower"><i class="w top"></i><i class="w top"></i><i class="w top"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w"></i><i class="w aff"></i><i class="w aff"></i><i class="w"></i></div></div>
-          <div class="ground"></div>
-          <figcaption><b>After</b><span>9 homes, none affordable</span></figcaption>
-        </figure>
-      </div>
-      <div class="blockv" aria-hidden="true">
-        <svg id="blockSvg" viewBox="0 0 440 210"></svg>
-        <p class="blockcap"><b>And then the whole block does.</b> <span>Every lot, building by building.</span></p>
-      </div>
+      <svg id="nowSvg" class="nowsvg" viewBox="638 180 540 540" role="img" aria-label="One building with 12 homes shrinks to 3 under the rollback, 9 homes lost. Then a whole block of buildings is cut down the same way, each one narrower and capped at three stories."></svg>
+      <p class="blockcap"><b>And then the whole block does.</b> <span>Every lot, building by building.</span></p>
       <!-- TODO: cite the inclusionary zoning threshold and the pipeline count -->
       <p class="source">Source: Cambridge inclusionary zoning ordinance; homes lost across the pipeline, pending. <a href="numbers.html">How we counted</a></p>
     </div>
@@ -1254,16 +1214,11 @@ footer.site{border-top:6px solid var(--rose)}
   <div class="wrap">
     <h2 id="pay-h">And we all pay the price.</h2>
     <p class="sub">Renters pay in <span class="pinku">higher rent</span>.<br>Homeownership becomes <span class="pinkh">impossible</span>.</p>
-    <div class="chart" id="costChart" role="img" aria-label="Illustrative trend: rents and home prices in Cambridge keep climbing when new homes don't get built.">
-      <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-        <polyline class="axis" vector-effect="non-scaling-stroke" points="0,0 0,100 100,100"/>
-        <polyline class="ln rent" id="rentLine" vector-effect="non-scaling-stroke" points=""/>
-        <polyline class="ln price" id="priceLine" vector-effect="non-scaling-stroke" points=""/>
-      </svg>
-    </div>
-    <div class="legend"><span><i></i>Rent</span><span><i class="rose"></i>Home prices</span></div>
-    <!-- TODO: replace illustrative lines with a real Cambridge rent and price series -->
-    <p class="source">Illustrative trend until the rent and home price series is in. <a href="numbers.html">Sources</a></p>
+    <figure class="vchart" id="costChart">
+      <figcaption class="vc-t"><b>A typical Cambridge home now costs <span id="costMult">3.3</span> times what it did in 2000.</b><span>Typical home value, Cambridge, January of each year</span></figcaption>
+      <svg id="costSvg" viewBox="0 0 640 300" role="img" aria-labelledby="costSvg-d"><desc id="costSvg-d">Line chart of the typical Cambridge home value from 2000 to 2026. It rises from about $314,000 to over $1 million, with a plateau after 2005 and steeper climbing since 2013.</desc></svg>
+    </figure>
+    <p class="source">Source: Zillow Home Value Index, Cambridge, single-family homes and condos, middle price tier, smoothed and seasonally adjusted; January of each year, not adjusted for inflation. Compiled in <a href="https://github.com/abettercambridge/data-projects-experimental/tree/main/housing" target="_blank" rel="noopener">A Better Cambridge's housing data</a>. <a href="numbers.html">Sources</a></p>
   </div>
 </section>
 
@@ -1363,9 +1318,8 @@ var DATA = {
   // TODO: illustrative only. Replace with Boston Indicators' yearly net loss of 25 to 44-year-olds.
   migStart: 2009,
   migration: [1,1,2,1,2,2,2,3,2,3,3,4,4,5],
-  // TODO: real index series. Illustrative only.
-  rent:  [6,11,8,15,12,21,17,27,23,33,29,41,36,48,45,57,52,65,61,72],
-  price: [4,7,5,9,7,12,9,14,12,18,15,21,19,26,22,30,27,35,33,42]
+  // Typical Cambridge home value, $ thousands, January of each year. Zillow Home Value Index (single-family + condo, middle tier, smoothed, seasonally adjusted), from A Better Cambridge's housing data project. Nominal dollars.
+  homeValue: { start: 2000, vals: [314,373,421,455,473,505,517,494,491,479,481,490,478,521,593,660,733,784,851,904,904,929,996,978,995,1044,1038] }
 };
 
 var fmt = function(n){ return Math.round(n).toLocaleString('en-US'); };
@@ -1534,10 +1488,10 @@ var lerp = function(a, b, t){ return a + (b - a) * t; };
       g += '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" fill="#1F5F5B" stroke="#D22B1F" stroke-width="2.5"/>';
       var hy = y + h * .42;
       g += '<path d="M' + (cx - 15) + ' ' + (y + h - 2) + 'q0-' + (h * .34) + ' 15-' + (h * .34) + 't15 ' + (h * .34) + 'Z" fill="#A7D4C9"/>';
-      g += '<circle cx="' + cx + '" cy="' + hy + '" r="8" fill="#A7D4C9"/>';
-      g += '<rect x="' + (cx - 12) + '" y="' + (hy - 9) + '" width="24" height="3" fill="#122322"/>';
-      g += '<rect x="' + (cx - 7) + '" y="' + (hy - 22) + '" width="14" height="14" fill="#122322"/>';
-      g += '<rect x="' + (cx - 7) + '" y="' + (hy - 12) + '" width="14" height="3" fill="#D22B1F"/>';
+      g += '<circle cx="' + cx + '" cy="' + hy + '" r="7.5" fill="#F3F7F6"/>';
+      g += '<path d="M' + (cx - 7.5) + ' ' + (hy - 1) + 'a7.5 7.5 0 0 1 15 0q-7.5-4-15 0Z" fill="#122322"/>';
+      g += '<path d="M' + (cx - 5) + ' ' + (hy + 7) + 'L' + cx + ' ' + (hy + 15) + 'L' + (cx + 5) + ' ' + (hy + 7) + 'Z" fill="#fff"/>';
+      g += '<path d="M' + (cx - 1.6) + ' ' + (hy + 10) + 'h3.2l1 7-2.6 3-2.6-3Z" fill="#122322"/>';
       g += '</g></g>';
       html += g;
     });
@@ -1629,38 +1583,68 @@ var lerp = function(a, b, t){ return a + (b - a) * t; };
   }, 0.4);
 })();
 
-/* ---------- 4. now: rules one at a time, building shrinks, then the whole block ---------- */
+/* ---------- 4. now: rules one at a time, one building shrinks from 12 homes to 3, then the whole block ---------- */
 (function(){
-  var NS='http://www.w3.org/2000/svg', svg=$('blockSvg'), bs=[];
+  var NS='http://www.w3.org/2000/svg', svg=$('nowSvg');
   if (!svg) return;
-  function mk(tag,a,p){ var e=document.createElementNS(NS,tag); for(var k in a) e.setAttribute(k,a[k]); p.appendChild(e); return e; }
-  [66,138,206].forEach(function(yb){ mk('line',{x1:6,y1:yb,x2:434,y2:yb,stroke:'#4A5C5A','stroke-width':1.5},svg); });
-  for (var r=0;r<3;r++) for (var c=0;c<4;c++){
-    var cx=60+c*107, yb=[66,138,206][r], w=50, h=56, x=cx-w/2, y=yb-h;
-    var gh=mk('rect',{'class':'gh',x:x,y:y,width:w,height:h,fill:'none',stroke:'#D22B1F','stroke-width':1.2,'stroke-dasharray':'4 3'},svg);
-    var g=mk('g',{'class':'b'},svg);
-    mk('rect',{x:x,y:y,width:w,height:h,fill:'#fff',stroke:'#4A5C5A','stroke-width':1.5},g);
-    for (var f=0;f<4;f++) for (var k=0;k<3;k++){
-      var aff=(f===3&&k<2);
-      mk('rect',{'class':aff?'aw':'',x:x+5+k*14.5,y:y+4+f*13,width:10,height:7,rx:1.5,fill:aff?'#5F968B':'none',stroke:aff?'#1F5F5B':'#C9D8D4','stroke-width':1.2},g);
-    }
-    bs.push({g:g,gh:gh,d:Math.hypot(c,2-r)});
+  var T = { ink:'#122322', soft:'#4A5C5A', rule:'#C9D8D4', red:'#D22B1F', white:'#FFFFFF', display:'Anton, Impact, sans-serif' };
+  function mk(tag,a,p){ var e=document.createElementNS(NS,tag); for(var k in a) e.setAttribute(k,a[k]); if(p) p.appendChild(e); return e; }
+  function lerp(a,b,p){ return a+(b-a)*p; }
+  function lin(t,a,b){ return Math.min(1,Math.max(0,(t-a)/(b-a))); }
+  function seg(t,a,b){ return ease(lin(t,a,b)); }
+  function label(p,x,y,str,size,fill){ var n=mk('text',{x:x,y:y,'text-anchor':'middle','font-family':T.display,'font-size':size,fill:fill||T.ink},p); n.textContent=str; return n; }
+  // one building
+  var one=mk('g',{},svg);
+  mk('line',{x1:660,x2:1140,y1:600,y2:600,stroke:T.soft,'stroke-width':2},one);
+  var ghost=mk('rect',{x:780,y:340,width:240,height:260,fill:'none',stroke:T.red,'stroke-width':2,'stroke-dasharray':'8 6',opacity:0},one);
+  var body=mk('rect',{x:780,y:340,width:240,height:260,fill:T.white,stroke:T.soft,'stroke-width':2},one);
+  var wins=[]; for (var f=0;f<4;f++) for (var c=0;c<3;c++) wins.push({f:f,c:c,n:mk('rect',{width:46,height:30,rx:3,fill:'none',stroke:T.rule,'stroke-width':2},one)});
+  var count=label(one,900,646,'12 HOMES',40), lostT=label(one,900,686,'9 HOMES LOST',28,T.red); lostT.setAttribute('opacity',0);
+  // a block of different buildings, each one narrower and capped at three stories
+  var block=mk('g',{opacity:0},svg);
+  var ROWS=[[[56,90,0],[70,58,1],[46,98,0],[92,54,0],[60,72,1],[64,86,0]],
+            [[82,68,0],[50,94,0],[66,56,1],[58,80,0],[96,62,0],[46,84,1]],
+            [[62,80,1],[88,60,0],[52,98,0],[72,70,1],[60,54,0],[64,92,0]]];
+  var SHADES=['#5F968B','#4F877C','#7AAFA4','#6A9F94'], STORY=18, CAP=3*STORY, minis=[];
+  ROWS.forEach(function(row,r){
+    var base=340+r*120, x=682;
+    mk('line',{x1:676,x2:1140,y1:base,y2:base,stroke:T.rule,'stroke-width':2},block);
+    row.forEach(function(d){
+      var w=d[0],h=d[1],gable=d[2],cx=x+w/2,i=minis.length,roofH=gable?Math.round(w*.32):0;
+      var gh=mk('path',{d:'M'+x+' '+base+'V'+(base-h)+(gable?'L'+cx+' '+(base-h-roofH)+'L'+(x+w)+' '+(base-h):'H'+(x+w))+'V'+base,fill:'none',stroke:T.red,'stroke-dasharray':'4 3','stroke-width':1.5,opacity:0},block);
+      var bd=mk('path',{fill:SHADES[i%SHADES.length]},block), ws=[];
+      var cols=Math.max(1,Math.floor((w-8)/14)), floors=Math.floor((h-6)/STORY);
+      for (var f=0;f<floors;f++) for (var c=0;c<cols;c++) ws.push({f:f,c:c,n:mk('rect',{width:7,height:8,fill:T.white,'fill-opacity':.75},block)});
+      minis.push({w:w,h:h,gable:gable,cx:cx,base:base,body:bd,wins:ws,gh:gh,i:i});
+      x+=w+12;
+    });
+  });
+  function draw(t){
+    var p=seg(t,2.8,4.6), w=lerp(240,96,p), h=lerp(260,195,p), x=900-w/2, y=600-h;
+    ghost.setAttribute('opacity',p>0?1:0);
+    body.setAttribute('x',x); body.setAttribute('y',y); body.setAttribute('width',w); body.setAttribute('height',h);
+    var sp=lerp(72,68,p);
+    wins.forEach(function(o){ var keep=o.c===1&&o.f>0; o.n.setAttribute('x',o.c===1?877:x+12+o.c*sp+(sp-46)/2); o.n.setAttribute('y',358+o.f*65); o.n.setAttribute('opacity',keep?1:1-lin(p,0,.6)); });
+    count.textContent=p>.5?'3 HOMES':'12 HOMES'; lostT.setAttribute('opacity',seg(t,4.6,5.1));
+    var zo=seg(t,5.6,6.2); one.setAttribute('opacity',1-zo); block.setAttribute('opacity',zo);
+    minis.forEach(function(m){
+      var q=seg(t,6.2+m.i*.1,6.7+m.i*.1);
+      var w=lerp(m.w,m.w*.68,q), h=lerp(m.h,Math.min(m.h*.8,CAP),q), x=m.cx-w/2, top=m.base-h, rh=m.gable?w*.32:0;
+      m.body.setAttribute('d','M'+x+' '+m.base+'V'+top+(m.gable?'L'+m.cx+' '+(top-rh)+'L'+(x+w)+' '+top:'H'+(x+w))+'V'+m.base+'Z');
+      var floors=Math.floor((h-6)/STORY), cols=Math.max(1,Math.floor((w-8)/14)), span=cols*14-7;
+      m.wins.forEach(function(o){ var on=o.f<floors&&o.c<cols; o.n.setAttribute('opacity',on?1:0); if(on){ o.n.setAttribute('x',m.cx-span/2+o.c*14); o.n.setAttribute('y',m.base-4-(o.f+1)*STORY+5); } });
+      m.gh.setAttribute('opacity',q>0?.85:0);
+    });
   }
-  bs.sort(function(a,b){ return a.d-b.d; });
+  var T0=1.8, T1=9;   // start with the building held for a moment, as in the 05 scene
   var rules=[].slice.call(document.querySelectorAll('.rules li'));
-  var line=$('loseLine'), len=line.getTotalLength();
-  line.style.strokeDasharray=len; line.style.strokeDashoffset=len;
-  function lost(v){ $('loseNum').textContent=fmt(v*DATA.atRisk); line.style.strokeDashoffset=len*(1-v); }
-  function shrink(n){ bs.forEach(function(b,i){ b.g.classList.toggle('s',i<n); b.gh.classList.toggle('s',i<n); }); }
-  lost(0);
+  function lost(t){ var v=t<4.6?0:Math.max(2/DATA.atRisk,Math.pow(lin(t,6.2,8.4),2)); $('loseNum').textContent=fmt(v*DATA.atRisk); }
+  function frame(t){ draw(t); lost(t); }
+  frame(T0);
   onEnter($('nowViz'), function(now){
-    if (now){ rules.forEach(function(li){ li.classList.add('on'); }); $('afterB').classList.add('shrunk'); shrink(bs.length); lost(1); return; }
+    if (now){ rules.forEach(function(li){ li.classList.add('on'); }); return frame(T1); }
     rules.forEach(function(li,i){ setTimeout(function(){ li.classList.add('on'); }, i*450); });
-    setTimeout(function(){ $('afterB').classList.add('shrunk'); lost(2/DATA.atRisk); }, 1400);
-    // the wave starts slow and speeds up
-    setTimeout(function(){
-      tween(2600, function(t){ var e=t*t; shrink(Math.round(e*bs.length)); lost(Math.max(2/DATA.atRisk, e)); });
-    }, 2600);
+    setTimeout(function(){ tween((T1-T0)*1000, function(p){ frame(T0+p*(T1-T0)); }); }, 800);
   }, 0.3);
 })();
 
@@ -1776,22 +1760,42 @@ var lerp = function(a, b, t){ return a + (b - a) * t; };
   onEnter(svg, function(now){ if (now) return draw(1); tween(5200, draw); }, 0.45);
 })();
 
-/* ---------- 6. cost chart draws once ---------- */
-function along(pts, t){
-  var f = t * (pts.length - 1), i = Math.floor(f), k = f - i;
-  var out = pts.slice(0, i + 1);
-  if (i < pts.length - 1) out.push([pts[i][0] + (pts[i+1][0]-pts[i][0])*k, pts[i][1] + (pts[i+1][1]-pts[i][1])*k]);
-  return out;
-}
-var ptsStr = function(p){ return p.map(function(q){ return q[0].toFixed(2)+','+q[1].toFixed(2); }).join(' '); };
-function linePts(arr){ return arr.map(function(v, i){ return [ i / (arr.length - 1) * 100, 98 - v ]; }); }
-var rentPts = linePts(DATA.rent), pricePts = linePts(DATA.price);
-function drawCost(t){
-  $('rentLine').setAttribute('points', ptsStr(along(rentPts, t)));
-  $('priceLine').setAttribute('points', ptsStr(along(pricePts, t)));
-}
-drawCost(0);
-onEnter($('costChart'), function(now){ if (now) return drawCost(1); tween(1500, function(t){ drawCost(ease(t)); }); }, 0.5);
+/* ---------- 6. cost chart: typical Cambridge home value, drawn once ---------- */
+(function(){
+  var svg = $('costSvg'); if (!svg) return;
+  var NS = 'http://www.w3.org/2000/svg', HV = DATA.homeValue;
+  var W = 640, H = 300, L = 58, R = 628, T = 22, B = 262, MIN = 200, MAX = 1100;
+  function mk(tag, a, p){ var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); (p || svg).appendChild(e); return e; }
+  function tx(x, y, s, a, p){ var e = mk('text', a, p); e.setAttribute('x', x); e.setAttribute('y', y); e.textContent = s; return e; }
+  var n = HV.vals.length, X = function(i){ return L + i / (n - 1) * (R - L); }, Y = function(v){ return B - (v - MIN) / (MAX - MIN) * (B - T); };
+  var money = function(k){ return k >= 1000 ? '$' + (k / 1000).toFixed(2).replace(/0$/, '') + 'M' : '$' + k + 'K'; };
+  [250, 500, 750, 1000].forEach(function(v){
+    mk('line', { x1: L, x2: R, y1: Y(v), y2: Y(v), 'class': 'gl' });
+    tx(L - 8, Y(v) + 4, money(v), { 'class': 'yl', 'text-anchor': 'end' });
+  });
+  mk('line', { x1: L, x2: R, y1: B, y2: B, 'class': 'ax' });
+  for (var y = HV.start; y < HV.start + n; y += 5){
+    tx(X(y - HV.start), B + 22, y, { 'class': 'xl', 'text-anchor': y === HV.start ? 'start' : 'middle' });
+  }
+  var pts = HV.vals.map(function(v, i){ return [X(i), Y(v)]; });
+  var d = 'M' + pts.map(function(q){ return q[0].toFixed(1) + ' ' + q[1].toFixed(1); }).join('L');
+  var area = mk('path', { d: d + 'L' + R + ' ' + B + 'L' + L + ' ' + B + 'Z', 'class': 'ar' });
+  var line = mk('path', { d: d, 'class': 'ln2' });
+  var s0 = mk('g', { 'class': 'pt' }), s1 = mk('g', { 'class': 'pt' });
+  mk('circle', { cx: pts[0][0], cy: pts[0][1], r: 5 }, s0);
+  tx(pts[0][0] + 12, pts[0][1] + 30, money(HV.vals[0]), { 'class': 'vl' }, s0);
+  var e = pts[n - 1];
+  mk('circle', { cx: e[0], cy: e[1], r: 6 }, s1);
+  tx(e[0] - 12, e[1] - 4, money(HV.vals[n - 1]), { 'class': 'vl big', 'text-anchor': 'end' }, s1);
+  $('costMult').textContent = (HV.vals[n - 1] / HV.vals[0]).toFixed(1);
+  var len = line.getTotalLength();
+  function draw(t){
+    line.style.strokeDasharray = len; line.style.strokeDashoffset = len * (1 - t);
+    area.style.opacity = t; s1.style.opacity = t > .98 ? 1 : 0; s0.style.opacity = 1;
+  }
+  draw(0);
+  onEnter($('costChart'), function(now){ if (now) return draw(1); tween(2200, function(t){ draw(ease(t)); }); }, 0.5);
+})();
 
 /* ---------- hook video: plays and loops only while on screen ---------- */
 (function(){
