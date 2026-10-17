@@ -1201,7 +1201,7 @@ footer.site{border-top:6px solid var(--rose)}
       <h3 class="mig-t">Massachusetts population loss</h3>
       <div class="mig-box"><svg id="migSvg" role="img" aria-labelledby="mig-d"><desc id="mig-d">Ten columns of faces from 2006 to 2022. Red bars of different heights wipe out faces in each column, with the biggest losses near 2022. The 26 faces lost, about 5,000 residents ages 25 to 44 each, add up to 129,800 more people in that age group leaving Massachusetts for other states than moving in.</desc></svg></div>
       <figcaption>
-        <p class="mig-key"><img class="mig-key-f" id="migKeyF" src="images/anon.svg" alt="" width="22" height="22">Each face is about 5,000 residents ages 25 to 44</p>
+        <p class="mig-key"><img class="mig-key-f" id="migKeyF" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%238CC0B5'/%3E%3Ccircle cx='50' cy='38' r='17' fill='%231F5F5B'/%3E%3Cpath d='M18 100c0-22 14-36 32-36s32 14 32 36z' fill='%231F5F5B'/%3E%3C/svg%3E" alt="" width="22" height="22">Each face is about 5,000 residents ages 25 to 44</p>
         <p class="mig-cap"><b>129,800 more residents ages 25 to 44 left Massachusetts for other states than moved in, 2006 to 2022.</b> People ages 25 to 44 make up about 60% of the state's net losses (2022).</p>
         <p class="source">Source: <a href="https://www.bostonindicators.org/article-pages/2024/april/domestic-migration" target="_blank" rel="noopener">Boston Indicators, Mass. Migration (April 2024)</a>. The 129,800 total is as reported by <a href="https://patch.com/massachusetts/across-ma/mass-migration-state-continues-lose-residents-study-finds" target="_blank" rel="noopener">Patch</a>.</p>
       </figcaption>
@@ -1278,6 +1278,7 @@ footer.site{border-top:6px solid var(--rose)}
 /* ============================================================
    EDIT THE NUMBERS HERE. Everything on the page reads from this.
    ============================================================ */
+var ANON_URI = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%238CC0B5'/%3E%3Ccircle cx='50' cy='38' r='17' fill='%231F5F5B'/%3E%3Cpath d='M18 100c0-22 14-36 32-36s32 14 32 36z' fill='%231F5F5B'/%3E%3C/svg%3E";
 var DATA = {
   // Permanently affordable inclusionary homes in the ordinance pipeline (A Better Cambridge, from Councillor Zusy's tracker, June 2026).
   affordable: 134,
@@ -1691,7 +1692,7 @@ var lerp = function(a, b, t){ return a + (b - a) * t; };
     shuffled.slice(0, nLit).forEach(function(i){ litSet[i] = true; });
     var html = '', p = 0, prevType = -1;
     for (i = 0; i < total; i++){
-      if (faceAt[i]){ html += '<span class="t p"><img src="images/anon.svg" alt="" loading="lazy"></span>'; prevType = -1; continue; }
+      if (faceAt[i]){ html += '<span class="t p"><img src="' + ANON_URI + '" alt="" loading="lazy"></span>'; prevType = -1; continue; }
       var type; do { type = Math.floor(R() * 4); } while (type === prevType); prevType = type;
       html += '<span class="t hs' + (litSet[i] ? ' lit' : '') + '"><svg viewBox="0 0 40 38" aria-hidden="true">' + HOUSES[type] + '</svg></span>';
     }
@@ -1729,7 +1730,7 @@ var lerp = function(a, b, t){ return a + (b - a) * t; };
   var pool=all.filter(function(ph){ return DATA.photos.indexOf(ph) < 0; });
   if (pool.length < 6) pool=all;   // not enough faces yet to keep the two sections apart
   var deck=[], seed=7;
-  $('migKeyF').src='images/anon.svg';
+  $('migKeyF').src=ANON_URI;
   function rnd(){ seed=(seed*16807)%2147483647; return seed/2147483647; }
   function face(){ if(!deck.length) deck=pool.slice().sort(function(){ return rnd()-.5; }); return deck.pop(); }
   for (var c=0;c<N;c++){
@@ -1737,7 +1738,7 @@ var lerp = function(a, b, t){ return a + (b - a) * t; };
     for (var r=0;r<ROWS;r++){
       var p=el('g',{'class':'mig-p',transform:'translate('+cx+' '+(TOP+r*RH+RH/2)+')'},g);
       el('circle',{r:23.5,'class':'mig-c'},p);
-      el('image',{href:'images/anon.svg',x:-22,y:-22,width:44,height:44,'clip-path':'url(#migClip)',preserveAspectRatio:'xMidYMid slice'},p);
+      el('image',{href:ANON_URI,x:-22,y:-22,width:44,height:44,'clip-path':'url(#migClip)',preserveAspectRatio:'xMidYMid slice'},p);
       people.push(p);
     }
     var bar=el('rect',{x:cx-22,y:TOP,width:44,height:0,'class':'mig-bar'},g);
