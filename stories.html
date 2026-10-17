@@ -318,6 +318,7 @@ footer.site strong{font-size:.8125rem;letter-spacing:.1em;text-transform:upperca
       <input type="hidden" name="photo_y" id="fy" value="25">
       <input type="hidden" name="photo_zoom" id="fz" value="1">
       <input type="hidden" name="card_color" id="fc" value="teal">
+      <input type="hidden" name="layout" id="fl" value="">
       <p class="hp"><label>Leave this empty <input name="company"></label></p>
 
       <fieldset class="step">
@@ -420,7 +421,7 @@ footer.site strong{font-size:.8125rem;letter-spacing:.1em;text-transform:upperca
   }
   // picker: one radio per layout, each thumbnail drawn with the person's own card
   looks.innerHTML = StoryCard.LAYOUTS.map(function(l, i){
-    return '<label class="look"><input type="radio" name="layout" value="' + l.slug + '"' + (i ? '' : ' checked') + '><div class="th" data-l="' + l.slug + '"></div><span class="lb">' + l.label + '</span></label>';
+    return '<label class="look"><input type="radio" name="look" value="' + l.slug + '"' + (i ? '' : ' checked') + '><div class="th" data-l="' + l.slug + '"></div><span class="lb">' + l.label + '</span></label>';
   }).join('');
   // color: recolors every card frame; the highlight around designs flips to the paired contrast color
   var sw = $('swatches');
@@ -434,7 +435,8 @@ footer.site strong{font-size:.8125rem;letter-spacing:.1em;text-transform:upperca
     looks.style.setProperty('--frame', st.color.hex);
     draw(true);
   });
-  looks.addEventListener('change', function(e){ if (e.target.name === 'layout'){ st.layout = e.target.value; draw(true); } });
+  $('fl').value = st.layout || StoryCard.LAYOUTS[0].slug;
+  looks.addEventListener('change', function(e){ if (e.target.name === 'look'){ st.layout = e.target.value; $('fl').value = st.layout; draw(true); } });
 
   var thumbsDue = false;
   function drawThumbs(){
