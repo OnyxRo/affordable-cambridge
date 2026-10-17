@@ -1022,18 +1022,6 @@ footer.site{border-top:6px solid var(--rose)}
   </div>
 </section>
 
-<section class="residents" aria-labelledby="residents-h">
-  <div class="wrap res-head">
-    <p class="intro" id="residents-h">We want to live here.</p>
-    <div class="loop-arrows">
-      <button type="button" class="pg" id="loopPrev" aria-label="Previous neighbor"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg></button>
-      <button type="button" class="pg" id="loopNext" aria-label="Next neighbor"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-    </div>
-  </div>
-  <!-- Cards are built from DATA.stories. Scroll or swipe; it loops forever. -->
-  <div class="loop" id="loop" tabindex="0" aria-label="Neighbors' stories. Scroll sideways or use the arrows."></div>
-</section>
-
 <!-- 2. THE PAST, ZOOMED IN, AND THE WIN. One stage that plays through on its own once it is on screen: the map runs from 1930 to 2024, zooms into West Cambridge, then flips the city green for 2025. -->
 <section class="story" id="past" aria-labelledby="past-h">
   <div class="st-stage" id="stStage">
@@ -1176,7 +1164,7 @@ footer.site{border-top:6px solid var(--rose)}
   <radialGradient id="warmLight" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#F7E2A8"/><stop offset=".45" stop-color="#F2C356"/><stop offset="1" stop-color="#E5992F"/></radialGradient>
   <filter id="warmGlow" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur in="SourceGraphic" stdDeviation="1.8" result="b"/><feColorMatrix in="b" type="matrix" values="1 0 0 0 0  0 .78 0 0 0  0 0 .3 0 0  0 0 0 .98 0" result="w"/><feMerge><feMergeNode in="w"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 </defs></svg>
-    <div class="porch" id="porch" role="img" aria-label="27 homes with their porch lights on, each standing for 5 permanently affordable homes, mixed with photos of residents."></div>
+    <div class="porch" id="porch" role="img" aria-label="27 homes with their porch lights on, each standing for 5 permanently affordable homes, mixed with icons standing for residents."></div>
     <div class="win-foot">
       <span><i aria-hidden="true"></i>Each porch light is 5 permanently affordable homes</span>
       <p class="source">Source: A Better Cambridge, from Councillor Zusy's Multifamily Housing Ordinance pipeline tracker, June 2026. <a href="numbers.html">How we counted</a></p>
@@ -1213,7 +1201,7 @@ footer.site{border-top:6px solid var(--rose)}
       <h3 class="mig-t">Massachusetts population loss</h3>
       <div class="mig-box"><svg id="migSvg" role="img" aria-labelledby="mig-d"><desc id="mig-d">Ten columns of faces from 2006 to 2022. Red bars of different heights wipe out faces in each column, with the biggest losses near 2022. The 26 faces lost, about 5,000 residents ages 25 to 44 each, add up to 129,800 more people in that age group leaving Massachusetts for other states than moving in.</desc></svg></div>
       <figcaption>
-        <p class="mig-key"><img class="mig-key-f" id="migKeyF" src="images/neighbor-1.jpg" alt="" width="22" height="22">Each face is about 5,000 residents ages 25 to 44</p>
+        <p class="mig-key"><img class="mig-key-f" id="migKeyF" src="images/anon.svg" alt="" width="22" height="22">Each face is about 5,000 residents ages 25 to 44</p>
         <p class="mig-cap"><b>129,800 more residents ages 25 to 44 left Massachusetts for other states than moved in, 2006 to 2022.</b> People ages 25 to 44 make up about 60% of the state's net losses (2022).</p>
         <p class="source">Source: <a href="https://www.bostonindicators.org/article-pages/2024/april/domestic-migration" target="_blank" rel="noopener">Boston Indicators, Mass. Migration (April 2024)</a>. The 129,800 total is as reported by <a href="https://patch.com/massachusetts/across-ma/mass-migration-state-continues-lose-residents-study-finds" target="_blank" rel="noopener">Patch</a>.</p>
       </figcaption>
@@ -1364,7 +1352,7 @@ setTimeout(function(){ $('hl').classList.add('on'); }, reduce ? 0 : 100);
 
 /* ---------- 1b. we want to live here: native scroll that loops forever ---------- */
 (function(){
-  var S = DATA.stories, track = $('loop');
+  var S = DATA.stories, track = $('loop'); if (!track) return;   // carousel is off until there are real neighbors' photos
   // every neighbor gets one of the seven card layouts, dealt at random on each visit
   var looks = StoryCard.deal(S.length);
   // colors too: a shuffled deck of the palette, never the same color twice in a row
@@ -1703,7 +1691,7 @@ var lerp = function(a, b, t){ return a + (b - a) * t; };
     shuffled.slice(0, nLit).forEach(function(i){ litSet[i] = true; });
     var html = '', p = 0, prevType = -1;
     for (i = 0; i < total; i++){
-      if (faceAt[i]){ html += '<span class="t p"><img src="images/' + DATA.photos[p++ % DATA.photos.length] + '.jpg" alt="" loading="lazy"></span>'; prevType = -1; continue; }
+      if (faceAt[i]){ html += '<span class="t p"><img src="images/anon.svg" alt="" loading="lazy"></span>'; prevType = -1; continue; }
       var type; do { type = Math.floor(R() * 4); } while (type === prevType); prevType = type;
       html += '<span class="t hs' + (litSet[i] ? ' lit' : '') + '"><svg viewBox="0 0 40 38" aria-hidden="true">' + HOUSES[type] + '</svg></span>';
     }
@@ -1741,7 +1729,7 @@ var lerp = function(a, b, t){ return a + (b - a) * t; };
   var pool=all.filter(function(ph){ return DATA.photos.indexOf(ph) < 0; });
   if (pool.length < 6) pool=all;   // not enough faces yet to keep the two sections apart
   var deck=[], seed=7;
-  $('migKeyF').src='images/'+pool[0]+'.jpg';
+  $('migKeyF').src='images/anon.svg';
   function rnd(){ seed=(seed*16807)%2147483647; return seed/2147483647; }
   function face(){ if(!deck.length) deck=pool.slice().sort(function(){ return rnd()-.5; }); return deck.pop(); }
   for (var c=0;c<N;c++){
@@ -1749,7 +1737,7 @@ var lerp = function(a, b, t){ return a + (b - a) * t; };
     for (var r=0;r<ROWS;r++){
       var p=el('g',{'class':'mig-p',transform:'translate('+cx+' '+(TOP+r*RH+RH/2)+')'},g);
       el('circle',{r:23.5,'class':'mig-c'},p);
-      el('image',{href:'images/'+face()+'.jpg',x:-22,y:-22,width:44,height:44,'clip-path':'url(#migClip)',preserveAspectRatio:'xMidYMid slice'},p);
+      el('image',{href:'images/anon.svg',x:-22,y:-22,width:44,height:44,'clip-path':'url(#migClip)',preserveAspectRatio:'xMidYMid slice'},p);
       people.push(p);
     }
     var bar=el('rect',{x:cx-22,y:TOP,width:44,height:0,'class':'mig-bar'},g);
