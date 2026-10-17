@@ -30,7 +30,7 @@ All homepage numbers live in one block at the top of the last <script> in index.
 
 ## Before launch
 Checked against public sources in October 2026; see numbers.html. Still needs a human:
-- Contact email and "Paid for by" line in the footer of every page (hello@example.org is a placeholder; check with OCPF)
+- Contact email and "Paid for by" line in the footer of every page (contact is hello@affordablecambridge.org; check the paid-for line with OCPF)
 - Resident stories and photos (index.html DATA.stories, images/neighbor-*.jpg, stories.html): names, neighborhoods and quotes must be real, with consent
 - Background video images/cambridge-aerial.mp4 is YouTube drone footage; confirm rights
 - og:image and og:url once the Netlify URL exists

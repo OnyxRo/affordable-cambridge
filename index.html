@@ -122,6 +122,9 @@ footer.site .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:spac
 footer.site a{color:inherit}
 footer.site strong{color:var(--ink)}
 .foot-brand{display:flex;align-items:center;gap:14px}
+.foot-brand{flex-wrap:wrap;row-gap:18px}
+.foot-partner{display:flex;align-items:center;gap:12px;font-size:.85rem;color:var(--muted);white-space:nowrap}
+.foot-partner img{height:56px;width:auto;display:block}
 .foot-brand .logo{width:84px;height:84px;flex:none}
 
 section.frame{padding:96px 0}
@@ -1125,7 +1128,7 @@ footer.site{border-top:6px solid var(--rose)}
 <section class="s win" id="win" aria-labelledby="lot-h">
   <div class="wrap two lot">
     <div class="rise">
-      <h2 id="lot-h">Now homes can be built <span class="lot-pink">for everyone</span>, not just mansions for the wealthy.</h2>
+      <h2 id="lot-h">Now homes can be built <span class="lot-pink">for everyone</span><span class="lot-y">, not just mansions for the wealthy.</span></h2>
       <p class="lot-p">In 2025 we opened every neighborhood to new homes. On a lot where the rules once allowed one large house, four stories now make room for nine families.</p>
     </div>
     <figure class="lot-fig" id="lotFig">
@@ -1208,12 +1211,11 @@ footer.site{border-top:6px solid var(--rose)}
     <p class="sub">Members of our community are being pushed out.</p>
     <figure class="mig">
       <h3 class="mig-t">Massachusetts population loss</h3>
-      <!-- Bars come from DATA.migration. TODO: replace the illustrative values with Boston Indicators' yearly series -->
-      <div class="mig-box"><svg id="migSvg" role="img" aria-labelledby="mig-d"><desc id="mig-d">Illustrative chart: Massachusetts loses more 25 to 44-year-olds to other states each year from 2009 to 2022, and the losses grow over time. Each bar removes the neighbors it reaches.</desc></svg></div>
+      <div class="mig-box"><svg id="migSvg" role="img" aria-labelledby="mig-d"><desc id="mig-d">Fifty faces in ten columns, each standing for about 2,600 residents ages 25 to 44. Red bars wipe them out one column at a time: 129,800 more people in that age group left Massachusetts for other states than moved in from 2006 to 2022.</desc></svg></div>
       <figcaption>
-        <p class="mig-key"><img class="mig-key-f" id="migKeyF" src="images/neighbor-1.jpg" alt="" width="22" height="22">Each face is [N] residents ages 25 to 44</p>
-        <p class="mig-cap"><b>Net loss of 25 to 44-year-olds to other states, Massachusetts, by year.</b> 25 to 44-year-olds make up about 60% of the state's net losses (2022).</p>
-        <p class="source">Illustrative until Boston Indicators shares the yearly data. Source: <a href="https://www.bostonindicators.org/article-pages/2024/april/domestic-migration" target="_blank" rel="noopener">Boston Indicators, Mass. Migration (April 2024)</a></p>
+        <p class="mig-key"><img class="mig-key-f" id="migKeyF" src="images/neighbor-1.jpg" alt="" width="22" height="22">Each face is about 2,600 residents ages 25 to 44</p>
+        <p class="mig-cap"><b>129,800 more residents ages 25 to 44 left Massachusetts for other states than moved in, 2006 to 2022.</b> People ages 25 to 44 make up about 60% of the state's net losses (2022).</p>
+        <p class="source">Source: <a href="https://www.bostonindicators.org/article-pages/2024/april/domestic-migration" target="_blank" rel="noopener">Boston Indicators, Mass. Migration (April 2024)</a>. The 129,800 total is as reported by <a href="https://patch.com/massachusetts/across-ma/mass-migration-state-continues-lose-residents-study-finds" target="_blank" rel="noopener">Patch</a>.</p>
       </figcaption>
     </figure>
   </div>
@@ -1267,9 +1269,9 @@ footer.site{border-top:6px solid var(--rose)}
       <svg class="logo" viewBox="0 0 1095 1095" aria-hidden="true"><use href="#ac-logo"/></svg>
       <div>
       <strong>Affordable Cambridge</strong><br>
-      <a href="mailto:hello@example.org">hello@example.org</a>
+      <a href="mailto:hello@affordablecambridge.org">hello@affordablecambridge.org</a>
       </div>
-      <div class="foot-partner" style="display:flex;align-items:center;gap:10px;margin-left:12px;font-size:.85rem">In partnership with <a href="https://www.abettercambridge.org" target="_blank" rel="noopener"><img src="https://assets.nationbuilder.com/abettercambridge/sites/1/meta_images/original/abc_logo_RGB_bitmap.jpg" alt="A Better Cambridge" height="44" style="height:44px;width:auto;display:block;background:#fff;padding:4px;border-radius:4px"></a></div>
+      <div class="foot-partner">In partnership with <a href="https://www.abettercambridge.org" target="_blank" rel="noopener"><img src="images/abc-logo.svg" alt="A Better Cambridge" width="109" height="56"></a></div>
     </div>
     <div>
       <p><a href="privacy.html">Privacy</a></p>
@@ -1318,10 +1320,9 @@ var DATA = {
     ];
     return base;
   })(),
-  // Pushed out: net loss per year, 2009 to 2022, in whole faces (0 to 5), so every bar stops exactly at a row. Each figure is DATA.migPer people.
-  // TODO: illustrative only. Replace with Boston Indicators' yearly net loss of 25 to 44-year-olds.
-  migStart: 2009,
-  migration: [1,1,2,1,2,2,2,3,2,3,3,4,4,5],
+  // Pushed out: 50 faces (10 columns of 5) stand for the 129,800 net loss of 25 to 44-year-olds, 2006 to 2022, about 2,600 each. Every face is lost.
+  migStart: 2006, migEnd: 2022,
+  migration: [5,5,5,5,5,5,5,5,5,5],
   // Typical Cambridge home value, $ thousands, January of each year. Zillow Home Value Index (single-family + condo, middle tier, smoothed, seasonally adjusted), from A Better Cambridge's housing data project. Nominal dollars.
   homeValue: { start: 2000, vals: [314,373,421,455,473,505,517,494,491,479,481,490,478,521,593,660,733,784,851,904,904,929,996,978,995,1044,1038] }
 };
@@ -1552,10 +1553,17 @@ var lerp = function(a, b, t){ return a + (b - a) * t; };
     });
   }
   // The story plays on its own once half of it is on screen: about 14 seconds from 1930 to the 2025 win.
-  var DUR = 14000, t0 = null, raf = 0, foot = $('stFoot'), bar = $('stBar'), replay = $('stReplay'), started = false;
+  var BASE = 14000, EXTRA = 3000, DUR = BASE + EXTRA, t0 = null, raf = 0, foot = $('stFoot'), bar = $('stBar'), replay = $('stReplay'), started = false;
+  // the mansions beat (progress .44 to .70) gets EXTRA ms on top of its share of BASE
+  function warp(u){
+    var ms = u * DUR, a = .44 * BASE, b = a + .26 * BASE + EXTRA;
+    if (ms < a) return ms / BASE;
+    if (ms < b) return .44 + (ms - a) / (b - a) * .26;
+    return Math.min(1, .70 + (ms - b) / BASE);
+  }
   function frame(now){
     if (t0 === null) t0 = now;
-    prog = clamp((now - t0) / DUR); render(); bar.style.transform = 'scaleX(' + prog.toFixed(3) + ')';
+    prog = warp(clamp((now - t0) / DUR)); render(); bar.style.transform = 'scaleX(' + prog.toFixed(3) + ')';
     if (prog < 1) raf = requestAnimationFrame(frame); else { foot.classList.add('done'); replay.hidden = false; }
   }
   function play(){ cancelAnimationFrame(raf); t0 = null; prog = 0; last = -1; bar.style.transform = 'scaleX(0)'; foot.classList.remove('done'); replay.hidden = true; render(); raf = requestAnimationFrame(frame); }
@@ -1747,9 +1755,8 @@ var lerp = function(a, b, t){ return a + (b - a) * t; };
     cols.push({bar:bar,people:people,v:V[c]});
   }
   el('line',{x1:0,x2:W,y1:TOP,y2:TOP,'class':'mig-axis'},svg);
-  [0, Math.floor((N-1)/2), N-1].forEach(function(c){
-    el('text',{x:c*CW+CW/2,y:TOP-12,'class':'mig-yr'},svg).textContent=String(DATA.migStart+c);
-  });
+  el('text',{x:CW/2,y:TOP-12,'class':'mig-yr'},svg).textContent=String(DATA.migStart);
+  el('text',{x:(N-1)*CW+CW/2,y:TOP-12,'class':'mig-yr'},svg).textContent=String(DATA.migEnd);
   // t runs 0..1 across the whole chart; columns start one after another
   function draw(t){
     cols.forEach(function(col,c){
