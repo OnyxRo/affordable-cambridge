@@ -11,7 +11,7 @@ window.AC_EVENTS = [
     start: null,
     end: null,
     location: "Sullivan Chamber, Cambridge City Hall, 795 Massachusetts Ave, Cambridge",
-    details: "The next step toward a rollback. Come fill the room, or send an email before the meeting.",
+    details: "",
     link: ""
   }
 ];
