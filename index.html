@@ -1211,9 +1211,9 @@ footer.site{border-top:6px solid var(--rose)}
     <p class="sub">Members of our community are being pushed out.</p>
     <figure class="mig">
       <h3 class="mig-t">Massachusetts population loss</h3>
-      <div class="mig-box"><svg id="migSvg" role="img" aria-labelledby="mig-d"><desc id="mig-d">Fifty faces in ten columns, each standing for about 2,600 residents ages 25 to 44. Red bars wipe them out one column at a time: 129,800 more people in that age group left Massachusetts for other states than moved in from 2006 to 2022.</desc></svg></div>
+      <div class="mig-box"><svg id="migSvg" role="img" aria-labelledby="mig-d"><desc id="mig-d">Ten columns of faces from 2006 to 2022. Red bars of different heights wipe out faces in each column, with the biggest losses near 2022. The 26 faces lost, about 5,000 residents ages 25 to 44 each, add up to 129,800 more people in that age group leaving Massachusetts for other states than moving in.</desc></svg></div>
       <figcaption>
-        <p class="mig-key"><img class="mig-key-f" id="migKeyF" src="images/neighbor-1.jpg" alt="" width="22" height="22">Each face is about 2,600 residents ages 25 to 44</p>
+        <p class="mig-key"><img class="mig-key-f" id="migKeyF" src="images/neighbor-1.jpg" alt="" width="22" height="22">Each face is about 5,000 residents ages 25 to 44</p>
         <p class="mig-cap"><b>129,800 more residents ages 25 to 44 left Massachusetts for other states than moved in, 2006 to 2022.</b> People ages 25 to 44 make up about 60% of the state's net losses (2022).</p>
         <p class="source">Source: <a href="https://www.bostonindicators.org/article-pages/2024/april/domestic-migration" target="_blank" rel="noopener">Boston Indicators, Mass. Migration (April 2024)</a>. The 129,800 total is as reported by <a href="https://patch.com/massachusetts/across-ma/mass-migration-state-continues-lose-residents-study-finds" target="_blank" rel="noopener">Patch</a>.</p>
       </figcaption>
@@ -1271,7 +1271,7 @@ footer.site{border-top:6px solid var(--rose)}
       <strong>Affordable Cambridge</strong><br>
       <a href="mailto:hello@affordablecambridge.org">hello@affordablecambridge.org</a>
       </div>
-      <div class="foot-partner">In partnership with <a href="https://www.abettercambridge.org" target="_blank" rel="noopener"><img src="images/abc-logo.svg" alt="A Better Cambridge" width="109" height="56"></a></div>
+      <div class="foot-partner">In partnership with <a href="https://www.abettercambridge.org" target="_blank" rel="noopener"><img src="images/abc-logo.svg" alt="A Better Cambridge" width="124" height="56"></a></div>
     </div>
     <div>
       <p><a href="privacy.html">Privacy</a></p>
@@ -1320,9 +1320,10 @@ var DATA = {
     ];
     return base;
   })(),
-  // Pushed out: 50 faces (10 columns of 5) stand for the 129,800 net loss of 25 to 44-year-olds, 2006 to 2022, about 2,600 each. Every face is lost.
+  // Pushed out: 10 columns of 5 faces, 2006 to 2022. The 26 faces lost stand for the 129,800 net loss of 25 to 44-year-olds, about 5,000 each.
+  // The total is sourced (Boston Indicators); how it splits across the columns is approximate, rising toward 2022.
   migStart: 2006, migEnd: 2022,
-  migration: [5,5,5,5,5,5,5,5,5,5],
+  migration: [1,2,2,2,3,2,3,3,3,5],
   // Typical Cambridge home value, $ thousands, January of each year. Zillow Home Value Index (single-family + condo, middle tier, smoothed, seasonally adjusted), from A Better Cambridge's housing data project. Nominal dollars.
   homeValue: { start: 2000, vals: [314,373,421,455,473,505,517,494,491,479,481,490,478,521,593,660,733,784,851,904,904,929,996,978,995,1044,1038] }
 };
